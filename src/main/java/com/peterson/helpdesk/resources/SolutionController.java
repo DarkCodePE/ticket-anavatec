@@ -42,8 +42,13 @@ public class SolutionController {
     }
     @GetMapping("/tickets")
     public ResponseEntity<List<SolutionResponseDTO>> getSolutionsByTicketId(@Valid @RequestParam Integer ticketID){
+        List<SolutionResponseDTO> solutionResponseDTO = solutionService.getSolutionsByTicketId(ticketID);
+        if (solutionResponseDTO.isEmpty()){
+            return ResponseEntity.status(HttpStatus.NO_CONTENT)
+                    .body(solutionResponseDTO);
+        }
         return ResponseEntity.status(HttpStatus.OK)
-                .body(solutionService.getSolutionsByTicketId(ticketID));
+                .body(solutionResponseDTO);
     }
     @PostMapping("/create")
     public ResponseEntity<List<SolutionListDTO>> createSolution(@RequestPart SolutionRequestDTO solutionRequestDTO, @RequestPart MultipartFile file) throws IOException {

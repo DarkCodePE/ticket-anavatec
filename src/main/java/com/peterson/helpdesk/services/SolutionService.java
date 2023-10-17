@@ -17,6 +17,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.peterson.helpdesk.domain.enums.Status.ENCERRADO;
 
@@ -68,7 +69,7 @@ public class SolutionService {
                         .title(sol.getTitle())
                         .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(sol.getImageSolution().getImageData())))
                         .build())
-                .toList();
+                .collect(Collectors.toList());
 
     }
     public List<Chamado> getTicketsByProductSku(Integer productID) {
