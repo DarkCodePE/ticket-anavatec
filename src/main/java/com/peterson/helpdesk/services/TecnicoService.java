@@ -41,6 +41,9 @@ public class TecnicoService {
         Tecnico newObj = new Tecnico(objDTO);
         return repository.save(newObj);
     }
+    public Tecnico findByEmail(String email) {
+        return repository.findByEmail(email).orElseThrow(() -> new ObjectnotFoundException("Objeto não encontrado! email: " + email));
+    }
 
     public Tecnico update(Integer id, @Valid TecnicoDTO objDTO) {
         objDTO.setId(id);

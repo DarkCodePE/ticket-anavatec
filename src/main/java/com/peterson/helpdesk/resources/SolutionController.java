@@ -1,10 +1,7 @@
 package com.peterson.helpdesk.resources;
 
 import com.peterson.helpdesk.domain.Chamado;
-import com.peterson.helpdesk.domain.dtos.ProductListDTO;
-import com.peterson.helpdesk.domain.dtos.SolutionListDTO;
-import com.peterson.helpdesk.domain.dtos.SolutionRequestDTO;
-import com.peterson.helpdesk.domain.dtos.SolutionResponseDTO;
+import com.peterson.helpdesk.domain.dtos.*;
 import com.peterson.helpdesk.services.SolutionService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -54,5 +51,15 @@ public class SolutionController {
     public ResponseEntity<List<SolutionListDTO>> createSolution(@RequestPart SolutionRequestDTO solutionRequestDTO, @RequestPart MultipartFile file) throws IOException {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(solutionService.createSolution(solutionRequestDTO, file));
+    }
+    @PostMapping("/search")
+    public ResponseEntity<List<SolutionResponseDTO>> searchSolution(@RequestBody SearchSolutionDTO solutionRequestDTO){
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(solutionService.searchSolution(solutionRequestDTO));
+    }
+    @GetMapping("/search")
+    public ResponseEntity<List<Chamado>> searchSolution(@RequestParam String query, @RequestParam Integer id){
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(solutionService.searchChamados(query, id));
     }
 }

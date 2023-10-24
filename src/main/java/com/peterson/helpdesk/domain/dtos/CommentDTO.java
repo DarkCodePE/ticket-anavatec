@@ -5,9 +5,8 @@ import lombok.Getter;
 
 @Builder
 @Getter
-public class RecommendationDTO {
-
+public class CommentDTO {
     private String description;
     private String tecnicoEmail;
-    private Integer solutionId;
+    private Integer recommendationId;
 }

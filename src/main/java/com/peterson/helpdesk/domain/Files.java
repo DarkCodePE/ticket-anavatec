@@ -1,5 +1,6 @@
 package com.peterson.helpdesk.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -23,4 +24,9 @@ public class Files {
     @Lob
     @Column(name = "solution_file", length = 1000)
     private byte[] solution_file;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "solution_id")
+    private Solution solution;
 }

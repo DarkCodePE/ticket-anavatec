@@ -2,6 +2,7 @@ package com.peterson.helpdesk.resources;
 
 import com.peterson.helpdesk.domain.Chamado;
 import com.peterson.helpdesk.domain.dtos.ChamadoDTO;
+import com.peterson.helpdesk.domain.dtos.ChamadoExpiredDTO;
 import com.peterson.helpdesk.services.ChamadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -45,4 +46,10 @@ public class ChamadoResource {
         Chamado newObj = service.update(id, objDTO);
         return ResponseEntity.ok().body(new ChamadoDTO(newObj));
     }
+    @GetMapping(value = "/expired")
+    public ResponseEntity<List<ChamadoExpiredDTO>> findExpired() {
+        List<ChamadoExpiredDTO> list = service.chamadoExpired();
+        return ResponseEntity.ok().body(list);
+    }
+
 }

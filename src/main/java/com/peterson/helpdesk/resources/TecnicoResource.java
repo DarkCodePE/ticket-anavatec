@@ -28,7 +28,11 @@ public class TecnicoResource {
         Tecnico obj = this.service.findById(id);
         return ResponseEntity.ok().body(new TecnicoDTO(obj));
     }
-
+    @GetMapping(value = "/email")
+    public ResponseEntity<TecnicoDTO> findByEmail(@RequestParam String email) {
+        Tecnico obj = this.service.findByEmail(email);
+        return ResponseEntity.ok().body(new TecnicoDTO(obj));
+    }
     @GetMapping
     public ResponseEntity<List<TecnicoDTO>> findAll() {
         List<Tecnico> list = service.findAll();

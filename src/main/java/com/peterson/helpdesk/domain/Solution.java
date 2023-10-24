@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-@Entity(name = "product")
+@Entity
 @Table(name="solutions")
 public class Solution {
     @Id
@@ -39,6 +39,8 @@ public class Solution {
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "solution")
     private List<Recommendation> recommendations = new ArrayList<>();
 
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "solution")
+    private List<Files> files = new ArrayList<>();
 
     public Solution(Integer id, String title, String summary, boolean status, Chamado chamado) {
         this.id = id;
@@ -105,6 +107,14 @@ public class Solution {
 
     public void setRecommendations(List<Recommendation> recommendations) {
         this.recommendations = recommendations;
+    }
+
+    public List<Files> getFiles() {
+        return files;
+    }
+
+    public void setFiles(List<Files> files) {
+        this.files = files;
     }
 
     @Override
