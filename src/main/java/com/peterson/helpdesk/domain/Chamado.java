@@ -53,6 +53,16 @@ public class Chamado {
         this.tecnico = tecnico;
         this.cliente = cliente;
     }
+    public Chamado(Integer id, Prioridade prioridade, Status status, String titulo, String observacoes, Tecnico tecnico, Cliente cliente, LocalDate dataFechamento) {
+        this.id = id;
+        this.prioridade = prioridade;
+        this.status = status;
+        this.titulo = titulo;
+        this.observacoes = observacoes;
+        this.tecnico = tecnico;
+        this.cliente = cliente;
+        this.dataFechamento = dataFechamento;
+    }
 
     public Integer getId() {
         return id;
