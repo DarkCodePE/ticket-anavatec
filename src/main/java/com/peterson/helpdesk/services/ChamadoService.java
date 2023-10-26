@@ -7,6 +7,8 @@ import com.peterson.helpdesk.domain.Product;
 import com.peterson.helpdesk.domain.Tecnico;
 import com.peterson.helpdesk.domain.dtos.ChamadoDTO;
 import com.peterson.helpdesk.domain.dtos.ChamadoExpiredDTO;
+import com.peterson.helpdesk.domain.dtos.TopDTO;
+import com.peterson.helpdesk.domain.dtos.TopTecnicoDTO;
 import com.peterson.helpdesk.domain.enums.Prioridade;
 import com.peterson.helpdesk.domain.enums.Status;
 import com.peterson.helpdesk.repositories.ChamadoRepository;
@@ -20,6 +22,7 @@ import java.nio.file.LinkOption;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import static java.time.temporal.ChronoUnit.DAYS;
@@ -114,5 +117,35 @@ public class ChamadoService {
                             .countDays(diasBetween.intValue())
                             .build();
                 }).collect(Collectors.toList());
+    }
+    public TopDTO topTecnicoByChamados(){
+        //Total de ticketResuelto
+        List<Chamado> chamados = repository.findAll();
+        int total = chamados.size();
+        int totalSolved = chamados.stream().filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO)).collect(Collectors.toList()).size();
+        int totalTechnician = chamados.stream().map(ticket -> ticket.getTecnico().getId()).collect(Collectors.toList()).size();
+        List<Tecnico> tecnicos = chamados.stream().map(Chamado::getTecnico).toList();
+        Random rn = new Random();
+        int range = totalSolved - 1;
+        int randomNum =  rn.nextInt(range) + 1;
+        List<TopTecnicoDTO> topTecnicoDTOS = chamados.stream()
+                .filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO))
+                .map(ticket -> TopTecnicoDTO.builder()
+                        .quantidade(getRandomNumber(1, totalSolved))
+                        .nome(ticket.getTecnico().getNome())
+                        .email(ticket.getTecnico().getEmail())
+                        .build())
+                .collect(Collectors.toList());
+
+        //Total de ticketResuelto por tecnico
+        return TopDTO.builder()
+                .total(total)
+                .totalSolved(totalSolved)
+                .totalTechnician(tecnicos.size())
+                .topTechnician(topTecnicoDTOS)
+                .build();
+    }
+    public int getRandomNumber(int min, int max) {
+        return (int) ((Math.random() * (max - min)) + min);
     }
 }

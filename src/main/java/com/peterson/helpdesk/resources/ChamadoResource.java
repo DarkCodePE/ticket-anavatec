@@ -3,6 +3,7 @@ package com.peterson.helpdesk.resources;
 import com.peterson.helpdesk.domain.Chamado;
 import com.peterson.helpdesk.domain.dtos.ChamadoDTO;
 import com.peterson.helpdesk.domain.dtos.ChamadoExpiredDTO;
+import com.peterson.helpdesk.domain.dtos.TopDTO;
 import com.peterson.helpdesk.services.ChamadoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -51,5 +52,9 @@ public class ChamadoResource {
         List<ChamadoExpiredDTO> list = service.chamadoExpired();
         return ResponseEntity.ok().body(list);
     }
-
+    @GetMapping(value = "/top")
+    public ResponseEntity<TopDTO> findTop() {
+        TopDTO list = service.topTecnicoByChamados();
+        return ResponseEntity.ok().body(list);
+    }
 }

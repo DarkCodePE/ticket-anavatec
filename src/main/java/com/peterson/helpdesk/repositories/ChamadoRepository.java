@@ -14,4 +14,5 @@ public interface ChamadoRepository extends JpaRepository<Chamado, Integer> {
             "Or c.observacoes LIKE CONCAT('%', :query, '%')"+
             "AND c.product.id = :id")
     List<Chamado> searchChamados(String query, Integer id);
+
 }
