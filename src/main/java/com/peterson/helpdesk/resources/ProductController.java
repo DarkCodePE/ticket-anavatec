@@ -37,6 +37,12 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(productService.getAllCategories());
     }
+    @GetMapping("/categories/list")
+    public ResponseEntity<List<ProductCategory>>  getAllCategories2(){
+        log.info("getAllCategories");
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(productService.getAllCategories());
+    }
     @PostMapping("/create")
     public ResponseEntity<List<ProductListDTO>> saveProduct(@RequestPart ProductRequestDTO productRequestDTO, @RequestPart MultipartFile file) throws IOException {
         log.info("image", file);
