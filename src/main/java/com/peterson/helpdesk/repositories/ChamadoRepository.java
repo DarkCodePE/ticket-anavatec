@@ -9,6 +9,7 @@ import java.util.List;
 
 public interface ChamadoRepository extends JpaRepository<Chamado, Integer> {
     List<Chamado> findByProduct_Id(Integer productId);
+    List<Chamado> findByTecnico_Id(Integer id);
     @Query("SELECT c FROM Chamado c WHERE " +
             "c.titulo LIKE CONCAT('%',:query, '%')" +
             "Or c.observacoes LIKE CONCAT('%', :query, '%')"+

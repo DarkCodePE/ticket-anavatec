@@ -20,6 +20,7 @@ import org.springframework.stereotype.Service;
 import javax.validation.Valid;
 import java.nio.file.LinkOption;
 import java.time.LocalDate;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
@@ -123,19 +124,16 @@ public class ChamadoService {
         List<Chamado> chamados = repository.findAll();
         int total = chamados.size();
         int totalSolved = chamados.stream().filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO)).collect(Collectors.toList()).size();
-        int totalTechnician = chamados.stream().map(ticket -> ticket.getTecnico().getId()).collect(Collectors.toList()).size();
         List<Tecnico> tecnicos = chamados.stream().map(Chamado::getTecnico).toList();
-        Random rn = new Random();
-        int range = totalSolved - 1;
-        int randomNum =  rn.nextInt(range) + 1;
+        HashMap<String, Integer> map = new HashMap<>();
         List<TopTecnicoDTO> topTecnicoDTOS = chamados.stream()
                 .filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO))
                 .map(ticket -> TopTecnicoDTO.builder()
-                        .quantidade(getRandomNumber(1, totalSolved))
+                        .quantidade(repository.findByTecnico_Id(ticket.getTecnico().getId()).stream().filter(ticket1 -> ticket1.getStatus().equals(Status.ENCERRADO)).toList().size())
                         .nome(ticket.getTecnico().getNome())
                         .email(ticket.getTecnico().getEmail())
                         .build())
-                .collect(Collectors.toList());
+                .toList();
 
         //Total de ticketResuelto por tecnico
         return TopDTO.builder()
@@ -144,8 +142,5 @@ public class ChamadoService {
                 .totalTechnician(tecnicos.size())
                 .topTechnician(topTecnicoDTOS)
                 .build();
-    }
-    public int getRandomNumber(int min, int max) {
-        return (int) ((Math.random() * (max - min)) + min);
     }
 }
