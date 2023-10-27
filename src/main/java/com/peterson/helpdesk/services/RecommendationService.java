@@ -36,6 +36,7 @@ public class RecommendationService {
         Solution solution = solutionRepository.findById(recommendation.getSolutionId()).orElseThrow(() -> new RuntimeException("Solution not found"));
         Tecnico tecnico = tecnicoRepository.findByEmail(recommendation.getTecnicoEmail()).orElseThrow(() -> new RuntimeException("Tecnico not found"));
         recommendationRepository.save(Recommendation.builder()
+                .createdAt(new Timestamp(new Date().getTime()))
                 .description(recommendation.getDescription())
                 .solution(solution)
                 .tecnico(tecnico)
