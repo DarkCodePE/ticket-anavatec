@@ -52,6 +52,8 @@ public class SolutionService {
                         .summary(sol.getSummary())
                         .status(sol.isStatus())
                         .title(sol.getTitle())
+                        .priority(sol.getChamado().getPrioridade().getDescricao())
+                        .nameStatus(sol.getChamado().getStatus().getDescricao())
                         .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(sol.getImageSolution().getImageData())))
                         .recommendations(recommendation.stream()
                                 .map(rec -> RecommendationResponseDTO.builder()
@@ -75,14 +77,18 @@ public class SolutionService {
     }
     public List<SolutionResponseDTO> getSolutionsByTicketId(Integer ticketID) {
         List<Recommendation> recommendation = recommendationRepository.findAllBySolution_Chamado_Id(ticketID);
+        Tecnico tecnico = chamadoRepository.findById(ticketID).orElseThrow(() -> new RuntimeException("no existe el ticket")).getTecnico();
         return solutionRepository.findByChamado_Id(ticketID)
                 .stream()
                 .map(sol -> SolutionResponseDTO.builder()
                         .id(sol.getId())
                         .productId(sol.getChamado().getProduct().getId())
+                        .technicalName(tecnico.getNome())
                         .summary(sol.getSummary())
                         .status(sol.isStatus())
                         .title(sol.getTitle())
+                        .priority(sol.getChamado().getPrioridade().getDescricao())
+                        .nameStatus(sol.getChamado().getStatus().getDescricao())
                         .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(sol.getImageSolution().getImageData())))
                         .recommendations(recommendation.stream()
                                 .map(rec -> RecommendationResponseDTO.builder()
@@ -114,6 +120,8 @@ public class SolutionService {
                         .summary(sol.getSummary())
                         .status(sol.isStatus())
                         .title(sol.getTitle())
+                        .priority(sol.getChamado().getPrioridade().getDescricao())
+                        .nameStatus(sol.getChamado().getStatus().getDescricao())
                         .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(sol.getImageSolution().getImageData())))
                         .recommendations(recommendation.stream()
                                 .map(rec -> RecommendationResponseDTO.builder()
