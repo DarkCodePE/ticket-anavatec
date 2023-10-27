@@ -32,7 +32,7 @@ public class TecnicoDTO implements Serializable{
 
     public TecnicoDTO(){
         super();
-        addPerfil(Perfil.CLIENTE);
+        addPerfil(Perfil.TECNICO);
     }
 
     public TecnicoDTO(Tecnico obj) {

@@ -47,6 +47,9 @@ public class ProductService extends BaseService<Product, Integer, ProductReposit
                    .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(productDB.getImage().getImageData()))).build();
         }).toList();
     }
+    public List<ProductCategory> getAllCategories() {
+        return productCategoryRepository.findAll();
+    }
     /**
      * Finds a user in the database by sku
      */

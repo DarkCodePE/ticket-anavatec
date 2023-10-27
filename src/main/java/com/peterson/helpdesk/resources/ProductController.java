@@ -2,6 +2,7 @@ package com.peterson.helpdesk.resources;
 
 import com.peterson.helpdesk.domain.Image;
 import com.peterson.helpdesk.domain.Product;
+import com.peterson.helpdesk.domain.ProductCategory;
 import com.peterson.helpdesk.domain.dtos.ProductListDTO;
 import com.peterson.helpdesk.domain.dtos.ProductRequestDTO;
 import com.peterson.helpdesk.services.ProductService;
@@ -29,6 +30,11 @@ public class ProductController {
     public ResponseEntity<List<ProductListDTO>>  getAllProduct(){
         return ResponseEntity.status(HttpStatus.OK)
                 .body(productService.products());
+    }
+    @GetMapping("/categories")
+    public ResponseEntity<List<ProductCategory>>  getAllCategories(){
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(productService.getAllCategories());
     }
     @PostMapping("/create")
     public ResponseEntity<List<ProductListDTO>> saveProduct(@RequestPart ProductRequestDTO productRequestDTO, @RequestPart MultipartFile file) throws IOException {
