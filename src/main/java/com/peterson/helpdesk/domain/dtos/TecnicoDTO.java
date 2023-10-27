@@ -17,13 +17,13 @@ public class TecnicoDTO implements Serializable{
     private static final long serialVersionUID = 1L;
 
     protected Integer id;
-    @NotNull(message = "O campo NOME é requerido")
+    @NotNull(message = "el campo NOMBRE es requerido")
     protected String nome;
-    @NotNull(message = "O campo CPF é requerido")
+    @NotNull(message = "el campo CPF es requerido")
     protected String cpf;
-    @NotNull(message = "O campo EMAIL é requerido")
+    @NotNull(message = "el campo EMAIL es requerido")
     protected String email;
-    @NotNull(message = "O campo SENHA é requerido")
+    @NotNull(message = "el campo contraseña es requerido")
     protected String senha;
     protected Set<Integer> perfis = new HashSet<>();
 
