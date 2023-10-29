@@ -106,4 +106,18 @@ public class ProductService extends BaseService<Product, Integer, ProductReposit
 
     }
 
+    @Transactional
+    public List<ProductCategory> createOrUpdateCategory(ProductCategory productCategory) {
+        try {
+            productCategoryRepository.save(productCategory);
+        }catch (Exception e){
+            log.error("Error", e);
+        }
+
+        return productCategoryRepository.findAll();
+    }
+    public  List<ProductCategory> deleteCategory(Integer id) {
+        productCategoryRepository.deleteById(id);
+        return productCategoryRepository.findAll();
+    }
 }

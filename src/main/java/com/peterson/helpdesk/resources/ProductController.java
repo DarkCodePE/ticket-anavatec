@@ -58,4 +58,16 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(image);
     }
+    @PostMapping("/category/create")
+    public ResponseEntity<List<ProductCategory>> saveCategory(@Valid @RequestBody ProductCategory productCategory){
+        List<ProductCategory> categories = productService.createOrUpdateCategory(productCategory);
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(categories);
+    }
+    @GetMapping("/delete/category")
+    public ResponseEntity<List<ProductCategory>> deleteCategory(@RequestParam("id") Integer id){
+        List<ProductCategory> categories = productService.deleteCategory(id);
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(categories);
+    }
 }
