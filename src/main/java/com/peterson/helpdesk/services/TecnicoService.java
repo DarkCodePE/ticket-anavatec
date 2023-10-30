@@ -1,8 +1,11 @@
 package com.peterson.helpdesk.services;
 
 import com.peterson.helpdesk.domain.Pessoa;
+import com.peterson.helpdesk.domain.Profile;
+import com.peterson.helpdesk.domain.dtos.ProfileRequestDTO;
 import com.peterson.helpdesk.domain.dtos.TecnicoDTO;
 import com.peterson.helpdesk.repositories.PessoaRepository;
+import com.peterson.helpdesk.repositories.ProfileRepository;
 import com.peterson.helpdesk.repositories.TecnicoRepository;
 import com.peterson.helpdesk.services.exceptions.DataIntegrityViolationException;
 import com.peterson.helpdesk.services.exceptions.ObjectnotFoundException;
@@ -12,6 +15,7 @@ import org.springframework.stereotype.Service;
 import com.peterson.helpdesk.domain.Tecnico;
 
 import javax.validation.Valid;
+import java.sql.Timestamp;
 import java.util.Optional;
 import java.util.List;
 
@@ -22,6 +26,8 @@ public class TecnicoService {
     private TecnicoRepository repository;
     @Autowired
     private PessoaRepository pessoaRepository;
+    @Autowired
+    private ProfileRepository profileRepository;
     @Autowired
     private BCryptPasswordEncoder encoder;
 
@@ -39,6 +45,9 @@ public class TecnicoService {
         objDTO.setSenha(encoder.encode(objDTO.getSenha()));
         validaPorCpfEEmail(objDTO);
         Tecnico newObj = new Tecnico(objDTO);
+        Profile profile = new Profile();
+        profile.setCreatedAt(new Timestamp(System.currentTimeMillis()));
+        newObj.setProfile(profile);
         return repository.save(newObj);
     }
     public Tecnico findByEmail(String email) {
@@ -79,6 +88,28 @@ public class TecnicoService {
         }
     }
 
-
-
+    //getProfileById
+    public Profile findProfileById(Integer id) {
+        return profileRepository.findByTecnico_Id(id).orElseThrow(() -> new ObjectnotFoundException("Tecnico es no encontrado! id: " + id));
+    }
+    //saveProfile
+    public Profile saveProfile(ProfileRequestDTO obj) {
+        Profile profile = new Profile();
+        profile.setTecnico(repository.getReferenceById(obj.getTecnicoId()));
+        profile.setAddress(obj.getAddress());
+        profile.setResume(obj.getResume());
+        profile.setPhone(obj.getPhone());
+        profile.setBirthDate(obj.getBirthDate());
+        profile.setCreatedAt(new Timestamp(System.currentTimeMillis()));
+        return profileRepository.save(profile);
+    }
+    //updateProfile
+    public Profile updateProfile(Integer id, ProfileRequestDTO obj) {
+        Profile profile = profileRepository.findByTecnico_Id(id).orElseThrow(() -> new ObjectnotFoundException("Tecnico es no encontrado! id: " + id));
+        profile.setAddress(obj.getAddress());
+        profile.setResume(obj.getResume());
+        profile.setPhone(obj.getPhone());
+        profile.setBirthDate(obj.getBirthDate());
+        return profileRepository.save(profile);
+    }
 }

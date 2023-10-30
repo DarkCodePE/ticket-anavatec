@@ -1,6 +1,8 @@
 package com.peterson.helpdesk.resources;
 
+import com.peterson.helpdesk.domain.Profile;
 import com.peterson.helpdesk.domain.Tecnico;
+import com.peterson.helpdesk.domain.dtos.ProfileRequestDTO;
 import com.peterson.helpdesk.domain.dtos.TecnicoDTO;
 import com.peterson.helpdesk.services.TecnicoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -61,6 +63,19 @@ public class TecnicoResource {
         return ResponseEntity.noContent().build();
     }
 
-
-
+    @GetMapping(value = "/profile")
+    public ResponseEntity<Profile> findProfile(@RequestParam Integer id) {
+        Profile profile = service.findProfileById(id);
+        return ResponseEntity.ok().body(profile);
+    }
+    @PostMapping(value = "/profile")
+    public ResponseEntity<Profile> createProfile(@RequestBody ProfileRequestDTO requestDTO) {
+        Profile newProfile = service.saveProfile(requestDTO);
+        return ResponseEntity.ok().body(newProfile);
+    }
+    @PutMapping(value = "/profile/{id}")
+    public ResponseEntity<Profile> updateProfile(@PathVariable Integer id, @RequestBody ProfileRequestDTO requestDTO) {
+        Profile newProfile = service.updateProfile(id, requestDTO);
+        return ResponseEntity.ok().body(newProfile);
+    }
 }
