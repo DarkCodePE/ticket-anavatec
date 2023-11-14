@@ -27,7 +27,6 @@ public class Profile {
     private String resume;
 
     @Column(name = "phone", unique = true)
-    @NotBlank(message = "phone can not be blank")
     private String phone;
 
     @Column(name = "birth_date")
@@ -35,7 +34,12 @@ public class Profile {
 
     private String address;
 
-    @OneToOne(mappedBy="profile", cascade = CascadeType.ALL)
+    @Lob
+    @Column(name = "avatar", length = 1000)
+    private byte[] avatar;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name="tecnico_id")
     @JsonIgnore
     private Tecnico tecnico;
 

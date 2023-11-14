@@ -125,7 +125,6 @@ public class ChamadoService {
         int total = chamados.size();
         int totalSolved = chamados.stream().filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO)).collect(Collectors.toList()).size();
         List<Tecnico> tecnicos = chamados.stream().map(Chamado::getTecnico).toList();
-        HashMap<String, Integer> map = new HashMap<>();
         List<TopTecnicoDTO> topTecnicoDTOS = chamados.stream()
                 .filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO))
                 .map(ticket -> TopTecnicoDTO.builder()

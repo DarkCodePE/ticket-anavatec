@@ -5,13 +5,16 @@ import com.peterson.helpdesk.domain.Tecnico;
 import com.peterson.helpdesk.domain.dtos.ProfileRequestDTO;
 import com.peterson.helpdesk.domain.dtos.TecnicoDTO;
 import com.peterson.helpdesk.services.TecnicoService;
+import com.peterson.helpdesk.util.ImageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
+import java.io.IOException;
 import java.net.URI;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,6 +36,9 @@ public class TecnicoResource {
     @GetMapping(value = "/email")
     public ResponseEntity<TecnicoDTO> findByEmail(@RequestParam String email) {
         Tecnico obj = this.service.findByEmail(email);
+        if (obj.getProfile() != null){
+            obj.getProfile().setAvatar(ImageUtil.decompressImage(obj.getProfile().getAvatar()));
+        }
         return ResponseEntity.ok().body(new TecnicoDTO(obj));
     }
     @GetMapping
@@ -69,7 +75,7 @@ public class TecnicoResource {
         return ResponseEntity.ok().body(profile);
     }
     @PostMapping(value = "/profile")
-    public ResponseEntity<Profile> createProfile(@RequestBody ProfileRequestDTO requestDTO) {
+    public ResponseEntity<Profile> createProfile(@Valid @RequestBody ProfileRequestDTO requestDTO) {
         Profile newProfile = service.saveProfile(requestDTO);
         return ResponseEntity.ok().body(newProfile);
     }
@@ -77,5 +83,19 @@ public class TecnicoResource {
     public ResponseEntity<Profile> updateProfile(@PathVariable Integer id, @RequestBody ProfileRequestDTO requestDTO) {
         Profile newProfile = service.updateProfile(id, requestDTO);
         return ResponseEntity.ok().body(newProfile);
+    }
+    @PostMapping(value = "/upload/avatar")
+    public ResponseEntity<TecnicoDTO> updateProfileAvatar(@RequestPart String email, @RequestPart MultipartFile file) throws IOException {
+        Tecnico newProfile = service.uploadAvatar(email, file);
+        if (newProfile.getProfile() != null){
+            newProfile.getProfile().setAvatar(ImageUtil.decompressImage(newProfile.getProfile().getAvatar()));
+        }
+        return ResponseEntity.ok().body(new TecnicoDTO(newProfile));
+    }
+    @GetMapping(value = "/profile/email")
+    public ResponseEntity<Profile> findProfileByEmail(@RequestParam String email) {
+        Profile profile = service.getProfileByTechnicianEmail(email);
+        profile.setAvatar(ImageUtil.decompressImage(profile.getAvatar()));
+        return ResponseEntity.ok().body(profile);
     }
 }

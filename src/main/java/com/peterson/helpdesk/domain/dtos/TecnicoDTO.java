@@ -1,6 +1,7 @@
 package com.peterson.helpdesk.domain.dtos;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.peterson.helpdesk.domain.Profile;
 import com.peterson.helpdesk.domain.Tecnico;
 import com.peterson.helpdesk.domain.enums.Perfil;
 
@@ -27,6 +28,7 @@ public class TecnicoDTO implements Serializable{
     protected String senha;
     protected Set<Integer> perfis = new HashSet<>();
 
+    protected Profile profile;
     @JsonFormat(pattern = "dd/MM/yyyy")
     protected LocalDate dataCriacao = LocalDate.now();
 
@@ -42,6 +44,7 @@ public class TecnicoDTO implements Serializable{
         this.email = obj.getEmail();
         this.senha = obj.getSenha();
         this.perfis = obj.getPerfis().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
+        this.profile = obj.getProfile();
         this.dataCriacao = obj.getDataCriacao();
         addPerfil(Perfil.CLIENTE);
     }
@@ -92,6 +95,14 @@ public class TecnicoDTO implements Serializable{
 
     public void addPerfil(Perfil perfil) {
         this.perfis.add(perfil.getCodigo());
+    }
+
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 
     public LocalDate getDataCriacao() {

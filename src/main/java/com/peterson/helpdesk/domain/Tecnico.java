@@ -21,8 +21,7 @@ public class Tecnico extends Pessoa{
     @OneToMany(mappedBy = "tecnico")
     private List<Chamado> chamados = new ArrayList<>();
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name="profile_id")
+    @OneToOne(mappedBy="tecnico", cascade = CascadeType.ALL)
     private Profile profile;
 
     public Tecnico() {
