@@ -45,6 +45,6 @@ public class Profile {
 
     @CreationTimestamp
     @NotNull(message = "createdAt can not be null")
-    @Column(name = "created_at", nullable = false,insertable = false, updatable = false)
+    @Column(name = "created_at", nullable = false, updatable = false)
     private Timestamp createdAt = new Timestamp(System.currentTimeMillis());
 }

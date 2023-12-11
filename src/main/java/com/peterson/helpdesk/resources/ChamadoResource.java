@@ -3,6 +3,7 @@ package com.peterson.helpdesk.resources;
 import com.peterson.helpdesk.domain.Chamado;
 import com.peterson.helpdesk.domain.dtos.ChamadoDTO;
 import com.peterson.helpdesk.domain.dtos.ChamadoExpiredDTO;
+import com.peterson.helpdesk.domain.dtos.ChartPieDTO;
 import com.peterson.helpdesk.domain.dtos.TopDTO;
 import com.peterson.helpdesk.services.ChamadoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +13,9 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @RestController
@@ -56,5 +59,30 @@ public class ChamadoResource {
     public ResponseEntity<TopDTO> findTop() {
         TopDTO list = service.topTecnicoByChamados();
         return ResponseEntity.ok().body(list);
+    }
+    @GetMapping(value = "/total/created")
+    public ResponseEntity<Integer> findByCreate() {
+        Integer quantity =  service.totalTicketsCreate();
+        return ResponseEntity.ok().body(quantity);
+    }
+    @GetMapping(value = "/total/assigned")
+    public ResponseEntity<Integer> findByAssigned() {
+        Integer quantity =  service.totalTicketsAssigned();
+        return ResponseEntity.ok().body(quantity);
+    }
+    @GetMapping(value = "/total/resolved")
+    public ResponseEntity<Integer> findByResolved() {
+        Integer quantity =  service.totalTicketsAssigned();
+        return ResponseEntity.ok().body(quantity);
+    }
+    @GetMapping(value = "/chart/assigned")
+    public ResponseEntity<ChartPieDTO> findByCharAssigned() {
+        Map<String, Integer> ticketsAssignedByTechnician = service.getTicketsAssignedByTechnician();
+        List<String> labels = new ArrayList<>(ticketsAssignedByTechnician.keySet());
+        List<Integer> series = new ArrayList<>(ticketsAssignedByTechnician.values());
+        return ResponseEntity.ok().body(ChartPieDTO.builder()
+                .labels(labels)
+                .series(series)
+                .build());
     }
 }

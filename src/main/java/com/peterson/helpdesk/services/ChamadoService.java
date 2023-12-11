@@ -20,10 +20,7 @@ import org.springframework.stereotype.Service;
 import javax.validation.Valid;
 import java.nio.file.LinkOption;
 import java.time.LocalDate;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
-import java.util.Random;
+import java.util.*;
 import java.util.stream.Collectors;
 
 import static java.time.temporal.ChronoUnit.DAYS;
@@ -124,22 +121,57 @@ public class ChamadoService {
         List<Chamado> chamados = repository.findAll();
         int total = chamados.size();
         int totalSolved = chamados.stream().filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO)).collect(Collectors.toList()).size();
-        List<Tecnico> tecnicos = chamados.stream().map(Chamado::getTecnico).toList();
-        List<TopTecnicoDTO> topTecnicoDTOS = chamados.stream()
-                .filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO))
-                .map(ticket -> TopTecnicoDTO.builder()
-                        .quantidade(repository.findByTecnico_Id(ticket.getTecnico().getId()).stream().filter(ticket1 -> ticket1.getStatus().equals(Status.ENCERRADO)).toList().size())
-                        .nome(ticket.getTecnico().getNome())
-                        .email(ticket.getTecnico().getEmail())
-                        .build())
-                .toList();
 
         //Total de ticketResuelto por tecnico
+        Map<Tecnico, Long> ticketsSolvedByTechnician = chamados.stream()
+                .filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO))
+                .collect(Collectors.groupingBy(Chamado::getTecnico, Collectors.counting()));
+
+        List<TopTecnicoDTO> topTecnicoDTOS = new ArrayList<>();
+        for (Map.Entry<Tecnico, Long> entry : ticketsSolvedByTechnician.entrySet()) {
+            topTecnicoDTOS.add(TopTecnicoDTO.builder()
+                    .quantidade(entry.getValue().intValue())
+                    .nome(entry.getKey().getNome())
+                    .email(entry.getKey().getEmail())
+                    .build());
+        }
+
         return TopDTO.builder()
                 .total(total)
                 .totalSolved(totalSolved)
-                .totalTechnician(tecnicos.size())
+                .totalTechnician(ticketsSolvedByTechnician.size())
                 .topTechnician(topTecnicoDTOS)
                 .build();
+    }
+    //total tickets create
+    public Integer totalTicketsCreate(){
+        List<Chamado> chamados = repository.findAll();
+        return chamados.size();
+    }
+    //total close tickets
+    public Integer totalTicketsClose(){
+        List<Chamado> chamados = repository.findAll();
+        return chamados.stream().filter(ticket -> ticket.getStatus().equals(Status.ENCERRADO)).collect(Collectors.toList()).size();
+    }
+    //totalTicketsAssigned
+    public Integer totalTicketsAssigned(){
+        List<Chamado> chamados = repository.findAll();
+        return chamados.stream().filter(ticket -> ticket.getStatus().equals(Status.ANDAMENTO)).collect(Collectors.toList()).size();
+    }
+    public Map<String, Integer> getTicketsAssignedByTechnician() {
+        // Obtén todos los tickets
+        List<Chamado> tickets = repository.findAll();
+
+        // Agrupa los tickets por técnico y cuenta cuántos tickets tiene cada técnico
+        Map<Tecnico, Long> ticketsByTechnician = tickets.stream()
+            .collect(Collectors.groupingBy(Chamado::getTecnico, Collectors.counting()));
+
+        // Crea un nuevo mapa con los nombres de los técnicos y la cantidad de tickets
+        Map<String, Integer> result = new HashMap<>();
+        for (Map.Entry<Tecnico, Long> entry : ticketsByTechnician.entrySet()) {
+            result.put(entry.getKey().getNome(), entry.getValue().intValue());
+        }
+
+        return result;
     }
 }

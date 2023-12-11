@@ -46,7 +46,7 @@ public class TecnicoService {
         return repository.findAll();
     }
 
-    public Tecnico create(TecnicoDTO objDTO) {
+    public Optional<Tecnico> create(TecnicoDTO objDTO) {
         objDTO.setId(null);
         objDTO.setSenha(encoder.encode(objDTO.getSenha()));
         validaPorCpfEEmail(objDTO);
@@ -54,7 +54,8 @@ public class TecnicoService {
         Profile profile = new Profile();
         profile.setCreatedAt(new Timestamp(System.currentTimeMillis()));
         newObj.setProfile(profile);
-        return repository.save(newObj);
+        Tecnico tecDB = repository.save(newObj);
+        return Optional.of(tecDB);
     }
     public Tecnico findByEmail(String email) {
         return repository.findByEmail(email).orElseThrow(() -> new ObjectnotFoundException("tecnico no encontrado! email: " + email));
