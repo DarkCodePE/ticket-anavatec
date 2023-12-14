@@ -29,10 +29,8 @@ public class DBService {
 
     public void instanciaDB() {
         ProductCategory productCategory = new ProductCategory();
-        productCategory.setId(1);
         productCategory.setName("Micrófonos y sonido");
         ProductCategory productCategory2 = new ProductCategory();
-        productCategory2.setId(2);
         productCategory2.setName("Adaptadores Hub");
 
         Tecnico tec1 = new Tecnico(null, "Valdir Cezar", "550.482.150-95", "valdir@gmail.com", encoder.encode("123"));
