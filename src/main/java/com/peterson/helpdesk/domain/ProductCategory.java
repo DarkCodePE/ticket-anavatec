@@ -10,9 +10,10 @@ public class ProductCategory {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
+    private static int counter = 3;
 
-    public ProductCategory(Integer id, String name) {
-        this.id = id;
+    public ProductCategory(String name) {
+        this.id = counter++;
         this.name = name;
     }
     public ProductCategory() {
