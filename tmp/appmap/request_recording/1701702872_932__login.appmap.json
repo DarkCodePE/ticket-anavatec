@@ -1,0 +1,349 @@
+{
+  "events": [
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTAuthenticationFilter",
+      "event": "call",
+      "id": 1,
+      "lineno": 34,
+      "method_id": "attemptAuthentication",
+      "parameters": [
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest",
+          "kind": "req",
+          "name": "request",
+          "object_id": 1395716228,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@5330f084"
+        },
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse",
+          "kind": "req",
+          "name": "response",
+          "object_id": 2044132874,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@79d6fe0a"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTAuthenticationFilter",
+        "object_id": 1158520066,
+        "value": "com.peterson.helpdesk.security.JWTAuthenticationFilter@450d9d02"
+      },
+      "static": false,
+      "thread_id": 41
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+      "event": "call",
+      "id": 2,
+      "lineno": 13,
+      "method_id": "setEmail",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 1869677015,
+          "value": "wibej64438@ratedane.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+        "object_id": 388117545,
+        "value": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO@17223429"
+      },
+      "static": false,
+      "thread_id": 41
+    },
+    {
+      "elapsed": 0.00244605,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "thread_id": 41
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+      "event": "call",
+      "id": 4,
+      "lineno": 21,
+      "method_id": "setSenha",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "senha",
+          "object_id": 953413652,
+          "value": "$$aNPROG1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+        "object_id": 388117545,
+        "value": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO@17223429"
+      },
+      "static": false,
+      "thread_id": 41
+    },
+    {
+      "elapsed": 0.00010055,
+      "event": "return",
+      "id": 5,
+      "parent_id": 4,
+      "thread_id": 41
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+      "event": "call",
+      "id": 6,
+      "lineno": 22,
+      "method_id": "loadUserByUsername",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 1869677015,
+          "value": "wibej64438@ratedane.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+        "object_id": 1507419114,
+        "value": "com.peterson.helpdesk.services.UserDetailServiceImpl@59d963ea"
+      },
+      "static": false,
+      "thread_id": 41
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.PessoaRepository",
+      "event": "call",
+      "id": 7,
+      "lineno": -1,
+      "method_id": "findByEmail",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 1869677015,
+          "value": "wibej64438@ratedane.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy151",
+        "object_id": 1632567800,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@64f24e4b"
+      },
+      "static": false,
+      "thread_id": 41
+    },
+    {
+      "event": "call",
+      "id": 8,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+      },
+      "thread_id": 41
+    },
+    {
+      "elapsed": 0.00025046,
+      "event": "return",
+      "id": 9,
+      "parent_id": 8,
+      "thread_id": 41
+    },
+    {
+      "elapsed": 0.0070247,
+      "event": "return",
+      "id": 10,
+      "parent_id": 7,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 1055662468,
+        "value": "Optional.empty"
+      },
+      "thread_id": 41
+    },
+    {
+      "elapsed": 0.00826083,
+      "event": "return",
+      "exceptions": [
+        {
+          "class": "org.springframework.security.core.userdetails.UsernameNotFoundException",
+          "lineno": 26,
+          "message": "wibej64438@ratedane.com",
+          "object_id": 1596464043,
+          "path": "UserDetailServiceImpl.java"
+        }
+      ],
+      "id": 11,
+      "parent_id": 6,
+      "thread_id": 41
+    },
+    {
+      "elapsed": 0.0318286,
+      "event": "return",
+      "exceptions": [
+        {
+          "class": "java.lang.RuntimeException",
+          "lineno": 39,
+          "message": "org.springframework.security.authentication.BadCredentialsException: Bad credentials",
+          "object_id": 807751217,
+          "path": "JWTAuthenticationFilter.java"
+        },
+        {
+          "class": "org.springframework.security.authentication.BadCredentialsException",
+          "lineno": 141,
+          "message": "Bad credentials",
+          "object_id": 1121449321,
+          "path": "AbstractUserDetailsAuthenticationProvider.java"
+        }
+      ],
+      "id": 12,
+      "parent_id": 1,
+      "thread_id": 41
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "POST /login (UNKNOWN) - 10:14:32.932",
+    "app": "helpdesk",
+    "language": {
+      "name": "java",
+      "version": "17.0.7+7-LTS",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {},
+    "git": {
+      "repository": "https://github.com/DarkCodePE/ticket-anavatec.git",
+      "branch": "DEVELOP_3"
+    }
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "setEmail",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java:13"
+                            },
+                            {
+                              "name": "setSenha",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java:21"
+                            }
+                          ],
+                          "name": "CredenciaisDTO",
+                          "type": "class"
+                        }
+                      ],
+                      "name": "dtos",
+                      "type": "package"
+                    }
+                  ],
+                  "name": "domain",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "loadUserByUsername",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22"
+                        }
+                      ],
+                      "name": "UserDetailServiceImpl",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "services",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "attemptAuthentication",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java:34"
+                        }
+                      ],
+                      "name": "JWTAuthenticationFilter",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "security",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "findByEmail",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java:-1"
+                        }
+                      ],
+                      "name": "PessoaRepository",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "repositories",
+                  "type": "package"
+                }
+              ],
+              "name": "helpdesk",
+              "type": "package"
+            }
+          ],
+          "name": "peterson",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+        }
+      ]
+    }
+  ]
+}

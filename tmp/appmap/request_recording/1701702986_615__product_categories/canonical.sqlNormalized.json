@@ -1,0 +1,3 @@
+[
+  "select productcat0_.id as id1_6_, productcat0_.name as name2_6_ from product_categories productcat0_"
+]

@@ -1,0 +1,65 @@
+[
+  {
+    "class": "javax.persistence.RollbackException",
+    "message": "Error while committing the transaction",
+    "stack": [
+      "ExceptionConverterImpl.java:81",
+      "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+    ],
+    "location": "ExceptionConverterImpl.java:81"
+  },
+  {
+    "class": "javax.persistence.RollbackException",
+    "message": "Error while committing the transaction",
+    "stack": [
+      "ExceptionConverterImpl.java:81",
+      "src/main/java/com/peterson/helpdesk/services/ProductService.java:61",
+      "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+    ],
+    "location": "ExceptionConverterImpl.java:81"
+  },
+  {
+    "class": "javax.validation.ConstraintViolationException",
+    "message": "Validation failed for classes [com.peterson.helpdesk.domain.Product] during update time for groups [javax.validation.groups.Default, ]\nList of constraint violations:[\n\tConstraintViolationImpl{interpolatedMessage='Sort summary can not be blank', propertyPath=summary, rootBeanClass=class com.peterson.helpdesk.domain.Product, messageTemplate='Sort summary can not be blank'}\n]",
+    "stack": [
+      "BeanValidationEventListener.java:140",
+      "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+    ],
+    "location": "BeanValidationEventListener.java:140"
+  },
+  {
+    "class": "javax.validation.ConstraintViolationException",
+    "message": "Validation failed for classes [com.peterson.helpdesk.domain.Product] during update time for groups [javax.validation.groups.Default, ]\nList of constraint violations:[\n\tConstraintViolationImpl{interpolatedMessage='Sort summary can not be blank', propertyPath=summary, rootBeanClass=class com.peterson.helpdesk.domain.Product, messageTemplate='Sort summary can not be blank'}\n]",
+    "stack": [
+      "BeanValidationEventListener.java:140",
+      "src/main/java/com/peterson/helpdesk/services/ProductService.java:61",
+      "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+    ],
+    "location": "BeanValidationEventListener.java:140"
+  },
+  {
+    "class": "org.springframework.transaction.TransactionSystemException",
+    "message": "Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction",
+    "stack": [
+      "JpaTransactionManager.java:571",
+      "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+    ],
+    "location": "JpaTransactionManager.java:571"
+  },
+  {
+    "class": "org.springframework.transaction.TransactionSystemException",
+    "message": "Could not commit JPA transaction; nested exception is javax.persistence.RollbackException: Error while committing the transaction",
+    "stack": [
+      "JpaTransactionManager.java:571",
+      "src/main/java/com/peterson/helpdesk/services/ProductService.java:61",
+      "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+    ],
+    "location": "JpaTransactionManager.java:571"
+  }
+]

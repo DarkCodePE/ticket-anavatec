@@ -1,0 +1,12 @@
+[
+  "com/peterson/helpdesk/domain/Chamado",
+  "com/peterson/helpdesk/domain/ImageSolution",
+  "com/peterson/helpdesk/domain/Pessoa",
+  "com/peterson/helpdesk/domain/Solution",
+  "com/peterson/helpdesk/domain/dtos/SolutionListDTO",
+  "com/peterson/helpdesk/domain/dtos/SolutionListDTO$SolutionListDTOBuilder",
+  "com/peterson/helpdesk/domain/dtos/SolutionRequestDTO",
+  "com/peterson/helpdesk/resources/SolutionController",
+  "com/peterson/helpdesk/services/SolutionService",
+  "com/peterson/helpdesk/util/ImageUtil"
+]

@@ -1,0 +1,10 @@
+[
+  "com/peterson/helpdesk/domain/Image",
+  "com/peterson/helpdesk/domain/Product",
+  "com/peterson/helpdesk/domain/dtos/ProductRequestDTO",
+  "com/peterson/helpdesk/repositories/ImageRepository",
+  "com/peterson/helpdesk/repositories/ProductRepository",
+  "com/peterson/helpdesk/resources/ProductController",
+  "com/peterson/helpdesk/services/ProductService",
+  "com/peterson/helpdesk/util/ImageUtil"
+]

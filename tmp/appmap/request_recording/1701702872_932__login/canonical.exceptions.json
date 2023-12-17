@@ -1,0 +1,30 @@
+[
+  {
+    "class": "java.lang.RuntimeException",
+    "message": "org.springframework.security.authentication.BadCredentialsException: Bad credentials",
+    "stack": [
+      "JWTAuthenticationFilter.java:39",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java:34"
+    ],
+    "location": "JWTAuthenticationFilter.java:39"
+  },
+  {
+    "class": "org.springframework.security.authentication.BadCredentialsException",
+    "message": "Bad credentials",
+    "stack": [
+      "AbstractUserDetailsAuthenticationProvider.java:141",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java:34"
+    ],
+    "location": "AbstractUserDetailsAuthenticationProvider.java:141"
+  },
+  {
+    "class": "org.springframework.security.core.userdetails.UsernameNotFoundException",
+    "message": "wibej64438@ratedane.com",
+    "stack": [
+      "UserDetailServiceImpl.java:26",
+      "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22",
+      "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java:34"
+    ],
+    "location": "UserDetailServiceImpl.java:26"
+  }
+]

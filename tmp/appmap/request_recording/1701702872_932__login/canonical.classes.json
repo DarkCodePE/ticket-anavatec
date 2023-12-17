@@ -1,0 +1,6 @@
+[
+  "com/peterson/helpdesk/domain/dtos/CredenciaisDTO",
+  "com/peterson/helpdesk/repositories/PessoaRepository",
+  "com/peterson/helpdesk/security/JWTAuthenticationFilter",
+  "com/peterson/helpdesk/services/UserDetailServiceImpl"
+]

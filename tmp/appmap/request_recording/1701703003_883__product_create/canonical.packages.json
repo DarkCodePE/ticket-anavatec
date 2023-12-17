@@ -1,0 +1,8 @@
+[
+  "com/peterson/helpdesk/domain",
+  "com/peterson/helpdesk/domain/dtos",
+  "com/peterson/helpdesk/repositories",
+  "com/peterson/helpdesk/resources",
+  "com/peterson/helpdesk/services",
+  "com/peterson/helpdesk/util"
+]

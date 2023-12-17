@@ -1,0 +1,10 @@
+[
+  {
+    "caller": "GET /product/categories",
+    "callee": "select productcat0_.id as id1_6_, productcat0_.name as name2_6_ from product_categories productcat0_"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "GET /product/categories"
+  }
+]

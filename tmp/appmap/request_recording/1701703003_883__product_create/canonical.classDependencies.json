@@ -1,0 +1,34 @@
+[
+  {
+    "caller": "POST /product/create",
+    "callee": "com/peterson"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "POST /product/create"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select image0_.id as id1_3_, image0_.imagedata as imagedat2_3_, image0_.name as name3_3_, image0_.type as type4_3_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id where product1_.product_id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select image0_.id as id1_3_0_, image0_.imagedata as imagedat2_3_0_, image0_.name as name3_3_0_, image0_.type as type4_3_0_, product1_.product_id as product_1_7_1_, product1_.category_id as category7_7_1_, product1_.image_id as image_id8_7_1_, product1_.price as price2_7_1_, product1_.sku as sku3_7_1_, product1_.status as status4_7_1_, product1_.summary as summary5_7_1_, product1_.title as title6_7_1_, productcat2_.id as id1_6_2_, productcat2_.name as name2_6_2_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id left outer join product_categories productcat2_ on product1_.category_id=productcat2_.id where image0_.id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select product0_.product_id as product_1_7_, product0_.category_id as category7_7_, product0_.image_id as image_id8_7_, product0_.price as price2_7_, product0_.sku as sku3_7_, product0_.status as status4_7_, product0_.summary as summary5_7_, product0_.title as title6_7_ from products product0_ where product0_.sku=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select product0_.product_id as product_1_7_2_, product0_.category_id as category7_7_2_, product0_.image_id as image_id8_7_2_, product0_.price as price2_7_2_, product0_.sku as sku3_7_2_, product0_.status as status4_7_2_, product0_.summary as summary5_7_2_, product0_.title as title6_7_2_, productcat1_.id as id1_6_0_, productcat1_.name as name2_6_0_, image2_.id as id1_3_1_, image2_.imagedata as imagedat2_3_1_, image2_.name as name3_3_1_, image2_.type as type4_3_1_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.image_id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select productcat0_.id as id1_6_0_, productcat0_.name as name2_6_0_ from product_categories productcat0_ where productcat0_.id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "update images set imagedata=?, name=?, type=? where id=?"
+  }
+]

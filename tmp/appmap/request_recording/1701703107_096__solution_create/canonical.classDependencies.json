@@ -1,0 +1,42 @@
+[
+  {
+    "caller": "POST /solution/create",
+    "callee": "com/peterson"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "POST /solution/create"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "insert into image_solutions (imagedata, name, type) values (?, ?, ?)"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "insert into solutions (chamado_id, image_solution_id, status, summary, title) values (?, ?, ?, ?, ?)"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select chamado0_.id as id1_0_0_, chamado0_.cliente_id as cliente_9_0_0_, chamado0_.data_abertura as data_abe2_0_0_, chamado0_.data_fechamento as data_fec3_0_0_, chamado0_.is_solution as is_solut4_0_0_, chamado0_.observacoes as observac5_0_0_, chamado0_.prioridade as priorida6_0_0_, chamado0_.product_id as product10_0_0_, chamado0_.status as status7_0_0_, chamado0_.tecnico_id as tecnico11_0_0_, chamado0_.titulo as titulo8_0_0_, cliente1_.id as id2_5_1_, cliente1_.cpf as cpf3_5_1_, cliente1_.data_criacao as data_cri4_5_1_, cliente1_.email as email5_5_1_, cliente1_.nome as nome6_5_1_, cliente1_.senha as senha7_5_1_, perfis2_.pessoa_id as pessoa_i1_4_2_, perfis2_.perfis as perfis2_4_2_, product3_.product_id as product_1_7_3_, product3_.category_id as category7_7_3_, product3_.image_id as image_id8_7_3_, product3_.price as price2_7_3_, product3_.sku as sku3_7_3_, product3_.status as status4_7_3_, product3_.summary as summary5_7_3_, product3_.title as title6_7_3_, productcat4_.id as id1_6_4_, productcat4_.name as name2_6_4_, image5_.id as id1_3_5_, image5_.imagedata as imagedat2_3_5_, image5_.name as name3_3_5_, image5_.type as type4_3_5_, tecnico6_.id as id2_5_6_, tecnico6_.cpf as cpf3_5_6_, tecnico6_.data_criacao as data_cri4_5_6_, tecnico6_.email as email5_5_6_, tecnico6_.nome as nome6_5_6_, tecnico6_.senha as senha7_5_6_, profile7_.profile_id as profile_1_8_7_, profile7_.address as address2_8_7_, profile7_.avatar as avatar3_8_7_, profile7_.birth_date as birth_da4_8_7_, profile7_.created_at as created_5_8_7_, profile7_.phone as phone6_8_7_, profile7_.resume as resume7_8_7_, profile7_.tecnico_id as tecnico_8_8_7_ from chamado chamado0_ left outer join personas cliente1_ on chamado0_.cliente_id=cliente1_.id left outer join perfis perfis2_ on cliente1_.id=perfis2_.pessoa_id left outer join products product3_ on chamado0_.product_id=product3_.product_id left outer join product_categories productcat4_ on product3_.category_id=productcat4_.id left outer join images image5_ on product3_.image_id=image5_.id left outer join personas tecnico6_ on chamado0_.tecnico_id=tecnico6_.id left outer join profiles profile7_ on tecnico6_.id=profile7_.tecnico_id where chamado0_.id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select imagesolut0_.id as id1_2_0_, imagesolut0_.imagedata as imagedat2_2_0_, imagesolut0_.name as name3_2_0_, imagesolut0_.type as type4_2_0_, solution1_.solution_id as solution1_11_1_, solution1_.chamado_id as chamado_5_11_1_, solution1_.image_solution_id as image_so6_11_1_, solution1_.status as status2_11_1_, solution1_.summary as summary3_11_1_, solution1_.title as title4_11_1_, chamado2_.id as id1_0_2_, chamado2_.cliente_id as cliente_9_0_2_, chamado2_.data_abertura as data_abe2_0_2_, chamado2_.data_fechamento as data_fec3_0_2_, chamado2_.is_solution as is_solut4_0_2_, chamado2_.observacoes as observac5_0_2_, chamado2_.prioridade as priorida6_0_2_, chamado2_.product_id as product10_0_2_, chamado2_.status as status7_0_2_, chamado2_.tecnico_id as tecnico11_0_2_, chamado2_.titulo as titulo8_0_2_ from image_solutions imagesolut0_ left outer join solutions solution1_ on imagesolut0_.id=solution1_.image_solution_id left outer join chamado chamado2_ on solution1_.chamado_id=chamado2_.id where imagesolut0_.id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select solution0_.solution_id as solution1_11_, solution0_.chamado_id as chamado_5_11_, solution0_.image_solution_id as image_so6_11_, solution0_.status as status2_11_, solution0_.summary as summary3_11_, solution0_.title as title4_11_ from solutions solution0_"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select solution0_.solution_id as solution1_11_5_, solution0_.chamado_id as chamado_5_11_5_, solution0_.image_solution_id as image_so6_11_5_, solution0_.status as status2_11_5_, solution0_.summary as summary3_11_5_, solution0_.title as title4_11_5_, chamado1_.id as id1_0_0_, chamado1_.cliente_id as cliente_9_0_0_, chamado1_.data_abertura as data_abe2_0_0_, chamado1_.data_fechamento as data_fec3_0_0_, chamado1_.is_solution as is_solut4_0_0_, chamado1_.observacoes as observac5_0_0_, chamado1_.prioridade as priorida6_0_0_, chamado1_.product_id as product10_0_0_, chamado1_.status as status7_0_0_, chamado1_.tecnico_id as tecnico11_0_0_, chamado1_.titulo as titulo8_0_0_, cliente2_.id as id2_5_1_, cliente2_.cpf as cpf3_5_1_, cliente2_.data_criacao as data_cri4_5_1_, cliente2_.email as email5_5_1_, cliente2_.nome as nome6_5_1_, cliente2_.senha as senha7_5_1_, product3_.product_id as product_1_7_2_, product3_.category_id as category7_7_2_, product3_.image_id as image_id8_7_2_, product3_.price as price2_7_2_, product3_.sku as sku3_7_2_, product3_.status as status4_7_2_, product3_.summary as summary5_7_2_, product3_.title as title6_7_2_, tecnico4_.id as id2_5_3_, tecnico4_.cpf as cpf3_5_3_, tecnico4_.data_criacao as data_cri4_5_3_, tecnico4_.email as email5_5_3_, tecnico4_.nome as nome6_5_3_, tecnico4_.senha as senha7_5_3_, imagesolut5_.id as id1_2_4_, imagesolut5_.imagedata as imagedat2_2_4_, imagesolut5_.name as name3_2_4_, imagesolut5_.type as type4_2_4_ from solutions solution0_ left outer join chamado chamado1_ on solution0_.chamado_id=chamado1_.id left outer join personas cliente2_ on chamado1_.cliente_id=cliente2_.id left outer join products product3_ on chamado1_.product_id=product3_.product_id left outer join personas tecnico4_ on chamado1_.tecnico_id=tecnico4_.id left outer join image_solutions imagesolut5_ on solution0_.image_solution_id=imagesolut5_.id where solution0_.image_solution_id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "update chamado set cliente_id=?, data_abertura=?, data_fechamento=?, is_solution=?, observacoes=?, prioridade=?, product_id=?, status=?, tecnico_id=?, titulo=? where id=?"
+  }
+]

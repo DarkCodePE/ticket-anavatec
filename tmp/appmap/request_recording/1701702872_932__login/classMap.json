@@ -1,0 +1,114 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "name": "setEmail",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java:13"
+                          },
+                          {
+                            "name": "setSenha",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java:21"
+                          }
+                        ],
+                        "name": "CredenciaisDTO",
+                        "type": "class"
+                      }
+                    ],
+                    "name": "dtos",
+                    "type": "package"
+                  }
+                ],
+                "name": "domain",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "loadUserByUsername",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22"
+                      }
+                    ],
+                    "name": "UserDetailServiceImpl",
+                    "type": "class"
+                  }
+                ],
+                "name": "services",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "attemptAuthentication",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java:34"
+                      }
+                    ],
+                    "name": "JWTAuthenticationFilter",
+                    "type": "class"
+                  }
+                ],
+                "name": "security",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "findByEmail",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java:-1"
+                      }
+                    ],
+                    "name": "PessoaRepository",
+                    "type": "class"
+                  }
+                ],
+                "name": "repositories",
+                "type": "package"
+              }
+            ],
+            "name": "helpdesk",
+            "type": "package"
+          }
+        ],
+        "name": "peterson",
+        "type": "package"
+      }
+    ],
+    "name": "com",
+    "type": "package"
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+      }
+    ]
+  }
+]

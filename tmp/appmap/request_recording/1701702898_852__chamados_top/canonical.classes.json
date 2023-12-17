@@ -1,0 +1,12 @@
+[
+  "com/peterson/helpdesk/domain/Pessoa",
+  "com/peterson/helpdesk/domain/dtos/TopDTO",
+  "com/peterson/helpdesk/domain/dtos/TopDTO$TopDTOBuilder",
+  "com/peterson/helpdesk/domain/dtos/TopTecnicoDTO",
+  "com/peterson/helpdesk/domain/dtos/TopTecnicoDTO$TopTecnicoDTOBuilder",
+  "com/peterson/helpdesk/domain/enums/Prioridade",
+  "com/peterson/helpdesk/domain/enums/Status",
+  "com/peterson/helpdesk/repositories/ChamadoRepository",
+  "com/peterson/helpdesk/resources/ChamadoResource",
+  "com/peterson/helpdesk/services/ChamadoService"
+]

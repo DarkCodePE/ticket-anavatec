@@ -1,0 +1,18 @@
+[
+  {
+    "caller": "GET /clientes",
+    "callee": "com/peterson"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "GET /clientes"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select cliente0_.id as id2_5_, cliente0_.cpf as cpf3_5_, cliente0_.data_criacao as data_cri4_5_, cliente0_.email as email5_5_, cliente0_.nome as nome6_5_, cliente0_.senha as senha7_5_ from personas cliente0_ where cliente0_.dtype='Cliente'"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+  }
+]
