@@ -1,0 +1,9 @@
+[
+  "com/peterson/helpdesk/domain/Pessoa",
+  "com/peterson/helpdesk/domain/dtos/ChamadoExpiredDTO",
+  "com/peterson/helpdesk/domain/dtos/ChamadoExpiredDTO$ChamadoExpiredDTOBuilder",
+  "com/peterson/helpdesk/domain/enums/Prioridade",
+  "com/peterson/helpdesk/domain/enums/Status",
+  "com/peterson/helpdesk/resources/ChamadoResource",
+  "com/peterson/helpdesk/services/ChamadoService"
+]

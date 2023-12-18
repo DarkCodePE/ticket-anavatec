@@ -1,23 +1,16 @@
 package com.peterson.helpdesk.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.util.Objects;
 
 @Entity
 @Table(name="product_categories")
 public class ProductCategory {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String name;
 
-    public ProductCategory(Integer id, String name) {
-        this.id = id;
-        this.name = name;
-    }
     public ProductCategory() {
     }
 

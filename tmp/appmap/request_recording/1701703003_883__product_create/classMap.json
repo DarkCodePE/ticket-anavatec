@@ -1,0 +1,364 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "name": "toEnum",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:24"
+                          },
+                          {
+                            "name": "values",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:3"
+                          }
+                        ],
+                        "name": "Perfil",
+                        "type": "class"
+                      }
+                    ],
+                    "name": "enums",
+                    "type": "package"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "name": "setTitle",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                          },
+                          {
+                            "name": "setSku",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                          },
+                          {
+                            "name": "setCategoryId",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                          },
+                          {
+                            "name": "setSummary",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                          }
+                        ],
+                        "name": "ProductRequestDTO",
+                        "type": "class"
+                      }
+                    ],
+                    "name": "dtos",
+                    "type": "package"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "setSku",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:81"
+                      },
+                      {
+                        "name": "setImage",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:129"
+                      },
+                      {
+                        "name": "setTitle",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:89"
+                      },
+                      {
+                        "name": "setStatus",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:121"
+                      },
+                      {
+                        "name": "setCategory",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:97"
+                      },
+                      {
+                        "name": "setSummary",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:105"
+                      }
+                    ],
+                    "name": "Product",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "addPerfil",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java:99"
+                      }
+                    ],
+                    "name": "Pessoa",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "setImageData",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Image.java:16"
+                      },
+                      {
+                        "name": "setType",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Image.java:16"
+                      },
+                      {
+                        "name": "setName",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Image.java:16"
+                      }
+                    ],
+                    "name": "Image",
+                    "type": "class"
+                  }
+                ],
+                "name": "domain",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "compressImage",
+                        "type": "function",
+                        "static": true,
+                        "location": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java:13"
+                      }
+                    ],
+                    "name": "ImageUtil",
+                    "type": "class"
+                  }
+                ],
+                "name": "util",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "doFilterInternal",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+                      }
+                    ],
+                    "name": "JWTAuthoorizationFilter",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "getUsername",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:66"
+                      },
+                      {
+                        "name": "tokenValido",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:44"
+                      }
+                    ],
+                    "name": "JWTUtil",
+                    "type": "class"
+                  }
+                ],
+                "name": "security",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "findBySku",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/repositories/ProductRepository.java:-1"
+                      }
+                    ],
+                    "name": "ProductRepository",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "findByProduct_Id",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/repositories/ImageRepository.java:-1"
+                      }
+                    ],
+                    "name": "ImageRepository",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "findByEmail",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java:-1"
+                      }
+                    ],
+                    "name": "PessoaRepository",
+                    "type": "class"
+                  }
+                ],
+                "name": "repositories",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "saveProduct",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48"
+                      }
+                    ],
+                    "name": "ProductController",
+                    "type": "class"
+                  }
+                ],
+                "name": "resources",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "loadUserByUsername",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22"
+                      }
+                    ],
+                    "name": "UserDetailServiceImpl",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "createOrUpdateProduct",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/services/ProductService.java:61"
+                      }
+                    ],
+                    "name": "ProductService",
+                    "type": "class"
+                  }
+                ],
+                "name": "services",
+                "type": "package"
+              }
+            ],
+            "name": "helpdesk",
+            "type": "package"
+          }
+        ],
+        "name": "peterson",
+        "type": "package"
+      }
+    ],
+    "name": "com",
+    "type": "package"
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+      },
+      {
+        "type": "query",
+        "name": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+      },
+      {
+        "type": "query",
+        "name": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+      },
+      {
+        "type": "query",
+        "name": "select productcat0_.id as id1_6_0_, productcat0_.name as name2_6_0_ from product_categories productcat0_ where productcat0_.id=?"
+      },
+      {
+        "type": "query",
+        "name": "select product0_.product_id as product_1_7_, product0_.category_id as category7_7_, product0_.image_id as image_id8_7_, product0_.price as price2_7_, product0_.sku as sku3_7_, product0_.status as status4_7_, product0_.summary as summary5_7_, product0_.title as title6_7_ from products product0_ where product0_.sku=?"
+      },
+      {
+        "type": "query",
+        "name": "select image0_.id as id1_3_0_, image0_.imagedata as imagedat2_3_0_, image0_.name as name3_3_0_, image0_.type as type4_3_0_, product1_.product_id as product_1_7_1_, product1_.category_id as category7_7_1_, product1_.image_id as image_id8_7_1_, product1_.price as price2_7_1_, product1_.sku as sku3_7_1_, product1_.status as status4_7_1_, product1_.summary as summary5_7_1_, product1_.title as title6_7_1_, productcat2_.id as id1_6_2_, productcat2_.name as name2_6_2_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id left outer join product_categories productcat2_ on product1_.category_id=productcat2_.id where image0_.id=?"
+      },
+      {
+        "type": "query",
+        "name": "select product0_.product_id as product_1_7_2_, product0_.category_id as category7_7_2_, product0_.image_id as image_id8_7_2_, product0_.price as price2_7_2_, product0_.sku as sku3_7_2_, product0_.status as status4_7_2_, product0_.summary as summary5_7_2_, product0_.title as title6_7_2_, productcat1_.id as id1_6_0_, productcat1_.name as name2_6_0_, image2_.id as id1_3_1_, image2_.imagedata as imagedat2_3_1_, image2_.name as name3_3_1_, image2_.type as type4_3_1_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.image_id=?"
+      },
+      {
+        "type": "query",
+        "name": "select image0_.id as id1_3_, image0_.imagedata as imagedat2_3_, image0_.name as name3_3_, image0_.type as type4_3_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id where product1_.product_id=?"
+      },
+      {
+        "type": "query",
+        "name": "update images set imagedata=?, name=?, type=? where id=?"
+      }
+    ]
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "POST /product/create"
+      },
+      {
+        "type": "route",
+        "name": "POST /error"
+      }
+    ]
+  }
+]

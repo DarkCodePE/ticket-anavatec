@@ -1,0 +1,10 @@
+[
+  "com/peterson/helpdesk/domain/Pessoa",
+  "com/peterson/helpdesk/domain/dtos/CredenciaisDTO",
+  "com/peterson/helpdesk/domain/enums/Perfil",
+  "com/peterson/helpdesk/repositories/PessoaRepository",
+  "com/peterson/helpdesk/security/JWTAuthenticationFilter",
+  "com/peterson/helpdesk/security/JWTUtil",
+  "com/peterson/helpdesk/security/UserSS",
+  "com/peterson/helpdesk/services/UserDetailServiceImpl"
+]

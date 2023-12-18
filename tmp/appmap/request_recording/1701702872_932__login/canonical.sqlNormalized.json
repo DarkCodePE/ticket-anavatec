@@ -1,0 +1,3 @@
+[
+  "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+]

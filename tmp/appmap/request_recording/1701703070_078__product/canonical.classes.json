@@ -1,0 +1,8 @@
+[
+  "com/peterson/helpdesk/domain/Solution",
+  "com/peterson/helpdesk/domain/dtos/ProductListDTO",
+  "com/peterson/helpdesk/domain/dtos/ProductListDTO$ProductListDTOBuilder",
+  "com/peterson/helpdesk/domain/enums/Perfil",
+  "com/peterson/helpdesk/services/ProductService",
+  "com/peterson/helpdesk/util/ImageUtil"
+]

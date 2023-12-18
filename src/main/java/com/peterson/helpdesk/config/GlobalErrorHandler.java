@@ -2,6 +2,7 @@ package com.peterson.helpdesk.config;
 
 import com.peterson.helpdesk.domain.dtos.ErrorMessageResponse;
 import com.peterson.helpdesk.domain.enums.ErrorTypes;
+import com.peterson.helpdesk.exceptions.InvalidTokenRequestException;
 import com.peterson.helpdesk.resources.exceptions.NoSuchElementFoundException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.MessageSource;
@@ -30,4 +31,12 @@ public class GlobalErrorHandler extends ResponseEntityExceptionHandler {
                 messageSource.getMessage(e.getMessage(), e.getParams(), LocaleContextHolder.getLocale());
         return new ErrorMessageResponse<>(ErrorTypes.VALIDATION, message);
     }
+    @ExceptionHandler({InvalidTokenRequestException.class})
+    @ResponseStatus(HttpStatus.NOT_ACCEPTABLE)
+    public ErrorMessageResponse<String> onInvalidTokenRequestException(InvalidTokenRequestException e) {
+        String message =
+                messageSource.getMessage(e.getMessage(), e.getParams(), LocaleContextHolder.getLocale());
+        return new ErrorMessageResponse<>(ErrorTypes.INVALID_ARGUMENT, message);
+    }
+
 }

@@ -1,0 +1,12 @@
+[
+  {
+    "route": "POST /error",
+    "parameters": "()",
+    "status": 500
+  },
+  {
+    "route": "POST /product/create",
+    "parameters": "()",
+    "status": null
+  }
+]

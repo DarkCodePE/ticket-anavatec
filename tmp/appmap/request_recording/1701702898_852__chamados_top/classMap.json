@@ -1,0 +1,344 @@
+[
+  {
+    "children": [
+      {
+        "children": [
+          {
+            "children": [
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "name": "build",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                          },
+                          {
+                            "name": "total",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                          },
+                          {
+                            "name": "totalSolved",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                          },
+                          {
+                            "name": "totalTechnician",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                          },
+                          {
+                            "name": "topTechnician",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                          }
+                        ],
+                        "name": "TopDTO$TopDTOBuilder",
+                        "type": "class"
+                      },
+                      {
+                        "children": [
+                          {
+                            "name": "quantidade",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                          },
+                          {
+                            "name": "email",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                          },
+                          {
+                            "name": "nome",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                          },
+                          {
+                            "name": "build",
+                            "type": "function",
+                            "static": false,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                          }
+                        ],
+                        "name": "TopTecnicoDTO$TopTecnicoDTOBuilder",
+                        "type": "class"
+                      },
+                      {
+                        "children": [
+                          {
+                            "name": "builder",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                          }
+                        ],
+                        "name": "TopTecnicoDTO",
+                        "type": "class"
+                      },
+                      {
+                        "children": [
+                          {
+                            "name": "builder",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                          }
+                        ],
+                        "name": "TopDTO",
+                        "type": "class"
+                      }
+                    ],
+                    "name": "dtos",
+                    "type": "package"
+                  },
+                  {
+                    "children": [
+                      {
+                        "children": [
+                          {
+                            "name": "values",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/enums/Status.java:3"
+                          }
+                        ],
+                        "name": "Status",
+                        "type": "class"
+                      },
+                      {
+                        "children": [
+                          {
+                            "name": "values",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/enums/Prioridade.java:3"
+                          }
+                        ],
+                        "name": "Prioridade",
+                        "type": "class"
+                      },
+                      {
+                        "children": [
+                          {
+                            "name": "toEnum",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:24"
+                          },
+                          {
+                            "name": "values",
+                            "type": "function",
+                            "static": true,
+                            "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:3"
+                          }
+                        ],
+                        "name": "Perfil",
+                        "type": "class"
+                      }
+                    ],
+                    "name": "enums",
+                    "type": "package"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "addPerfil",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java:99"
+                      }
+                    ],
+                    "name": "Pessoa",
+                    "type": "class"
+                  }
+                ],
+                "name": "domain",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "getUsername",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:66"
+                      },
+                      {
+                        "name": "tokenValido",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:44"
+                      }
+                    ],
+                    "name": "JWTUtil",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "doFilterInternal",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+                      }
+                    ],
+                    "name": "JWTAuthoorizationFilter",
+                    "type": "class"
+                  }
+                ],
+                "name": "security",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "findByTecnico_Id",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/repositories/ChamadoRepository.java:-1"
+                      }
+                    ],
+                    "name": "ChamadoRepository",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "findByEmail",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java:-1"
+                      }
+                    ],
+                    "name": "PessoaRepository",
+                    "type": "class"
+                  }
+                ],
+                "name": "repositories",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "loadUserByUsername",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22"
+                      }
+                    ],
+                    "name": "UserDetailServiceImpl",
+                    "type": "class"
+                  },
+                  {
+                    "children": [
+                      {
+                        "name": "topTecnicoByChamados",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/services/ChamadoService.java:124"
+                      }
+                    ],
+                    "name": "ChamadoService",
+                    "type": "class"
+                  }
+                ],
+                "name": "services",
+                "type": "package"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "name": "findTop",
+                        "type": "function",
+                        "static": false,
+                        "location": "src/main/java/com/peterson/helpdesk/resources/ChamadoResource.java:57"
+                      }
+                    ],
+                    "name": "ChamadoResource",
+                    "type": "class"
+                  }
+                ],
+                "name": "resources",
+                "type": "package"
+              }
+            ],
+            "name": "helpdesk",
+            "type": "package"
+          }
+        ],
+        "name": "peterson",
+        "type": "package"
+      }
+    ],
+    "name": "com",
+    "type": "package"
+  },
+  {
+    "type": "database",
+    "name": "Database",
+    "children": [
+      {
+        "type": "query",
+        "name": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+      },
+      {
+        "type": "query",
+        "name": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+      },
+      {
+        "type": "query",
+        "name": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+      },
+      {
+        "type": "query",
+        "name": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_"
+      },
+      {
+        "type": "query",
+        "name": "select cliente0_.id as id2_5_0_, cliente0_.cpf as cpf3_5_0_, cliente0_.data_criacao as data_cri4_5_0_, cliente0_.email as email5_5_0_, cliente0_.nome as nome6_5_0_, cliente0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_ from personas cliente0_ left outer join perfis perfis1_ on cliente0_.id=perfis1_.pessoa_id where cliente0_.id=? and cliente0_.dtype='Cliente'"
+      },
+      {
+        "type": "query",
+        "name": "select product0_.product_id as product_1_7_0_, product0_.category_id as category7_7_0_, product0_.image_id as image_id8_7_0_, product0_.price as price2_7_0_, product0_.sku as sku3_7_0_, product0_.status as status4_7_0_, product0_.summary as summary5_7_0_, product0_.title as title6_7_0_, productcat1_.id as id1_6_1_, productcat1_.name as name2_6_1_, image2_.id as id1_3_2_, image2_.imagedata as imagedat2_3_2_, image2_.name as name3_3_2_, image2_.type as type4_3_2_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.product_id=?"
+      },
+      {
+        "type": "query",
+        "name": "select tecnico0_.id as id2_5_0_, tecnico0_.cpf as cpf3_5_0_, tecnico0_.data_criacao as data_cri4_5_0_, tecnico0_.email as email5_5_0_, tecnico0_.nome as nome6_5_0_, tecnico0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_, profile2_.profile_id as profile_1_8_2_, profile2_.address as address2_8_2_, profile2_.avatar as avatar3_8_2_, profile2_.birth_date as birth_da4_8_2_, profile2_.created_at as created_5_8_2_, profile2_.phone as phone6_8_2_, profile2_.resume as resume7_8_2_, profile2_.tecnico_id as tecnico_8_8_2_ from personas tecnico0_ left outer join perfis perfis1_ on tecnico0_.id=perfis1_.pessoa_id left outer join profiles profile2_ on tecnico0_.id=profile2_.tecnico_id where tecnico0_.id=? and tecnico0_.dtype='Tecnico'"
+      },
+      {
+        "type": "query",
+        "name": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_ left outer join personas tecnico1_ on chamado0_.tecnico_id=tecnico1_.id where tecnico1_.id=?"
+      }
+    ]
+  },
+  {
+    "type": "http",
+    "name": "HTTP server requests",
+    "children": [
+      {
+        "type": "route",
+        "name": "GET /chamados/top"
+      }
+    ]
+  }
+]

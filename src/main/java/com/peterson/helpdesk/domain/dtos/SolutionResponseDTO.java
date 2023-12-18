@@ -1,14 +1,18 @@
 package com.peterson.helpdesk.domain.dtos;
 
+import com.peterson.helpdesk.domain.Chamado;
 import lombok.Builder;
 import lombok.Getter;
 
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import java.util.List;
 
 @Builder
 @Getter
 public class SolutionResponseDTO {
+    private Integer id;
+    private String technicalName;
     private Integer productId;
     @NotBlank(message = "Title can not be blank")
     private String title;
@@ -16,4 +20,7 @@ public class SolutionResponseDTO {
     private String summary;
     private String imageUrl;
     private boolean status;
+    private String priority;
+    private String nameStatus;
+    private List<RecommendationResponseDTO> recommendations;
 }

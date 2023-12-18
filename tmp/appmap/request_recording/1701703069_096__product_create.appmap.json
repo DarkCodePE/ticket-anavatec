@@ -1,0 +1,2913 @@
+{
+  "events": [
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTAuthoorizationFilter",
+      "event": "call",
+      "id": 1,
+      "lineno": 29,
+      "method_id": "doFilterInternal",
+      "parameters": [
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest",
+          "kind": "req",
+          "name": "request",
+          "object_id": 952293677,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@38c2d92d"
+        },
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse",
+          "kind": "req",
+          "name": "response",
+          "object_id": 1207233794,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@47f4ed02"
+        },
+        {
+          "class": "org.springframework.security.web.FilterChainProxy$VirtualFilterChain",
+          "kind": "req",
+          "name": "chain",
+          "object_id": 738197071,
+          "value": "org.springframework.security.web.FilterChainProxy$VirtualFilterChain@2bfffe4f"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTAuthoorizationFilter",
+        "object_id": 814220467,
+        "value": "com.peterson.helpdesk.security.JWTAuthoorizationFilter@308804b3"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTUtil",
+      "event": "call",
+      "id": 2,
+      "lineno": 44,
+      "method_id": "tokenValido",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "token",
+          "object_id": 232982752,
+          "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAZ21haWwuY29tIiwiZXhwIjoxNzAyMzA3Njk4fQ._DxtcTh85wT_xaexRQ8wrMNbBIhx8SwCSxJmPTIhWrsQiFDG2gwcGh0DpNguOCiNpL7H83gUYf9d6PY2KEoPjA"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTUtil",
+        "object_id": 1137270729,
+        "value": "com.peterson.helpdesk.security.JWTUtil@43c95fc9"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00021039,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1007575416,
+        "value": "true"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTUtil",
+      "event": "call",
+      "id": 4,
+      "lineno": 66,
+      "method_id": "getUsername",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "token",
+          "object_id": 232982752,
+          "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAZ21haWwuY29tIiwiZXhwIjoxNzAyMzA3Njk4fQ._DxtcTh85wT_xaexRQ8wrMNbBIhx8SwCSxJmPTIhWrsQiFDG2gwcGh0DpNguOCiNpL7H83gUYf9d6PY2KEoPjA"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTUtil",
+        "object_id": 1137270729,
+        "value": "com.peterson.helpdesk.security.JWTUtil@43c95fc9"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 5,
+      "parent_id": 4,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 400770553,
+        "value": "valdir@gmail.com"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+      "event": "call",
+      "id": 6,
+      "lineno": 22,
+      "method_id": "loadUserByUsername",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 400770553,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+        "object_id": 1507419114,
+        "value": "com.peterson.helpdesk.services.UserDetailServiceImpl@59d963ea"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.PessoaRepository",
+      "event": "call",
+      "id": 7,
+      "lineno": -1,
+      "method_id": "findByEmail",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 400770553,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy151",
+        "object_id": 1632567800,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@64f24e4b"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 8,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 9,
+      "parent_id": 8,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 10,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 16905470,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 11,
+      "parent_id": 10,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 12,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 1721512139,
+          "value": "TECNICO"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 16905470,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 13,
+      "parent_id": 12,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 14,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00005076,
+      "event": "return",
+      "id": 15,
+      "parent_id": 14,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 16,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 17,
+      "parent_id": 16,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00057124,
+      "event": "return",
+      "id": 18,
+      "parent_id": 7,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 325574059,
+        "value": "Optional[com.peterson.helpdesk.domain.Tecnico@864dbcbb]"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 19,
+      "lineno": 24,
+      "method_id": "toEnum",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "cod",
+          "object_id": 1608532537,
+          "value": "0"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 20,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 21,
+      "parent_id": 20,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Perfil;",
+        "object_id": 43666894,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Perfil;@29a4dce"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 22,
+      "parent_id": 19,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.enums.Perfil",
+        "object_id": 39807075,
+        "value": "ADMIN"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 23,
+      "lineno": 24,
+      "method_id": "toEnum",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "cod",
+          "object_id": 602447388,
+          "value": "1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 24,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 25,
+      "parent_id": 24,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Perfil;",
+        "object_id": 1348807489,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Perfil;@50652b41"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 26,
+      "parent_id": 23,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.enums.Perfil",
+        "object_id": 907222711,
+        "value": "CLIENTE"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00057124,
+      "event": "return",
+      "id": 27,
+      "parent_id": 6,
+      "return_value": {
+        "class": "com.peterson.helpdesk.security.UserSS",
+        "object_id": 696305754,
+        "value": "com.peterson.helpdesk.security.UserSS@2980c85a"
+      },
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "sec-fetch-mode": "cors",
+          "content-length": "90478",
+          "referer": "http://localhost:4200/",
+          "sec-fetch-site": "same-site",
+          "accept-language": "es-419,es;q=0.9",
+          "origin": "http://localhost:4200",
+          "accept": "application/json, text/plain, */*",
+          "authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAZ21haWwuY29tIiwiZXhwIjoxNzAyMzA3Njk4fQ._DxtcTh85wT_xaexRQ8wrMNbBIhx8SwCSxJmPTIhWrsQiFDG2gwcGh0DpNguOCiNpL7H83gUYf9d6PY2KEoPjA",
+          "sec-ch-ua": "\"Google Chrome\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "host": "localhost:8080",
+          "connection": "keep-alive",
+          "content-type": "multipart/form-data; boundary=----WebKitFormBoundaryv4l3Htf9zl3lPaqn",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+          "sec-fetch-dest": "empty"
+        },
+        "normalized_path_info": "/product/create",
+        "path_info": "/product/create",
+        "protocol": "HTTP/1.1",
+        "request_method": "POST"
+      },
+      "id": 28,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+      "event": "call",
+      "id": 29,
+      "lineno": 12,
+      "method_id": "setSku",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "sku",
+          "object_id": 78107204,
+          "value": "PROD1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+        "object_id": 1409489699,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO@54031b23"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 30,
+      "parent_id": 29,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+      "event": "call",
+      "id": 31,
+      "lineno": 12,
+      "method_id": "setTitle",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "title",
+          "object_id": 767888833,
+          "value": "test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+        "object_id": 1409489699,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO@54031b23"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 32,
+      "parent_id": 31,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+      "event": "call",
+      "id": 33,
+      "lineno": 12,
+      "method_id": "setCategoryId",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "categoryId",
+          "object_id": 524446078,
+          "value": "7"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+        "object_id": 1409489699,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO@54031b23"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 34,
+      "parent_id": 33,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+      "event": "call",
+      "id": 35,
+      "lineno": 12,
+      "method_id": "setSummary",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "summary",
+          "object_id": 44614203,
+          "value": "este es un test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+        "object_id": 1409489699,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO@54031b23"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 36,
+      "parent_id": 35,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.resources.ProductController",
+      "event": "call",
+      "id": 37,
+      "lineno": 48,
+      "method_id": "saveProduct",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+          "kind": "req",
+          "name": "productRequestDTO",
+          "object_id": 1409489699,
+          "value": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO@54031b23"
+        },
+        {
+          "class": "org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile",
+          "kind": "req",
+          "name": "file",
+          "object_id": 950470104,
+          "value": "org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@38a705d8"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/resources/ProductController.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.resources.ProductController",
+        "object_id": 1634755684,
+        "value": "com.peterson.helpdesk.resources.ProductController@61706464"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.services.ProductService",
+      "event": "call",
+      "id": 38,
+      "lineno": 61,
+      "method_id": "createOrUpdateProduct",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO",
+          "kind": "req",
+          "name": "productDTO",
+          "object_id": 1409489699,
+          "value": "com.peterson.helpdesk.domain.dtos.ProductRequestDTO@54031b23"
+        },
+        {
+          "class": "org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile",
+          "kind": "req",
+          "name": "file",
+          "object_id": 950470104,
+          "value": "org.springframework.web.multipart.support.StandardMultipartHttpServletRequest$StandardMultipartFile@38a705d8"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/services/ProductService.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.services.ProductService",
+        "object_id": 532033501,
+        "value": "com.peterson.helpdesk.services.ProductService@1fb62fdd"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 39,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select productcat0_.id as id1_6_0_, productcat0_.name as name2_6_0_ from product_categories productcat0_ where productcat0_.id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00010023,
+      "event": "return",
+      "id": 40,
+      "parent_id": 39,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.ProductRepository",
+      "event": "call",
+      "id": 41,
+      "lineno": -1,
+      "method_id": "findBySku",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 78107204,
+          "value": "PROD1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/ProductRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy163",
+        "object_id": 1425699479,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@3b37034d"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 42,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_, product0_.category_id as category7_7_, product0_.image_id as image_id8_7_, product0_.price as price2_7_, product0_.sku as sku3_7_, product0_.status as status4_7_, product0_.summary as summary5_7_, product0_.title as title6_7_ from products product0_ where product0_.sku=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 43,
+      "parent_id": 42,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 44,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select productcat0_.id as id1_6_0_, productcat0_.name as name2_6_0_ from product_categories productcat0_ where productcat0_.id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 45,
+      "parent_id": 44,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 46,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select image0_.id as id1_3_0_, image0_.imagedata as imagedat2_3_0_, image0_.name as name3_3_0_, image0_.type as type4_3_0_, product1_.product_id as product_1_7_1_, product1_.category_id as category7_7_1_, product1_.image_id as image_id8_7_1_, product1_.price as price2_7_1_, product1_.sku as sku3_7_1_, product1_.status as status4_7_1_, product1_.summary as summary5_7_1_, product1_.title as title6_7_1_, productcat2_.id as id1_6_2_, productcat2_.name as name2_6_2_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id left outer join product_categories productcat2_ on product1_.category_id=productcat2_.id where image0_.id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00009999,
+      "event": "return",
+      "id": 47,
+      "parent_id": 46,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 48,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_2_, product0_.category_id as category7_7_2_, product0_.image_id as image_id8_7_2_, product0_.price as price2_7_2_, product0_.sku as sku3_7_2_, product0_.status as status4_7_2_, product0_.summary as summary5_7_2_, product0_.title as title6_7_2_, productcat1_.id as id1_6_0_, productcat1_.name as name2_6_0_, image2_.id as id1_3_1_, image2_.imagedata as imagedat2_3_1_, image2_.name as name3_3_1_, image2_.type as type4_3_1_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.image_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00010033,
+      "event": "return",
+      "id": 49,
+      "parent_id": 48,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00155347,
+      "event": "return",
+      "id": 50,
+      "parent_id": 41,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 1083726268,
+        "value": "Optional[com.peterson.helpdesk.domain.Product@20]"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.ImageRepository",
+      "event": "call",
+      "id": 51,
+      "lineno": -1,
+      "method_id": "findByProduct_Id",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 602447388,
+          "value": "1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/ImageRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy164",
+        "object_id": 1990089241,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@15d29d77"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 52,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select image0_.id as id1_3_, image0_.imagedata as imagedat2_3_, image0_.name as name3_3_, image0_.type as type4_3_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id where product1_.product_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00009975,
+      "event": "return",
+      "id": 53,
+      "parent_id": 52,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.0006892,
+      "event": "return",
+      "id": 54,
+      "parent_id": 51,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.Image",
+        "object_id": 2030422259,
+        "value": "com.peterson.helpdesk.domain.Image@7905c8f3"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Image",
+      "event": "call",
+      "id": 55,
+      "lineno": 16,
+      "method_id": "setName",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "name",
+          "object_id": 1575904516,
+          "value": "01__image002.png"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Image.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Image",
+        "object_id": 2030422259,
+        "value": "com.peterson.helpdesk.domain.Image@7905c8f3"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 56,
+      "parent_id": 55,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Image",
+      "event": "call",
+      "id": 57,
+      "lineno": 16,
+      "method_id": "setType",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "type",
+          "object_id": 1373860367,
+          "value": "image/png"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Image.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Image",
+        "object_id": 2030422259,
+        "value": "com.peterson.helpdesk.domain.Image@7905c8f3"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 58,
+      "parent_id": 57,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 59,
+      "lineno": 13,
+      "method_id": "compressImage",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 510083870,
+          "value": "[B@1e67431e"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.0002782,
+      "event": "return",
+      "id": 60,
+      "parent_id": 59,
+      "return_value": {
+        "class": "[B",
+        "object_id": 232447110,
+        "value": "[B@ddadc86"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Image",
+      "event": "call",
+      "id": 61,
+      "lineno": 16,
+      "method_id": "setImageData",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "imageData",
+          "object_id": 232447110,
+          "value": "[B@ddadc86"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Image.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Image",
+        "object_id": 2030422259,
+        "value": "com.peterson.helpdesk.domain.Image@7905c8f3"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 62,
+      "parent_id": 61,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Product",
+      "event": "call",
+      "id": 63,
+      "lineno": 97,
+      "method_id": "setCategory",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.ProductCategory",
+          "kind": "req",
+          "name": "category",
+          "object_id": 904054444,
+          "value": "com.peterson.helpdesk.domain.ProductCategory@26"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Product.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Product",
+        "object_id": 1724081665,
+        "value": "com.peterson.helpdesk.domain.Product@20"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 64,
+      "parent_id": 63,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Product",
+      "event": "call",
+      "id": 65,
+      "lineno": 129,
+      "method_id": "setImage",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.Image",
+          "kind": "req",
+          "name": "image",
+          "object_id": 2030422259,
+          "value": "com.peterson.helpdesk.domain.Image@7905c8f3"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Product.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Product",
+        "object_id": 1724081665,
+        "value": "com.peterson.helpdesk.domain.Product@20"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 66,
+      "parent_id": 65,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Product",
+      "event": "call",
+      "id": 67,
+      "lineno": 81,
+      "method_id": "setSku",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "sku",
+          "object_id": 78107204,
+          "value": "PROD1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Product.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Product",
+        "object_id": 1724081665,
+        "value": "com.peterson.helpdesk.domain.Product@20"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 68,
+      "parent_id": 67,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Product",
+      "event": "call",
+      "id": 69,
+      "lineno": 89,
+      "method_id": "setTitle",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "title",
+          "object_id": 767888833,
+          "value": "test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Product.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Product",
+        "object_id": 1724081665,
+        "value": "com.peterson.helpdesk.domain.Product@20"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 70,
+      "parent_id": 69,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Product",
+      "event": "call",
+      "id": 71,
+      "lineno": 105,
+      "method_id": "setSummary",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "summary",
+          "object_id": 44614203,
+          "value": "este es un test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Product.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Product",
+        "object_id": 1724081665,
+        "value": "com.peterson.helpdesk.domain.Product@20"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 72,
+      "parent_id": 71,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Product",
+      "event": "call",
+      "id": 73,
+      "lineno": 121,
+      "method_id": "setStatus",
+      "parameters": [
+        {
+          "class": "java.lang.Boolean",
+          "kind": "req",
+          "name": "status",
+          "object_id": 1007575416,
+          "value": "true"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Product.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Product",
+        "object_id": 1724081665,
+        "value": "com.peterson.helpdesk.domain.Product@20"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 74,
+      "parent_id": 73,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 75,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "update products set category_id=?, image_id=?, price=?, status=?, summary=?, title=? where product_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 76,
+      "parent_id": 75,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 77,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_, product0_.category_id as category7_7_, product0_.image_id as image_id8_7_, product0_.price as price2_7_, product0_.sku as sku3_7_, product0_.status as status4_7_, product0_.summary as summary5_7_, product0_.title as title6_7_ from products product0_"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00010066,
+      "event": "return",
+      "id": 78,
+      "parent_id": 77,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 79,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select productcat0_.id as id1_6_0_, productcat0_.name as name2_6_0_ from product_categories productcat0_ where productcat0_.id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 80,
+      "parent_id": 79,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 81,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select image0_.id as id1_3_0_, image0_.imagedata as imagedat2_3_0_, image0_.name as name3_3_0_, image0_.type as type4_3_0_, product1_.product_id as product_1_7_1_, product1_.category_id as category7_7_1_, product1_.image_id as image_id8_7_1_, product1_.price as price2_7_1_, product1_.sku as sku3_7_1_, product1_.status as status4_7_1_, product1_.summary as summary5_7_1_, product1_.title as title6_7_1_, productcat2_.id as id1_6_2_, productcat2_.name as name2_6_2_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id left outer join product_categories productcat2_ on product1_.category_id=productcat2_.id where image0_.id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 82,
+      "parent_id": 81,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 83,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_2_, product0_.category_id as category7_7_2_, product0_.image_id as image_id8_7_2_, product0_.price as price2_7_2_, product0_.sku as sku3_7_2_, product0_.status as status4_7_2_, product0_.summary as summary5_7_2_, product0_.title as title6_7_2_, productcat1_.id as id1_6_0_, productcat1_.name as name2_6_0_, image2_.id as id1_3_1_, image2_.imagedata as imagedat2_3_1_, image2_.name as name3_3_1_, image2_.type as type4_3_1_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.image_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 84,
+      "parent_id": 83,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 85,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select image0_.id as id1_3_0_, image0_.imagedata as imagedat2_3_0_, image0_.name as name3_3_0_, image0_.type as type4_3_0_, product1_.product_id as product_1_7_1_, product1_.category_id as category7_7_1_, product1_.image_id as image_id8_7_1_, product1_.price as price2_7_1_, product1_.sku as sku3_7_1_, product1_.status as status4_7_1_, product1_.summary as summary5_7_1_, product1_.title as title6_7_1_, productcat2_.id as id1_6_2_, productcat2_.name as name2_6_2_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id left outer join product_categories productcat2_ on product1_.category_id=productcat2_.id where image0_.id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00010115,
+      "event": "return",
+      "id": 86,
+      "parent_id": 85,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 87,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_2_, product0_.category_id as category7_7_2_, product0_.image_id as image_id8_7_2_, product0_.price as price2_7_2_, product0_.sku as sku3_7_2_, product0_.status as status4_7_2_, product0_.summary as summary5_7_2_, product0_.title as title6_7_2_, productcat1_.id as id1_6_0_, productcat1_.name as name2_6_0_, image2_.id as id1_3_1_, image2_.imagedata as imagedat2_3_1_, image2_.name as name3_3_1_, image2_.type as type4_3_1_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.image_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 88,
+      "parent_id": 87,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 89,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select image0_.id as id1_3_0_, image0_.imagedata as imagedat2_3_0_, image0_.name as name3_3_0_, image0_.type as type4_3_0_, product1_.product_id as product_1_7_1_, product1_.category_id as category7_7_1_, product1_.image_id as image_id8_7_1_, product1_.price as price2_7_1_, product1_.sku as sku3_7_1_, product1_.status as status4_7_1_, product1_.summary as summary5_7_1_, product1_.title as title6_7_1_, productcat2_.id as id1_6_2_, productcat2_.name as name2_6_2_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id left outer join product_categories productcat2_ on product1_.category_id=productcat2_.id where image0_.id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 90,
+      "parent_id": 89,
+      "thread_id": 42
+    },
+    {
+      "event": "call",
+      "id": 91,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_2_, product0_.category_id as category7_7_2_, product0_.image_id as image_id8_7_2_, product0_.price as price2_7_2_, product0_.sku as sku3_7_2_, product0_.status as status4_7_2_, product0_.summary as summary5_7_2_, product0_.title as title6_7_2_, productcat1_.id as id1_6_0_, productcat1_.name as name2_6_0_, image2_.id as id1_3_1_, image2_.imagedata as imagedat2_3_1_, image2_.name as name3_3_1_, image2_.type as type4_3_1_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.image_id=?"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 92,
+      "parent_id": 91,
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+      "event": "call",
+      "id": 93,
+      "lineno": 11,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 94,
+      "parent_id": 93,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=null, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 95,
+      "lineno": 11,
+      "method_id": "categoryName",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "categoryName",
+          "object_id": 123625103,
+          "value": "test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=test, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 96,
+      "parent_id": 95,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=test, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 97,
+      "lineno": 11,
+      "method_id": "title",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "title",
+          "object_id": 767888833,
+          "value": "test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=test, categoryName=test, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 98,
+      "parent_id": 97,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=test, categoryName=test, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 99,
+      "lineno": 11,
+      "method_id": "sku",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "sku",
+          "object_id": 78107204,
+          "value": "PROD1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD1, tickets=null, title=test, categoryName=test, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 100,
+      "parent_id": 99,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD1, tickets=null, title=test, categoryName=test, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 101,
+      "lineno": 11,
+      "method_id": "summary",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "summary",
+          "object_id": 44614203,
+          "value": "este es un test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD1, tickets=null, title=test, categoryName=test, summary=este es un test, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 102,
+      "parent_id": 101,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD1, tickets=null, title=test, categoryName=test, summary=este es un test, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 103,
+      "lineno": 32,
+      "method_id": "decompressImage",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 232447110,
+          "value": "[B@ddadc86"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00010004,
+      "event": "return",
+      "id": 104,
+      "parent_id": 103,
+      "return_value": {
+        "class": "[B",
+        "object_id": 1273099400,
+        "value": "[B@4be1f488"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 105,
+      "lineno": 51,
+      "method_id": "compressImageBase64",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 1273099400,
+          "value": "[B@4be1f488"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 106,
+      "parent_id": 105,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 1938027218,
+        "value": "iVBORw0KGgoAAAANSUhEUgAAA4gAAAJXCAIAAABeze3XAAAMP2lDQ1BJQ0MgUHJvZmlsZQAASImVVwdYU8kWnltSIbQAAlJCb4JIDSAlhBZAehFshCRAKCEmBBU7uqjg2sUCNnRVRLEDYkfsLIoN+2JBRVkXC3blTQrouq98b75v7vz3nzP/OXPu3Dt3ANA8wRWL81AtAPJFhZL4sCDG6NQ0BukpIAMSoABP4MXlScWs2NgoAMtA+/fy7gZA5O1VJ7nWP/v/a9HmC6Q8AJBYiDP4Ul4+xAcAwKt4YkkhAEQ5bzmpUCzHsAJdCQwQ4vlynKXEVXKcocR7FDaJ8WyIWwAgq3O5kiwANC5DnlHEy4IaGr0Qu4j4QhEAmgyI/fPzC/gQp0NsB23EEMv1mRk/6GT9TTNjUJPLzRrEyrkoCjlYKBXncaf8n+n43yU/TzbgwwZW9WxJeLx8zjBvN3MLIuVYHeIeUUZ0DMQ6EH8Q8hX2EKPUbFl4ktIeNeZJ2TBnQB9iFz43OBJiY4hDRXnRUSo+I1MYyoEYrhB0srCQkwixAcTzBdKQBJXNRklBvMoXWp8pYbNU/DmuROFX7uu+LDeJpdJ/nS3gqPQxjeLsxBSIqRBbFQmToyHWgNhZmpsQqbIZWZzNjh6wkcji5fFbQRwvEIUFKfWxokxJaLzKvixfOjBfbGO2kBOtwvsKsxPDlfnBWnhcRfxwLthlgYiVNKAjkI6OGpgLXxAcopw79kwgSkpQ6XwQFwbFK8fiVHFerMoetxDkhcl5C4jdpUUJqrF4ciFckEp9PFNcGJuojBMvzuFGxCrjwZeAKMAGwYABZLBmgAKQA4RtPQ098E7ZEwq4QAKygAA4qZiBESmKHhG8JoBi8CdEAiAdHBek6BWAIsh/HWSVVyeQqegtUozIBU8gzgeRIA/eyxSjRIPeksFjyAj/4Z0LKw/GmwervP/f8wPsd4YFmSgVIxvwyNAcsCSGEIOJ4cRQoj1uhPvjvngUvAbC6oozce+BeXy3J..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 107,
+      "lineno": 11,
+      "method_id": "imageUrl",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "imageUrl",
+          "object_id": 1938027218,
+          "value": "iVBORw0KGgoAAAANSUhEUgAAA4gAAAJXCAIAAABeze3XAAAMP2lDQ1BJQ0MgUHJvZmlsZQAASImVVwdYU8kWnltSIbQAAlJCb4JIDSAlhBZAehFshCRAKCEmBBU7uqjg2sUCNnRVRLEDYkfsLIoN+2JBRVkXC3blTQrouq98b75v7vz3nzP/OXPu3Dt3ANA8wRWL81AtAPJFhZL4sCDG6NQ0BukpIAMSoABP4MXlScWs2NgoAMtA+/fy7gZA5O1VJ7nWP/v/a9HmC6Q8AJBYiDP4Ul4+xAcAwKt4YkkhAEQ5bzmpUCzHsAJdCQwQ4vlynKXEVXKcocR7FDaJ8WyIWwAgq3O5kiwANC5DnlHEy4IaGr0Qu4j4QhEAmgyI/fPzC/gQp0NsB23EEMv1mRk/6GT9TTNjUJPLzRrEyrkoCjlYKBXncaf8n+n43yU/TzbgwwZW9WxJeLx8zjBvN3MLIuVYHeIeUUZ0DMQ6EH8Q8hX2EKPUbFl4ktIeNeZJ2TBnQB9iFz43OBJiY4hDRXnRUSo+I1MYyoEYrhB0srCQkwixAcTzBdKQBJXNRklBvMoXWp8pYbNU/DmuROFX7uu+LDeJpdJ/nS3gqPQxjeLsxBSIqRBbFQmToyHWgNhZmpsQqbIZWZzNjh6wkcji5fFbQRwvEIUFKfWxokxJaLzKvixfOjBfbGO2kBOtwvsKsxPDlfnBWnhcRfxwLthlgYiVNKAjkI6OGpgLXxAcopw79kwgSkpQ6XwQFwbFK8fiVHFerMoetxDkhcl5C4jdpUUJqrF4ciFckEp9PFNcGJuojBMvzuFGxCrjwZeAKMAGwYABZLBmgAKQA4RtPQ098E7ZEwq4QAKygAA4qZiBESmKHhG8JoBi8CdEAiAdHBek6BWAIsh/HWSVVyeQqegtUozIBU8gzgeRIA/eyxSjRIPeksFjyAj/4Z0LKw/GmwervP/f8wPsd4YFmSgVIxvwyNAcsCSGEIOJ4cRQoj1uhPvjvngUvAbC6oozce+BeXy3J..."
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD1, tickets=null, title=test, categoryName=test, summary=este es un test, imageUrl=iVBORw0KGgoAAAANSUhEUgAAA4gAAAJXCAIAAABeze3XAAAMP2lDQ1BJQ0MgUHJvZmlsZQAASImVVwdYU8kWnltSIbQAAlJCb4JIDSAlhBZAehFshCRAKCEmBBU7uqjg2sUCNnRVRLEDYkfsLIoN+2JBRVkXC3blTQrouq98b75v7vz3nzP/OXPu3Dt3ANA8wRWL81AtAPJFhZL4sCDG6NQ0BukpIAMSoABP4MXlScWs2NgoAMtA+/fy7gZA5O1VJ7nWP/v/a9HmC6Q8AJBYiDP4Ul4+xAcAwKt4YkkhAEQ5bzmpUCzHsAJdCQwQ4vlynKXEVXKcocR7FDaJ8WyIWwAgq3O5kiwANC5DnlHEy4IaGr0Qu4j4QhEAmgyI/fPzC/gQp0NsB23EEMv1mRk/6GT9TTNjUJPLzRrEyrkoCjlYKBXncaf8n+n43yU/TzbgwwZW9WxJeLx8zjBvN3MLIuVYHeIeUUZ0DMQ6EH8Q8hX2EKPUbFl4ktIeNeZJ2TBnQB9iFz43OBJiY4hDRXnRUSo+I1MYyoEYrhB0srCQkwixAcTzBdKQBJXNRklBvMoXWp8pYbNU/DmuROFX7uu+LDeJpdJ/nS3gqPQxjeLsxBSIqRBbFQmToyHWgNhZmpsQqbIZWZzNjh6wkcji5fFbQRwvEIUFKfWxokxJaLzKvixfOjBfbGO2kBOtwvsKsxPDlfnBWnhcRfxwLthlgYiVNKAjkI6OGpgLXxAcopw79kwgSkpQ6XwQFwbFK8fiVHFerMoetxDkhcl5C4jdpUUJqrF4ciFckEp9PFNcGJuojBMvzuFGxCrjwZeAKMAGwYABZLBmgAKQA4RtPQ098E7ZEwq4QAKygAA4qZiBESmKHhG8JoBi8CdEA..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 108,
+      "parent_id": 107,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD1, tickets=null, title=test, categoryName=test, summary=este es un test, imageUrl=iVBORw0KGgoAAAANSUhEUgAAA4gAAAJXCAIAAABeze3XAAAMP2lDQ1BJQ0MgUHJvZmlsZQAASImVVwdYU8kWnltSIbQAAlJCb4JIDSAlhBZAehFshCRAKCEmBBU7uqjg2sUCNnRVRLEDYkfsLIoN+2JBRVkXC3blTQrouq98b75v7vz3nzP/OXPu3Dt3ANA8wRWL81AtAPJFhZL4sCDG6NQ0BukpIAMSoABP4MXlScWs2NgoAMtA+/fy7gZA5O1VJ7nWP/v/a9HmC6Q8AJBYiDP4Ul4+xAcAwKt4YkkhAEQ5bzmpUCzHsAJdCQwQ4vlynKXEVXKcocR7FDaJ8WyIWwAgq3O5kiwANC5DnlHEy4IaGr0Qu4j4QhEAmgyI/fPzC/gQp0NsB23EEMv1mRk/6GT9TTNjUJPLzRrEyrkoCjlYKBXncaf8n+n43yU/TzbgwwZW9WxJeLx8zjBvN3MLIuVYHeIeUUZ0DMQ6EH8Q8hX2EKPUbFl4ktIeNeZJ2TBnQB9iFz43OBJiY4hDRXnRUSo+I1MYyoEYrhB0srCQkwixAcTzBdKQBJXNRklBvMoXWp8pYbNU/DmuROFX7uu+LDeJpdJ/nS3gqPQxjeLsxBSIqRBbFQmToyHWgNhZmpsQqbIZWZzNjh6wkcji5fFbQRwvEIUFKfWxokxJaLzKvixfOjBfbGO2kBOtwvsKsxPDlfnBWnhcRfxwLthlgYiVNKAjkI6OGpgLXxAcopw79kwgSkpQ6XwQFwbFK8fiVHFerMoetxDkhcl5C4jdpUUJqrF4ciFckEp9PFNcGJuojBMvzuFGxCrjwZeAKMAGwYABZLBmgAKQA4RtPQ098E7ZEwq4QAKygAA4qZiBESmKHhG8JoBi8CdEA..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 109,
+      "lineno": 11,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 703315107,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD1, tickets=null, title=test, categoryName=test, summary=este es un test, imageUrl=iVBORw0KGgoAAAANSUhEUgAAA4gAAAJXCAIAAABeze3XAAAMP2lDQ1BJQ0MgUHJvZmlsZQAASImVVwdYU8kWnltSIbQAAlJCb4JIDSAlhBZAehFshCRAKCEmBBU7uqjg2sUCNnRVRLEDYkfsLIoN+2JBRVkXC3blTQrouq98b75v7vz3nzP/OXPu3Dt3ANA8wRWL81AtAPJFhZL4sCDG6NQ0BukpIAMSoABP4MXlScWs2NgoAMtA+/fy7gZA5O1VJ7nWP/v/a9HmC6Q8AJBYiDP4Ul4+xAcAwKt4YkkhAEQ5bzmpUCzHsAJdCQwQ4vlynKXEVXKcocR7FDaJ8WyIWwAgq3O5kiwANC5DnlHEy4IaGr0Qu4j4QhEAmgyI/fPzC/gQp0NsB23EEMv1mRk/6GT9TTNjUJPLzRrEyrkoCjlYKBXncaf8n+n43yU/TzbgwwZW9WxJeLx8zjBvN3MLIuVYHeIeUUZ0DMQ6EH8Q8hX2EKPUbFl4ktIeNeZJ2TBnQB9iFz43OBJiY4hDRXnRUSo+I1MYyoEYrhB0srCQkwixAcTzBdKQBJXNRklBvMoXWp8pYbNU/DmuROFX7uu+LDeJpdJ/nS3gqPQxjeLsxBSIqRBbFQmToyHWgNhZmpsQqbIZWZzNjh6wkcji5fFbQRwvEIUFKfWxokxJaLzKvixfOjBfbGO2kBOtwvsKsxPDlfnBWnhcRfxwLthlgYiVNKAjkI6OGpgLXxAcopw79kwgSkpQ6XwQFwbFK8fiVHFerMoetxDkhcl5C4jdpUUJqrF4ciFckEp9PFNcGJuojBMvzuFGxCrjwZeAKMAGwYABZLBmgAKQA4RtPQ098E7ZEwq4QAKygAA4qZiBESmKHhG8JoBi8CdEA..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 110,
+      "parent_id": 109,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+        "object_id": 133777061,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductListDTO@7f946a5"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+      "event": "call",
+      "id": 111,
+      "lineno": 11,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 112,
+      "parent_id": 111,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=null, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 113,
+      "lineno": 11,
+      "method_id": "categoryName",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "categoryName",
+          "object_id": 916927883,
+          "value": "Micrófonos y sonido"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=Micrófonos y sonido, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 114,
+      "parent_id": 113,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=Micrófonos y sonido, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 115,
+      "lineno": 11,
+      "method_id": "title",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "title",
+          "object_id": 1516127471,
+          "value": "test 2"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 116,
+      "parent_id": 115,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 117,
+      "lineno": 11,
+      "method_id": "sku",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "sku",
+          "object_id": 400555375,
+          "value": "PROD 2"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD 2, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 118,
+      "parent_id": 117,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD 2, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 119,
+      "lineno": 11,
+      "method_id": "summary",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "summary",
+          "object_id": 1407867941,
+          "value": "test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD 2, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=test, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 120,
+      "parent_id": 119,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD 2, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=test, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 121,
+      "lineno": 32,
+      "method_id": "decompressImage",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 1559113918,
+          "value": "[B@5cee30be"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00009979,
+      "event": "return",
+      "id": 122,
+      "parent_id": 121,
+      "return_value": {
+        "class": "[B",
+        "object_id": 1958706928,
+        "value": "[B@74bf7ef0"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 123,
+      "lineno": 51,
+      "method_id": "compressImageBase64",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 1958706928,
+          "value": "[B@74bf7ef0"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 124,
+      "parent_id": 123,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 484688269,
+        "value": "iVBORw0KGgoAAAANSUhEUgAABLAAAAJ2CAIAAADAIuwLAAAAA3NCSVQICAjb4U/gAAAAX3pUWHRSYXcgcHJvZmlsZSB0eXBlIEFQUDEAAAiZ40pPzUstykxWKCjKT8vMSeVSAANjEy4TSxNLo0QDAwMLAwgwNDAwNgSSRkC2OVQo0QAFmJibpQGhuVmymSmIzwUAT7oVaBst2IwAACAASURBVHic7N13eBzVuT/w75myfaVVL1a35N6rXLFNNRBCcUgCBAd+NzQTEkpyCeGmEHIDCQYCF0iAEBxCj+kYG+OGbRk35C43yZYlq3dtnZ2Z8/tjpGWthi3Zan4/D4+e9Wp25uyi3dnvnPecwzjnIO3U1NSUl5fLsnw6G3POZVlOT08PbZ+Tk3P06NHNmzfPnDkzfMsVK1ZcccUVJpOppKQkPj4eQFFRUSAQYIyd9adwHuKcm83mrKysXjgUju/EqzejqgAWoP3/PQ4woAa4631Mv7rT3RzdgZdvh/I1gkAM8FATTM4za0hVIZ7IhgKIYYdWgdxf4ppfweo6s70R0is2HfI/tcnnkJg7yC/KlG+9wG6WGACV83fqmVv/5s85RONwiphhR7q5gzfc2bV2v+fCV09mRovH3NqjkyMeuCrBaB7p/7Zu3Zqbmwuguro6NjYWwM6dO6+99toTJ04UFhYaZ4d//vOft95667Rp09atW2ez2fq4xYQQ0g8Ifd2Afurw4cPFxcWMMX56enKs0zwE+Va6rgtCL/xJcxzegjfvRF0BHIAEiO3+kwAJYIAsdbUfdwO0UhibjPnlGadBAPFDMedxBE49tAgUb0RDZXefYI/4/f4+OS4ZQIYnmdIcgqLDJrEtJ9UTNapxv8TYJBvUdh+oGocOzHci49ynQV+QL99RHxFt0gAE+LwRTkqDA5pxdgi/x7gCGwgEOF0QJ4QQAEAX31bPaxaLZcyYMRkZGef6QL3SnXUe8Xg85/wYJfvxn3tRtwMOoOuvExIg6J3+lnMoAbAaCIAVyJzRz..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 125,
+      "lineno": 11,
+      "method_id": "imageUrl",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "imageUrl",
+          "object_id": 484688269,
+          "value": "iVBORw0KGgoAAAANSUhEUgAABLAAAAJ2CAIAAADAIuwLAAAAA3NCSVQICAjb4U/gAAAAX3pUWHRSYXcgcHJvZmlsZSB0eXBlIEFQUDEAAAiZ40pPzUstykxWKCjKT8vMSeVSAANjEy4TSxNLo0QDAwMLAwgwNDAwNgSSRkC2OVQo0QAFmJibpQGhuVmymSmIzwUAT7oVaBst2IwAACAASURBVHic7N13eBzVuT/w75myfaVVL1a35N6rXLFNNRBCcUgCBAd+NzQTEkpyCeGmEHIDCQYCF0iAEBxCj+kYG+OGbRk35C43yZYlq3dtnZ2Z8/tjpGWthi3Zan4/D4+e9Wp25uyi3dnvnPecwzjnIO3U1NSUl5fLsnw6G3POZVlOT08PbZ+Tk3P06NHNmzfPnDkzfMsVK1ZcccUVJpOppKQkPj4eQFFRUSAQYIyd9adwHuKcm83mrKysXjgUju/EqzejqgAWoP3/PQ4woAa4631Mv7rT3RzdgZdvh/I1gkAM8FATTM4za0hVIZ7IhgKIYYdWgdxf4ppfweo6s70R0is2HfI/tcnnkJg7yC/KlG+9wG6WGACV83fqmVv/5s85RONwiphhR7q5gzfc2bV2v+fCV09mRovH3NqjkyMeuCrBaB7p/7Zu3Zqbmwuguro6NjYWwM6dO6+99toTJ04UFhYaZ4d//vOft95667Rp09atW2ez2fq4xYQQ0g8Ifd2Afurw4cPFxcWMMX56enKs0zwE+Va6rgtCL/xJcxzegjfvRF0BHIAEiO3+kwAJYIAsdbUfdwO0UhibjPnlGadBAPFDMedxBE49tAgUb0RDZXefYI/4/f4+OS4ZQIYnmdIcgqLDJrEtJ9UTNapxv8TYJBvUdh+oGocOzHci49ynQV+QL99RHxFt0gAE+LwRTkqDA5pxdgi/x7gCGwgEOF0QJ4QQAEAX31bPaxaLZcyYMRkZGef6QL3SnXUe8Xg85/wYJfvxn3tRtwMOoOuvExIg6J3+lnMoAbAaCIAVyJzRz..."
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD 2, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=test, imageUrl=iVBORw0KGgoAAAANSUhEUgAABLAAAAJ2CAIAAADAIuwLAAAAA3NCSVQICAjb4U/gAAAAX3pUWHRSYXcgcHJvZmlsZSB0eXBlIEFQUDEAAAiZ40pPzUstykxWKCjKT8vMSeVSAANjEy4TSxNLo0QDAwMLAwgwNDAwNgSSRkC2OVQo0QAFmJibpQGhuVmymSmIzwUAT7oVaBst2IwAACAASURBVHic7N13eBzVuT/w75myfaVVL1a35N6rXLFNNRBCcUgCBAd+NzQTEkpyCeGmEHIDCQYCF0iAEBxCj+kYG+OGbRk35C43yZYlq3dtnZ2Z8/tjpGWthi3Zan4/D4+e9Wp25uyi3dnvnPecwzjnIO3U1NSUl5fLsnw6G3POZVlOT08PbZ+Tk3P06NHNmzfPnDkzfMsVK1ZcccUVJpOppKQkPj4eQFFRUSAQYIyd9adwHuKcm83mrKysXjgUju/EqzejqgAWoP3/PQ4woAa4631Mv7rT3RzdgZdvh/I1gkAM8FATTM4za0hVIZ7IhgKIYYdWgdxf4ppfweo6s70R0is2HfI/tcnnkJg7yC/KlG+9wG6WGACV83fqmVv/5s85RONwiphhR7q5gzfc2bV2v+fCV09mRovH3NqjkyMeuCrBaB7p/7Zu3Zqbmwuguro6NjYWwM6dO6+99toTJ04UFhYaZ4d//vOft95667Rp09atW2ez2fq4xYQQ0g8Ifd2Afurw4cPFxcWMMX56enKs0zwE+Va6rgtCL/xJcxzegjfvRF0BHIAEiO3+kwAJYIAsdbUfdwO0UhibjPnlGadBAPFDMedxBE49tAgUb0RDZXefYI/4/f4+OS4ZQIYnmdIcgqLDJrEtJ9UTNapxv8TYJBvUdh..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 126,
+      "parent_id": 125,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD 2, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=test, imageUrl=iVBORw0KGgoAAAANSUhEUgAABLAAAAJ2CAIAAADAIuwLAAAAA3NCSVQICAjb4U/gAAAAX3pUWHRSYXcgcHJvZmlsZSB0eXBlIEFQUDEAAAiZ40pPzUstykxWKCjKT8vMSeVSAANjEy4TSxNLo0QDAwMLAwgwNDAwNgSSRkC2OVQo0QAFmJibpQGhuVmymSmIzwUAT7oVaBst2IwAACAASURBVHic7N13eBzVuT/w75myfaVVL1a35N6rXLFNNRBCcUgCBAd+NzQTEkpyCeGmEHIDCQYCF0iAEBxCj+kYG+OGbRk35C43yZYlq3dtnZ2Z8/tjpGWthi3Zan4/D4+e9Wp25uyi3dnvnPecwzjnIO3U1NSUl5fLsnw6G3POZVlOT08PbZ+Tk3P06NHNmzfPnDkzfMsVK1ZcccUVJpOppKQkPj4eQFFRUSAQYIyd9adwHuKcm83mrKysXjgUju/EqzejqgAWoP3/PQ4woAa4631Mv7rT3RzdgZdvh/I1gkAM8FATTM4za0hVIZ7IhgKIYYdWgdxf4ppfweo6s70R0is2HfI/tcnnkJg7yC/KlG+9wG6WGACV83fqmVv/5s85RONwiphhR7q5gzfc2bV2v+fCV09mRovH3NqjkyMeuCrBaB7p/7Zu3Zqbmwuguro6NjYWwM6dO6+99toTJ04UFhYaZ4d//vOft95667Rp09atW2ez2fq4xYQQ0g8Ifd2Afurw4cPFxcWMMX56enKs0zwE+Va6rgtCL/xJcxzegjfvRF0BHIAEiO3+kwAJYIAsdbUfdwO0UhibjPnlGadBAPFDMedxBE49tAgUb0RDZXefYI/4/f4+OS4ZQIYnmdIcgqLDJrEtJ9UTNapxv8TYJBvUdh..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 127,
+      "lineno": 11,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 1915149043,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PROD 2, tickets=null, title=test 2, categoryName=Micrófonos y sonido, summary=test, imageUrl=iVBORw0KGgoAAAANSUhEUgAABLAAAAJ2CAIAAADAIuwLAAAAA3NCSVQICAjb4U/gAAAAX3pUWHRSYXcgcHJvZmlsZSB0eXBlIEFQUDEAAAiZ40pPzUstykxWKCjKT8vMSeVSAANjEy4TSxNLo0QDAwMLAwgwNDAwNgSSRkC2OVQo0QAFmJibpQGhuVmymSmIzwUAT7oVaBst2IwAACAASURBVHic7N13eBzVuT/w75myfaVVL1a35N6rXLFNNRBCcUgCBAd+NzQTEkpyCeGmEHIDCQYCF0iAEBxCj+kYG+OGbRk35C43yZYlq3dtnZ2Z8/tjpGWthi3Zan4/D4+e9Wp25uyi3dnvnPecwzjnIO3U1NSUl5fLsnw6G3POZVlOT08PbZ+Tk3P06NHNmzfPnDkzfMsVK1ZcccUVJpOppKQkPj4eQFFRUSAQYIyd9adwHuKcm83mrKysXjgUju/EqzejqgAWoP3/PQ4woAa4631Mv7rT3RzdgZdvh/I1gkAM8FATTM4za0hVIZ7IhgKIYYdWgdxf4ppfweo6s70R0is2HfI/tcnnkJg7yC/KlG+9wG6WGACV83fqmVv/5s85RONwiphhR7q5gzfc2bV2v+fCV09mRovH3NqjkyMeuCrBaB7p/7Zu3Zqbmwuguro6NjYWwM6dO6+99toTJ04UFhYaZ4d//vOft95667Rp09atW2ez2fq4xYQQ0g8Ifd2Afurw4cPFxcWMMX56enKs0zwE+Va6rgtCL/xJcxzegjfvRF0BHIAEiO3+kwAJYIAsdbUfdwO0UhibjPnlGadBAPFDMedxBE49tAgUb0RDZXefYI/4/f4+OS4ZQIYnmdIcgqLDJrEtJ9UTNapxv8TYJBvUdh..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00010006,
+      "event": "return",
+      "id": 128,
+      "parent_id": 127,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+        "object_id": 501857600,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductListDTO@1de9bd40"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+      "event": "call",
+      "id": 129,
+      "lineno": 11,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 130,
+      "parent_id": 129,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=null, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 131,
+      "lineno": 11,
+      "method_id": "categoryName",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "categoryName",
+          "object_id": 1063822744,
+          "value": "Adaptadores Hub"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 132,
+      "parent_id": 131,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 133,
+      "lineno": 11,
+      "method_id": "title",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "title",
+          "object_id": 1032189009,
+          "value": "MICROFONO"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 134,
+      "parent_id": 133,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 135,
+      "lineno": 11,
+      "method_id": "sku",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "sku",
+          "object_id": 1842765084,
+          "value": "PRODCD2"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PRODCD2, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 136,
+      "parent_id": 135,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PRODCD2, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 137,
+      "lineno": 11,
+      "method_id": "summary",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "summary",
+          "object_id": 631066152,
+          "value": "TEST"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PRODCD2, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=TEST, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 138,
+      "parent_id": 137,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PRODCD2, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=TEST, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 139,
+      "lineno": 32,
+      "method_id": "decompressImage",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 1596160870,
+          "value": "[B@5f237b66"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00005088,
+      "event": "return",
+      "id": 140,
+      "parent_id": 139,
+      "return_value": {
+        "class": "[B",
+        "object_id": 1301687215,
+        "value": "[B@4d962baf"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 141,
+      "lineno": 51,
+      "method_id": "compressImageBase64",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 1301687215,
+          "value": "[B@4d962baf"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 142,
+      "parent_id": 141,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 318222780,
+        "value": "iVBORw0KGgoAAAANSUhEUgAAAxEAAAGGCAIAAACL+ZvjAAAAB3RJTUUH5wIJFRAjMhWfyAAAIABJREFUeJzsnXVYFUsbwGfrJHBoaRDBVhQUTLATO0BFLOy4BnYrmNcAu7vF7kKvnWBcGwxKOk9uzPfHePY7F9Tr9eoVcH+Pj885w8ye2dnd2XfeeQNjWRaUaiCEEEKSJDmOUyqVcrkcQohh2E/pCQDgp/y0gICAgICAwL8E/9kd+IFACFmWJQiCJMnHjx4PGTjo5o0bGIYh2eUfHeeb6xiW4zjO//o/7YOAgICAgIDAz6XUykwsy+I4TlFUZkbGrBkzA7t1O37smFqtLloTQsgwDMuyDMPQNG2oeGNZFpXQNM1xHCrkKzMMY9icpmleEuLroP85joMQ6nS6aVOmPoyNRV9//BgICAgICAgIfDfIn92B7wySRTiOoyhKrVYfjopas3rN61evRCKRiYkJQRBFmxAEUaic5TgMAAghRVF/KWdZDMNEIhFfwrFcoeZF66D+YBiGE0T0pUv9BwwgSZKm6e9yvgICAgICAgL/DaVKZkL6G4qiCIK4+scfq1euir50SSQSGRsbsyzLsmwh7Q4ybMrIyNi6eXNZV9dLFy4yDNOsRYsuXToDDCMI4uzpM8eOHqVpWi6X9wruXatWLY7j1qxaXb5C+agDBx0cHaZMm/YmPn79unVpqWk2tjYhAweWdXXlOC5i2TIHB8fnz5+9fPHSzd1t0JAhVlbWc2fNzsnJmTp5cmCPHh06deQ4DsdLrZ5PQEBAQECglFF63tnI0JuiqPfv3o0fOy6kX//L0dEmJiYikaiotMSDYZhWq928YeOC8HkeNTx86taZOnny9m3bcRzfuW176Nix7uXLN2vRPCsrc8SQoakfPmAYtmfXrjkzZ1EiyszM7E38m769gwvy89v4t83Lzevfp+/rV68wDDuwf//smTNFIlHTZs2iDhyMWLoMAFjdo7pELK7hWbNipYoYhgnG4AICAgICAiWIUqJng..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 143,
+      "lineno": 11,
+      "method_id": "imageUrl",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "imageUrl",
+          "object_id": 318222780,
+          "value": "iVBORw0KGgoAAAANSUhEUgAAAxEAAAGGCAIAAACL+ZvjAAAAB3RJTUUH5wIJFRAjMhWfyAAAIABJREFUeJzsnXVYFUsbwGfrJHBoaRDBVhQUTLATO0BFLOy4BnYrmNcAu7vF7kKvnWBcGwxKOk9uzPfHePY7F9Tr9eoVcH+Pj885w8ye2dnd2XfeeQNjWRaUaiCEEEKSJDmOUyqVcrkcQohh2E/pCQDgp/y0gICAgICAwL8E/9kd+IFACFmWJQiCJMnHjx4PGTjo5o0bGIYh2eUfHeeb6xiW4zjO//o/7YOAgICAgIDAz6XUykwsy+I4TlFUZkbGrBkzA7t1O37smFqtLloTQsgwDMuyDMPQNG2oeGNZFpXQNM1xHCrkKzMMY9icpmleEuLroP85joMQ6nS6aVOmPoyNRV9//BgICAgICAgIfDfIn92B7wySRTiOoyhKrVYfjopas3rN61evRCKRiYkJQRBFmxAEUaic5TgMAAghRVF/KWdZDMNEIhFfwrFcoeZF66D+YBiGE0T0pUv9BwwgSZKm6e9yvgICAgICAgL/DaVKZkL6G4qiCIK4+scfq1euir50SSQSGRsbsyzLsmwh7Q4ybMrIyNi6eXNZV9dLFy4yDNOsRYsuXToDDCMI4uzpM8eOHqVpWi6X9wruXatWLY7j1qxaXb5C+agDBx0cHaZMm/YmPn79unVpqWk2tjYhAweWdXXlOC5i2TIHB8fnz5+9fPHSzd1t0JAhVlbWc2fNzsnJmTp5cmCPHh06deQ4DsdLrZ5PQEBAQECglFF63tnI0JuiqPfv3o0fOy6kX//L0dEmJiYikaiotMSDYZhWq928YeOC8HkeNTx86taZOnny9m3bcRzfuW176Nix7uXLN2vRPCsrc8SQoakfPmAYtmfXrjkzZ1EiyszM7E38m769gwvy89v4t83Lzevfp+/rV68wDDuwf//smTNFIlHTZs2iDhyMWLoMAFjdo7pELK7hWbNipYoYhgnG4AICAgICAiWIUqJng..."
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PRODCD2, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=TEST, imageUrl=iVBORw0KGgoAAAANSUhEUgAAAxEAAAGGCAIAAACL+ZvjAAAAB3RJTUUH5wIJFRAjMhWfyAAAIABJREFUeJzsnXVYFUsbwGfrJHBoaRDBVhQUTLATO0BFLOy4BnYrmNcAu7vF7kKvnWBcGwxKOk9uzPfHePY7F9Tr9eoVcH+Pj885w8ye2dnd2XfeeQNjWRaUaiCEEEKSJDmOUyqVcrkcQohh2E/pCQDgp/y0gICAgICAwL8E/9kd+IFACFmWJQiCJMnHjx4PGTjo5o0bGIYh2eUfHeeb6xiW4zjO//o/7YOAgICAgIDAz6XUykwsy+I4TlFUZkbGrBkzA7t1O37smFqtLloTQsgwDMuyDMPQNG2oeGNZFpXQNM1xHCrkKzMMY9icpmleEuLroP85joMQ6nS6aVOmPoyNRV9//BgICAgICAgIfDfIn92B7wySRTiOoyhKrVYfjopas3rN61evRCKRiYkJQRBFmxAEUaic5TgMAAghRVF/KWdZDMNEIhFfwrFcoeZF66D+YBiGE0T0pUv9BwwgSZKm6e9yvgICAgICAgL/DaVKZkL6G4qiCIK4+scfq1euir50SSQSGRsbsyzLsmwh7Q4ybMrIyNi6eXNZV9dLFy4yDNOsRYsuXToDDCMI4uzpM8eOHqVpWi6X9wruXatWLY7j1qxaXb5C+agDBx0cHaZMm/YmPn79unVpqWk2tjYhAweWdXXlOC5i2TIHB8fnz5+9fPHSzd1t0JAhVlbWc2fNzsnJmTp5cmCPHh06deQ4DsdLrZ5PQEBAQECglFF63tnI0JuiqPfv3o0fOy6kX//L0dEmJiYikaiotMSDYZhWq928YeOC8HkeNTx86taZOnny9m3bcRzfuW176N..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 144,
+      "parent_id": 143,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PRODCD2, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=TEST, imageUrl=iVBORw0KGgoAAAANSUhEUgAAAxEAAAGGCAIAAACL+ZvjAAAAB3RJTUUH5wIJFRAjMhWfyAAAIABJREFUeJzsnXVYFUsbwGfrJHBoaRDBVhQUTLATO0BFLOy4BnYrmNcAu7vF7kKvnWBcGwxKOk9uzPfHePY7F9Tr9eoVcH+Pj885w8ye2dnd2XfeeQNjWRaUaiCEEEKSJDmOUyqVcrkcQohh2E/pCQDgp/y0gICAgICAwL8E/9kd+IFACFmWJQiCJMnHjx4PGTjo5o0bGIYh2eUfHeeb6xiW4zjO//o/7YOAgICAgIDAz6XUykwsy+I4TlFUZkbGrBkzA7t1O37smFqtLloTQsgwDMuyDMPQNG2oeGNZFpXQNM1xHCrkKzMMY9icpmleEuLroP85joMQ6nS6aVOmPoyNRV9//BgICAgICAgIfDfIn92B7wySRTiOoyhKrVYfjopas3rN61evRCKRiYkJQRBFmxAEUaic5TgMAAghRVF/KWdZDMNEIhFfwrFcoeZF66D+YBiGE0T0pUv9BwwgSZKm6e9yvgICAgICAgL/DaVKZkL6G4qiCIK4+scfq1euir50SSQSGRsbsyzLsmwh7Q4ybMrIyNi6eXNZV9dLFy4yDNOsRYsuXToDDCMI4uzpM8eOHqVpWi6X9wruXatWLY7j1qxaXb5C+agDBx0cHaZMm/YmPn79unVpqWk2tjYhAweWdXXlOC5i2TIHB8fnz5+9fPHSzd1t0JAhVlbWc2fNzsnJmTp5cmCPHh06deQ4DsdLrZ5PQEBAQECglFF63tnI0JuiqPfv3o0fOy6kX//L0dEmJiYikaiotMSDYZhWq928YeOC8HkeNTx86taZOnny9m3bcRzfuW176N..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 145,
+      "lineno": 11,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 816780675,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=PRODCD2, tickets=null, title=MICROFONO, categoryName=Adaptadores Hub, summary=TEST, imageUrl=iVBORw0KGgoAAAANSUhEUgAAAxEAAAGGCAIAAACL+ZvjAAAAB3RJTUUH5wIJFRAjMhWfyAAAIABJREFUeJzsnXVYFUsbwGfrJHBoaRDBVhQUTLATO0BFLOy4BnYrmNcAu7vF7kKvnWBcGwxKOk9uzPfHePY7F9Tr9eoVcH+Pj885w8ye2dnd2XfeeQNjWRaUaiCEEEKSJDmOUyqVcrkcQohh2E/pCQDgp/y0gICAgICAwL8E/9kd+IFACFmWJQiCJMnHjx4PGTjo5o0bGIYh2eUfHeeb6xiW4zjO//o/7YOAgICAgIDAz6XUykwsy+I4TlFUZkbGrBkzA7t1O37smFqtLloTQsgwDMuyDMPQNG2oeGNZFpXQNM1xHCrkKzMMY9icpmleEuLroP85joMQ6nS6aVOmPoyNRV9//BgICAgICAgIfDfIn92B7wySRTiOoyhKrVYfjopas3rN61evRCKRiYkJQRBFmxAEUaic5TgMAAghRVF/KWdZDMNEIhFfwrFcoeZF66D+YBiGE0T0pUv9BwwgSZKm6e9yvgICAgICAgL/DaVKZkL6G4qiCIK4+scfq1euir50SSQSGRsbsyzLsmwh7Q4ybMrIyNi6eXNZV9dLFy4yDNOsRYsuXToDDCMI4uzpM8eOHqVpWi6X9wruXatWLY7j1qxaXb5C+agDBx0cHaZMm/YmPn79unVpqWk2tjYhAweWdXXlOC5i2TIHB8fnz5+9fPHSzd1t0JAhVlbWc2fNzsnJmTp5cmCPHh06deQ4DsdLrZ5PQEBAQECglFF63tnI0JuiqPfv3o0fOy6kX//L0dEmJiYikaiotMSDYZhWq928YeOC8HkeNTx86taZOnny9m3bcRzfuW176N..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 146,
+      "parent_id": 145,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+        "object_id": 1565802948,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductListDTO@5d5441c4"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+      "event": "call",
+      "id": 147,
+      "lineno": 11,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 148,
+      "parent_id": 147,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=null, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 149,
+      "lineno": 11,
+      "method_id": "categoryName",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "categoryName",
+          "object_id": 1063822744,
+          "value": "Adaptadores Hub"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 150,
+      "parent_id": 149,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=null, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 151,
+      "lineno": 11,
+      "method_id": "title",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "title",
+          "object_id": 1700749954,
+          "value": "test 4"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 152,
+      "parent_id": 151,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=null, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 153,
+      "lineno": 11,
+      "method_id": "sku",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "sku",
+          "object_id": 1242191300,
+          "value": "prod2"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=prod2, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 154,
+      "parent_id": 153,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=prod2, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=null, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 155,
+      "lineno": 11,
+      "method_id": "summary",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "summary",
+          "object_id": 892303136,
+          "value": "test"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=prod2, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=test, imageUrl=null)"
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 156,
+      "parent_id": 155,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=prod2, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=test, imageUrl=null)"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 157,
+      "lineno": 32,
+      "method_id": "decompressImage",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 1800614455,
+          "value": "[B@6b533237"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 158,
+      "parent_id": 157,
+      "return_value": {
+        "class": "[B",
+        "object_id": 1963329197,
+        "value": "[B@750606ad"
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.util.ImageUtil",
+      "event": "call",
+      "id": 159,
+      "lineno": 51,
+      "method_id": "compressImageBase64",
+      "parameters": [
+        {
+          "class": "[B",
+          "kind": "req",
+          "name": "data",
+          "object_id": 1963329197,
+          "value": "[B@750606ad"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java",
+      "static": true,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 160,
+      "parent_id": 159,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 1832573372,
+        "value": "iVBORw0KGgoAAAANSUhEUgAAA2kAAAORCAYAAABoSerSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAP+lSURBVHhe7P37lx3FmeeN+v+Ztrsb98VdRoUk0AUhVEWpZFSSECBQmbKMyhayt7nIXIwLA8YgwJQujS9IIMk2oO6eFj3uMzPvO/Pic9ZZZ+bMWmfNes9515o185/EqSdzR+7IyOeJjNgZkTuz8vvDZ6l2ROQ3Yj8Z+UR8d+be+spdd92lAAAAAAAAAAB0A5g0AAAAAAAAAOgQX7n7nl0KAAAAAACAtlh4AABgY14jMGkAAAAAAKBVuA0qAEPHvEZg0gAAAAAAQKtwG1QAho55jcCkAQAAAACAVuE2qAAMHfMagUkDAAAAAACtwm1QARg65jUCkwYAAAAAAFqF26ACMHTMawQmDQAAAAAAtAq3QQVg6JjXCEwaAAAAAABoFW6DCsDQMa8RmDQAAAAAANAq3AYVgKFjXiMwaQAAAAAAoFW4DaoPJ08+rL77vaejQppcXwC0jXmNwKQBAAAAAIBW4TaoPpCpevOXV6JCmlxfALSNeY0MyqSdeeZZdeXG7aiQJtcXAAC0CfIbAKBPcBtUH2DSwHbGvEZg0hqCTQwAoAsgvwEA+gS3QfUBJg1sZ8xrBCatIW1tYtbe/6P64ycvqcPzO9n6rtCXcc4axKkZh1/8RP3xj++rNcSvACYNdBHkumZs51zHbVB96LNJO7+5dT3cfEk9cWAnW98V+jLO7Yh5jYgmbW7+YfXjT/6o/vVf/zXj4xcfZtu52HnfXnXwoWW2zuTBrTbUlquLCUxaesxx6jnUxrjb7CsUWmT1daTH53M+u/yemtL0vcXYuDTNcchvQLOdr9UQkOuqINfJcBvUaTl44rhaOHgvW1diq03WlqtrgT6atEMHHlav3Wxn3G321ZSlhb3q2LFlts7k+FYbasvVcZjXSO2dNH1xT2PSDi4tq5On1..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 161,
+      "lineno": 11,
+      "method_id": "imageUrl",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "imageUrl",
+          "object_id": 1832573372,
+          "value": "iVBORw0KGgoAAAANSUhEUgAAA2kAAAORCAYAAABoSerSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAP+lSURBVHhe7P37lx3FmeeN+v+Ztrsb98VdRoUk0AUhVEWpZFSSECBQmbKMyhayt7nIXIwLA8YgwJQujS9IIMk2oO6eFj3uMzPvO/Pic9ZZZ+bMWmfNes9515o185/EqSdzR+7IyOeJjNgZkTuz8vvDZ6l2ROQ3Yj8Z+UR8d+be+spdd92lAAAAAAAAAAB0A5g0AAAAAAAAAOgQX7n7nl0KAAAAAACAtlh4AABgY14jMGkAAAAAAKBVuA0qAEPHvEZg0gAAAAAAQKtwG1QAho55jcCkAQAAAACAVuE2qAAMHfMagUkDAAAAAACtwm1QARg65jUCkwYAAAAAAFqF26ACMHTMawQmDQAAAAAAtAq3QQVg6JjXCEwaAAAAAABoFW6DCsDQMa8RmDQAAAAAANAq3AYVgKFjXiMwaQAAAAAAoFW4DaoPJ08+rL77vaejQppcXwC0jXmNwKQBAAAAAIBW4TaoPpCpevOXV6JCmlxfALSNeY0MyqSdeeZZdeXG7aiQJtcXAAC0CfIbAKBPcBtUH2DSwHbGvEZg0hqCTQwAoAsgvwEA+gS3QfUBJg1sZ8xrBCatIW1tYtbe/6P64ycvqcPzO9n6rtCXcc4axKkZh1/8RP3xj++rNcSvACYNdBHkumZs51zHbVB96LNJO7+5dT3cfEk9cWAnW98V+jLO7Yh5jYgmbW7+YfXjT/6o/vVf/zXj4xcfZtu52HnfXnXwoWW2zuTBrTbUlquLCUxaesxx6jnUxrjb7CsUWmT1daTH53M+u/yemtL0vcXYuDTNcchvQLOdr9UQkOuqINfJcBvUaTl44rhaOHgvW1diq03WlqtrgT6atEMHHlav3Wxn3G321ZSlhb3q2LFlts7k+FYbasvVcZjXSO2dNH1xT2PSDi4tq5On1..."
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=prod2, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=test, imageUrl=iVBORw0KGgoAAAANSUhEUgAAA2kAAAORCAYAAABoSerSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAP+lSURBVHhe7P37lx3FmeeN+v+Ztrsb98VdRoUk0AUhVEWpZFSSECBQmbKMyhayt7nIXIwLA8YgwJQujS9IIMk2oO6eFj3uMzPvO/Pic9ZZZ+bMWmfNes9515o185/EqSdzR+7IyOeJjNgZkTuz8vvDZ6l2ROQ3Yj8Z+UR8d+be+spdd92lAAAAAAAAAAB0A5g0AAAAAAAAAOgQX7n7nl0KAAAAAACAtlh4AABgY14jMGkAAAAAAKBVuA0qAEPHvEZg0gAAAAAAQKtwG1QAho55jcCkAQAAAACAVuE2qAAMHfMagUkDAAAAAACtwm1QARg65jUCkwYAAAAAAFqF26ACMHTMawQmDQAAAAAAtAq3QQVg6JjXCEwaAAAAAABoFW6DCsDQMa8RmDQAAAAAANAq3AYVgKFjXiMwaQAAAAAAoFW4DaoPJ08+rL77vaejQppcXwC0jXmNwKQBAAAAAIBW4TaoPpCpevOXV6JCmlxfALSNeY0MyqSdeeZZdeXG7aiQJtcXAAC0CfIbAKBPcBtUH2DSwHbGvEZg0hqCTQwAoAsgvwEA+gS3QfUBJg1sZ8xrBCatIW1tYtbe/6P64ycvqcPzO9n6rtCXcc4axKkZh1/8RP3xj++rNcSvACYNdBHkumZs51zHbVB96LNJO7+5dT3cfEk9cWAnW98V+jLO7Yh5jYgmbW7+YfXjT/6o/vVf/zXj4xcfZtu52HnfXnXwoWW2zuTBrTbUlquLCUxaesxx6jnUxrjb7CsUWmT1daT..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 162,
+      "parent_id": 161,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=prod2, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=test, imageUrl=iVBORw0KGgoAAAANSUhEUgAAA2kAAAORCAYAAABoSerSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAP+lSURBVHhe7P37lx3FmeeN+v+Ztrsb98VdRoUk0AUhVEWpZFSSECBQmbKMyhayt7nIXIwLA8YgwJQujS9IIMk2oO6eFj3uMzPvO/Pic9ZZZ+bMWmfNes9515o185/EqSdzR+7IyOeJjNgZkTuz8vvDZ6l2ROQ3Yj8Z+UR8d+be+spdd92lAAAAAAAAAAB0A5g0AAAAAAAAAOgQX7n7nl0KAAAAAACAtlh4AABgY14jMGkAAAAAAKBVuA0qAEPHvEZg0gAAAAAAQKtwG1QAho55jcCkAQAAAACAVuE2qAAMHfMagUkDAAAAAACtwm1QARg65jUCkwYAAAAAAFqF26ACMHTMawQmDQAAAAAAtAq3QQVg6JjXCEwaAAAAAABoFW6DCsDQMa8RmDQAAAAAANAq3AYVgKFjXiMwaQAAAAAAoFW4DaoPJ08+rL77vaejQppcXwC0jXmNwKQBAAAAAIBW4TaoPpCpevOXV6JCmlxfALSNeY0MyqSdeeZZdeXG7aiQJtcXAAC0CfIbAKBPcBtUH2DSwHbGvEZg0hqCTQwAoAsgvwEA+gS3QfUBJg1sZ8xrBCatIW1tYtbe/6P64ycvqcPzO9n6rtCXcc4axKkZh1/8RP3xj++rNcSvACYNdBHkumZs51zHbVB96LNJO7+5dT3cfEk9cWAnW98V+jLO7Yh5jYgmbW7+YfXjT/6o/vVf/zXj4xcfZtu52HnfXnXwoWW2zuTBrTbUlquLCUxaesxx6jnUxrjb7CsUWmT1daT..."
+      },
+      "thread_id": 42
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+      "event": "call",
+      "id": 163,
+      "lineno": 11,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO$ProductListDTOBuilder",
+        "object_id": 434694467,
+        "value": "ProductListDTO.ProductListDTOBuilder(id=null, sku=prod2, tickets=null, title=test 4, categoryName=Adaptadores Hub, summary=test, imageUrl=iVBORw0KGgoAAAANSUhEUgAAA2kAAAORCAYAAABoSerSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAP+lSURBVHhe7P37lx3FmeeN+v+Ztrsb98VdRoUk0AUhVEWpZFSSECBQmbKMyhayt7nIXIwLA8YgwJQujS9IIMk2oO6eFj3uMzPvO/Pic9ZZZ+bMWmfNes9515o185/EqSdzR+7IyOeJjNgZkTuz8vvDZ6l2ROQ3Yj8Z+UR8d+be+spdd92lAAAAAAAAAAB0A5g0AAAAAAAAAOgQX7n7nl0KAAAAAACAtlh4AABgY14jMGkAAAAAAKBVuA0qAEPHvEZg0gAAAAAAQKtwG1QAho55jcCkAQAAAACAVuE2qAAMHfMagUkDAAAAAACtwm1QARg65jUCkwYAAAAAAFqF26ACMHTMawQmDQAAAAAAtAq3QQVg6JjXCEwaAAAAAABoFW6DCsDQMa8RmDQAAAAAANAq3AYVgKFjXiMwaQAAAAAAoFW4DaoPJ08+rL77vaejQppcXwC0jXmNwKQBAAAAAIBW4TaoPpCpevOXV6JCmlxfALSNeY0MyqSdeeZZdeXG7aiQJtcXAAC0CfIbAKBPcBtUH2DSwHbGvEZg0hqCTQwAoAsgvwEA+gS3QfUBJg1sZ8xrBCatIW1tYtbe/6P64ycvqcPzO9n6rtCXcc4axKkZh1/8RP3xj++rNcSvACYNdBHkumZs51zHbVB96LNJO7+5dT3cfEk9cWAnW98V+jLO7Yh5jYgmbW7+YfXjT/6o/vVf/zXj4xcfZtu52HnfXnXwoWW2zuTBrTbUlquLCUxaesxx6jnUxrjb7CsUWmT1daT..."
+      },
+      "static": false,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 164,
+      "parent_id": 163,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.ProductListDTO",
+        "object_id": 593634636,
+        "value": "com.peterson.helpdesk.domain.dtos.ProductListDTO@2362254c"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00867245,
+      "event": "return",
+      "id": 165,
+      "parent_id": 38,
+      "return_value": {
+        "class": "java.util.ArrayList",
+        "object_id": 1364355485,
+        "value": "[com.peterson.helpdesk.domain.dtos.ProductListDTO@7f946a5, com.peterson.helpdesk.domain.dtos.ProductListDTO@1de9bd40, com.peterson.helpdesk.domain.dtos.ProductListDTO@5d5441c4, com.peterson.helpdesk.domain.dtos.ProductListDTO@2362254c]"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.00930892,
+      "event": "return",
+      "id": 166,
+      "parent_id": 37,
+      "return_value": {
+        "class": "org.springframework.http.ResponseEntity",
+        "object_id": 337915508,
+        "value": "<200 OK OK,[com.peterson.helpdesk.domain.dtos.ProductListDTO@7f946a5, com.peterson.helpdesk.domain.dtos.ProductListDTO@1de9bd40, com.peterson.helpdesk.domain.dtos.ProductListDTO@5d5441c4, com.peterson.helpdesk.domain.dtos.ProductListDTO@2362254c],[]>"
+      },
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.01052971,
+      "event": "return",
+      "http_server_response": {
+        "headers": {
+          "Transfer-Encoding": "chunked",
+          "Keep-Alive": "timeout=60",
+          "Access-Control-Allow-Origin": "*",
+          "X-Content-Type-Options": "nosniff",
+          "Connection": "keep-alive",
+          "Pragma": "no-cache",
+          "Date": "Mon, 04 Dec 2023 15:17:49 GMT",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+          "Vary": "Origin",
+          "Expires": "0",
+          "X-XSS-Protection": "1; mode=block",
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      },
+      "id": 167,
+      "parent_id": 28,
+      "thread_id": 42
+    },
+    {
+      "elapsed": 0.01143974,
+      "event": "return",
+      "id": 168,
+      "parent_id": 1,
+      "thread_id": 42
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "POST /product/create (200) - 10:17:49.096",
+    "app": "helpdesk",
+    "language": {
+      "name": "java",
+      "version": "17.0.7+7-LTS",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {},
+    "git": {
+      "repository": "https://github.com/DarkCodePE/ticket-anavatec.git",
+      "branch": "DEVELOP_3"
+    }
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "sku",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java:11"
+                            },
+                            {
+                              "name": "title",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java:11"
+                            },
+                            {
+                              "name": "imageUrl",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java:11"
+                            },
+                            {
+                              "name": "summary",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java:11"
+                            },
+                            {
+                              "name": "build",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java:11"
+                            },
+                            {
+                              "name": "categoryName",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java:11"
+                            }
+                          ],
+                          "name": "ProductListDTO$ProductListDTOBuilder",
+                          "type": "class"
+                        },
+                        {
+                          "children": [
+                            {
+                              "name": "builder",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductListDTO.java:11"
+                            }
+                          ],
+                          "name": "ProductListDTO",
+                          "type": "class"
+                        },
+                        {
+                          "children": [
+                            {
+                              "name": "setTitle",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                            },
+                            {
+                              "name": "setSku",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                            },
+                            {
+                              "name": "setCategoryId",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                            },
+                            {
+                              "name": "setSummary",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/ProductRequestDTO.java:12"
+                            }
+                          ],
+                          "name": "ProductRequestDTO",
+                          "type": "class"
+                        }
+                      ],
+                      "name": "dtos",
+                      "type": "package"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "toEnum",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:24"
+                            },
+                            {
+                              "name": "values",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:3"
+                            }
+                          ],
+                          "name": "Perfil",
+                          "type": "class"
+                        }
+                      ],
+                      "name": "enums",
+                      "type": "package"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "setSku",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:81"
+                        },
+                        {
+                          "name": "setImage",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:129"
+                        },
+                        {
+                          "name": "setTitle",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:89"
+                        },
+                        {
+                          "name": "setStatus",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:121"
+                        },
+                        {
+                          "name": "setCategory",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:97"
+                        },
+                        {
+                          "name": "setSummary",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Product.java:105"
+                        }
+                      ],
+                      "name": "Product",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "addPerfil",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java:99"
+                        }
+                      ],
+                      "name": "Pessoa",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "setImageData",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Image.java:16"
+                        },
+                        {
+                          "name": "setType",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Image.java:16"
+                        },
+                        {
+                          "name": "setName",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Image.java:16"
+                        }
+                      ],
+                      "name": "Image",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "domain",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "compressImageBase64",
+                          "type": "function",
+                          "static": true,
+                          "location": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java:51"
+                        },
+                        {
+                          "name": "compressImage",
+                          "type": "function",
+                          "static": true,
+                          "location": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java:13"
+                        },
+                        {
+                          "name": "decompressImage",
+                          "type": "function",
+                          "static": true,
+                          "location": "src/main/java/com/peterson/helpdesk/util/ImageUtil.java:32"
+                        }
+                      ],
+                      "name": "ImageUtil",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "util",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "doFilterInternal",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+                        }
+                      ],
+                      "name": "JWTAuthoorizationFilter",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "getUsername",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:66"
+                        },
+                        {
+                          "name": "tokenValido",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:44"
+                        }
+                      ],
+                      "name": "JWTUtil",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "security",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "findBySku",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/repositories/ProductRepository.java:-1"
+                        }
+                      ],
+                      "name": "ProductRepository",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "findByProduct_Id",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/repositories/ImageRepository.java:-1"
+                        }
+                      ],
+                      "name": "ImageRepository",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "findByEmail",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java:-1"
+                        }
+                      ],
+                      "name": "PessoaRepository",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "repositories",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "saveProduct",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/resources/ProductController.java:48"
+                        }
+                      ],
+                      "name": "ProductController",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "resources",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "loadUserByUsername",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22"
+                        }
+                      ],
+                      "name": "UserDetailServiceImpl",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "createOrUpdateProduct",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/services/ProductService.java:61"
+                        }
+                      ],
+                      "name": "ProductService",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "services",
+                  "type": "package"
+                }
+              ],
+              "name": "helpdesk",
+              "type": "package"
+            }
+          ],
+          "name": "peterson",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+        },
+        {
+          "type": "query",
+          "name": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select productcat0_.id as id1_6_0_, productcat0_.name as name2_6_0_ from product_categories productcat0_ where productcat0_.id=?"
+        },
+        {
+          "type": "query",
+          "name": "select product0_.product_id as product_1_7_, product0_.category_id as category7_7_, product0_.image_id as image_id8_7_, product0_.price as price2_7_, product0_.sku as sku3_7_, product0_.status as status4_7_, product0_.summary as summary5_7_, product0_.title as title6_7_ from products product0_ where product0_.sku=?"
+        },
+        {
+          "type": "query",
+          "name": "select image0_.id as id1_3_0_, image0_.imagedata as imagedat2_3_0_, image0_.name as name3_3_0_, image0_.type as type4_3_0_, product1_.product_id as product_1_7_1_, product1_.category_id as category7_7_1_, product1_.image_id as image_id8_7_1_, product1_.price as price2_7_1_, product1_.sku as sku3_7_1_, product1_.status as status4_7_1_, product1_.summary as summary5_7_1_, product1_.title as title6_7_1_, productcat2_.id as id1_6_2_, productcat2_.name as name2_6_2_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id left outer join product_categories productcat2_ on product1_.category_id=productcat2_.id where image0_.id=?"
+        },
+        {
+          "type": "query",
+          "name": "select product0_.product_id as product_1_7_2_, product0_.category_id as category7_7_2_, product0_.image_id as image_id8_7_2_, product0_.price as price2_7_2_, product0_.sku as sku3_7_2_, product0_.status as status4_7_2_, product0_.summary as summary5_7_2_, product0_.title as title6_7_2_, productcat1_.id as id1_6_0_, productcat1_.name as name2_6_0_, image2_.id as id1_3_1_, image2_.imagedata as imagedat2_3_1_, image2_.name as name3_3_1_, image2_.type as type4_3_1_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.image_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select image0_.id as id1_3_, image0_.imagedata as imagedat2_3_, image0_.name as name3_3_, image0_.type as type4_3_ from images image0_ left outer join products product1_ on image0_.id=product1_.image_id where product1_.product_id=?"
+        },
+        {
+          "type": "query",
+          "name": "update products set category_id=?, image_id=?, price=?, status=?, summary=?, title=? where product_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select product0_.product_id as product_1_7_, product0_.category_id as category7_7_, product0_.image_id as image_id8_7_, product0_.price as price2_7_, product0_.sku as sku3_7_, product0_.status as status4_7_, product0_.summary as summary5_7_, product0_.title as title6_7_ from products product0_"
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "POST /product/create"
+        }
+      ]
+    }
+  ]
+}

@@ -1,14 +1,8 @@
 package com.peterson.helpdesk.services;
 
 import com.peterson.helpdesk.domain.*;
-import com.peterson.helpdesk.domain.dtos.ProductListDTO;
-import com.peterson.helpdesk.domain.dtos.SolutionListDTO;
-import com.peterson.helpdesk.domain.dtos.SolutionRequestDTO;
-import com.peterson.helpdesk.domain.dtos.SolutionResponseDTO;
-import com.peterson.helpdesk.repositories.ChamadoRepository;
-import com.peterson.helpdesk.repositories.ImageRepository;
-import com.peterson.helpdesk.repositories.ImageSolutionRepository;
-import com.peterson.helpdesk.repositories.SolutionRepository;
+import com.peterson.helpdesk.domain.dtos.*;
+import com.peterson.helpdesk.repositories.*;
 import com.peterson.helpdesk.util.ImageUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
@@ -17,6 +11,7 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static com.peterson.helpdesk.domain.enums.Status.ENCERRADO;
 
@@ -27,17 +22,19 @@ public class SolutionService {
     private final ChamadoRepository chamadoRepository;
     private final ImageRepository imageRepository;
     private final ImageSolutionRepository imageSolutionRepository;
-
-    public SolutionService(SolutionRepository solutionRepository, ChamadoRepository chamadoRepository, ImageRepository imageRepository, ImageSolutionRepository imageSolutionRepository) {
+    private final RecommendationRepository recommendationRepository;
+    public SolutionService(SolutionRepository solutionRepository, ChamadoRepository chamadoRepository, ImageRepository imageRepository, ImageSolutionRepository imageSolutionRepository, RecommendationRepository recommendationRepository) {
         this.solutionRepository = solutionRepository;
         this.chamadoRepository = chamadoRepository;
         this.imageRepository = imageRepository;
         this.imageSolutionRepository = imageSolutionRepository;
+        this.recommendationRepository = recommendationRepository;
     }
     public List<SolutionResponseDTO> solutions() {
         return solutionRepository.findAll()
                 .stream()
                 .map(sol -> SolutionResponseDTO.builder()
+                        .id(sol.getId())
                         .productId(sol.getChamado().getProduct().getId())
                         .summary(sol.getSummary())
                         .status(sol.isStatus())
@@ -48,31 +45,112 @@ public class SolutionService {
 
     }
     public List<SolutionResponseDTO> getSolutionsByProductId(Integer productID) {
+        List<Recommendation> recommendation = recommendationRepository.findAllBySolution_Chamado_Product_Id(productID);
         return solutionRepository.findByChamado_Product_Id(productID)
                 .stream()
                 .map(sol -> SolutionResponseDTO.builder()
                         .summary(sol.getSummary())
                         .status(sol.isStatus())
                         .title(sol.getTitle())
+                        .priority(sol.getChamado().getPrioridade().getDescricao())
+                        .nameStatus(sol.getChamado().getStatus().getDescricao())
                         .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(sol.getImageSolution().getImageData())))
+                        .recommendations(recommendation.stream()
+                                .map(rec -> RecommendationResponseDTO.builder()
+                                        .id(rec.getId())
+                                        .description(rec.getDescription())
+                                        .solutionTitle(sol.getTitle())
+                                        .created_at(rec.getCreatedAt())
+                                        .tecnicoName(rec.getTecnico().getNome())
+                                        .comments(rec.getComments().stream()
+                                                .map(comment -> CommentResponseDTO.builder()
+                                                        .description(comment.getDescription())
+                                                        .createdAt(comment.getCreatedAt())
+                                                        .tecnicoName(comment.getTecnico().getNome())
+                                                        .build())
+                                                .toList())
+                                        .build())
+                                .collect(Collectors.toList()))
                         .build())
                 .toList();
 
     }
     public List<SolutionResponseDTO> getSolutionsByTicketId(Integer ticketID) {
+        List<Recommendation> recommendation = recommendationRepository.findAllBySolution_Chamado_Id(ticketID);
+        Tecnico tecnico = chamadoRepository.findById(ticketID).orElseThrow(() -> new RuntimeException("no existe el ticket")).getTecnico();
         return solutionRepository.findByChamado_Id(ticketID)
                 .stream()
                 .map(sol -> SolutionResponseDTO.builder()
+                        .id(sol.getId())
+                        .productId(sol.getChamado().getProduct().getId())
+                        .technicalName(tecnico.getNome())
                         .summary(sol.getSummary())
                         .status(sol.isStatus())
                         .title(sol.getTitle())
+                        .priority(sol.getChamado().getPrioridade().getDescricao())
+                        .nameStatus(sol.getChamado().getStatus().getDescricao())
                         .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(sol.getImageSolution().getImageData())))
+                        .recommendations(recommendation.stream()
+                                .map(rec -> RecommendationResponseDTO.builder()
+                                        .id(rec.getId())
+                                        .description(rec.getDescription())
+                                        .solutionTitle(sol.getTitle())
+                                        .created_at(rec.getCreatedAt())
+                                        .tecnicoName(rec.getTecnico().getNome())
+                                        .comments(rec.getComments().stream()
+                                                .map(comment -> CommentResponseDTO.builder()
+                                                        .description(comment.getDescription())
+                                                        .createdAt(comment.getCreatedAt())
+                                                        .tecnicoName(comment.getTecnico().getNome())
+                                                        .build())
+                                                .toList())
+                                        .build())
+                                .collect(Collectors.toList()))
                         .build())
-                .toList();
+                .collect(Collectors.toList());
 
     }
+    public List<SolutionResponseDTO> searchSolution(SearchSolutionDTO searchSolutionDTO) {
+        List<Recommendation> recommendation = recommendationRepository.findAllBySolution_Chamado_Product_Id(searchSolutionDTO.getProductId());
+        return solutionRepository.searchSolutions(searchSolutionDTO.getTitle(), searchSolutionDTO.getProductId())
+                .stream()
+                .map(sol -> SolutionResponseDTO.builder()
+                        .id(sol.getId())
+                        .productId(sol.getChamado().getProduct().getId())
+                        .summary(sol.getSummary())
+                        .status(sol.isStatus())
+                        .title(sol.getTitle())
+                        .priority(sol.getChamado().getPrioridade().getDescricao())
+                        .nameStatus(sol.getChamado().getStatus().getDescricao())
+                        .imageUrl(ImageUtil.compressImageBase64(ImageUtil.decompressImage(sol.getImageSolution().getImageData())))
+                        .recommendations(recommendation.stream()
+                                .map(rec -> RecommendationResponseDTO.builder()
+                                        .id(rec.getId())
+                                        .description(rec.getDescription())
+                                        .solutionTitle(sol.getTitle())
+                                        .created_at(rec.getCreatedAt())
+                                        .tecnicoName(rec.getTecnico().getNome())
+                                        .comments(rec.getComments().stream()
+                                                .map(comment -> CommentResponseDTO.builder()
+                                                        .description(comment.getDescription())
+                                                        .createdAt(comment.getCreatedAt())
+                                                        .tecnicoName(comment.getTecnico().getNome())
+                                                        .build())
+                                                .toList())
+                                        .build())
+                                .collect(Collectors.toList()))
+                        .build())
+                .collect(Collectors.toList());
+    }
+
+
+
     public List<Chamado> getTicketsByProductSku(Integer productID) {
         return chamadoRepository.findByProduct_Id(productID);
+    }
+    public List<Chamado> searchChamados(String titulo, Integer productID) {
+        if (titulo == null || titulo.isEmpty()) return chamadoRepository.findByProduct_Id(productID);
+        return chamadoRepository.searchChamados(titulo, productID);
     }
     public List<SolutionListDTO> createSolution(SolutionRequestDTO solutionRequestDTO, MultipartFile file) throws IOException {
         Chamado chamado = chamadoRepository.findById(solutionRequestDTO.getTicketId()).orElseThrow(() -> new RuntimeException("no existe el ticket"));

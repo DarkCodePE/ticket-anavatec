@@ -1,0 +1,19 @@
+[
+  "category",
+  "categoryId",
+  "categoryName",
+  "data",
+  "file",
+  "image",
+  "imageData",
+  "imageUrl",
+  "name",
+  "p0",
+  "productDTO",
+  "productRequestDTO",
+  "sku",
+  "status",
+  "summary",
+  "title",
+  "type"
+]

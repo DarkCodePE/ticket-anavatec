@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /product/categories",
+    "parameters": "()",
+    "status": 200
+  }
+]

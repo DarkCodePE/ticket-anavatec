@@ -1,12 +1,20 @@
 package com.peterson.helpdesk.security;
 
+import com.peterson.helpdesk.domain.Pessoa;
+import com.peterson.helpdesk.domain.Tecnico;
+import com.peterson.helpdesk.repositories.PessoaRepository;
+import com.peterson.helpdesk.repositories.TecnicoRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Component;
 
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 @Component
 public class JWTUtil {
@@ -17,8 +25,15 @@ public class JWTUtil {
     @Value("${jwt.secret}")
     private String secret;
 
+    @Autowired
+    private PessoaRepository pessoaRepository;
+
     public String generateToken(String email) {
+       /* Map<String, Object> customClaims = new HashMap<String, Object>();
+        Pessoa pessoa = pessoaRepository.findByEmail(email).orElse(null);
+        customClaims.put("user", pessoa);*/
         return Jwts.builder()
+                //.setClaims(customClaims)
                 .setSubject(email)
                 .setExpiration(new Date(System.currentTimeMillis() + expiration))
                 .signWith(SignatureAlgorithm.HS512, secret.getBytes())

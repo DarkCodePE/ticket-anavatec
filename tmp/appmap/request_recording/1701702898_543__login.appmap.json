@@ -1,0 +1,822 @@
+{
+  "events": [
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTAuthenticationFilter",
+      "event": "call",
+      "id": 1,
+      "lineno": 34,
+      "method_id": "attemptAuthentication",
+      "parameters": [
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest",
+          "kind": "req",
+          "name": "request",
+          "object_id": 2074452069,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7ba5a065"
+        },
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse",
+          "kind": "req",
+          "name": "response",
+          "object_id": 2140810185,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@7f9a2bc9"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTAuthenticationFilter",
+        "object_id": 1158520066,
+        "value": "com.peterson.helpdesk.security.JWTAuthenticationFilter@450d9d02"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+      "event": "call",
+      "id": 2,
+      "lineno": 13,
+      "method_id": "setEmail",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 983083614,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+        "object_id": 1561870908,
+        "value": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO@5d18423c"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.00009983,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+      "event": "call",
+      "id": 4,
+      "lineno": 21,
+      "method_id": "setSenha",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "senha",
+          "object_id": 199784306,
+          "value": "123"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO",
+        "object_id": 1561870908,
+        "value": "com.peterson.helpdesk.domain.dtos.CredenciaisDTO@5d18423c"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 5,
+      "parent_id": 4,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+      "event": "call",
+      "id": 6,
+      "lineno": 22,
+      "method_id": "loadUserByUsername",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 983083614,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+        "object_id": 1507419114,
+        "value": "com.peterson.helpdesk.services.UserDetailServiceImpl@59d963ea"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.PessoaRepository",
+      "event": "call",
+      "id": 7,
+      "lineno": -1,
+      "method_id": "findByEmail",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 983083614,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy151",
+        "object_id": 1632567800,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@64f24e4b"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "event": "call",
+      "id": 8,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 9,
+      "parent_id": 8,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 10,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 347882020,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 11,
+      "parent_id": 10,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 12,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 1721512139,
+          "value": "TECNICO"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 347882020,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 13,
+      "parent_id": 12,
+      "thread_id": 43
+    },
+    {
+      "event": "call",
+      "id": 14,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 15,
+      "parent_id": 14,
+      "thread_id": 43
+    },
+    {
+      "event": "call",
+      "id": 16,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 17,
+      "parent_id": 16,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.00436453,
+      "event": "return",
+      "id": 18,
+      "parent_id": 7,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 1176630829,
+        "value": "Optional[com.peterson.helpdesk.domain.Tecnico@864dbcbb]"
+      },
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 19,
+      "lineno": 24,
+      "method_id": "toEnum",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "cod",
+          "object_id": 1608532537,
+          "value": "0"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 20,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 21,
+      "parent_id": 20,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Perfil;",
+        "object_id": 377048761,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Perfil;@16794eb9"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.00010004,
+      "event": "return",
+      "id": 22,
+      "parent_id": 19,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.enums.Perfil",
+        "object_id": 39807075,
+        "value": "ADMIN"
+      },
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 23,
+      "lineno": 24,
+      "method_id": "toEnum",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "cod",
+          "object_id": 602447388,
+          "value": "1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 24,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 25,
+      "parent_id": 24,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Perfil;",
+        "object_id": 2126836178,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Perfil;@7ec4f1d2"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 26,
+      "parent_id": 23,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.enums.Perfil",
+        "object_id": 907222711,
+        "value": "CLIENTE"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.00606697,
+      "event": "return",
+      "id": 27,
+      "parent_id": 6,
+      "return_value": {
+        "class": "com.peterson.helpdesk.security.UserSS",
+        "object_id": 1542524004,
+        "value": "com.peterson.helpdesk.security.UserSS@5bf10c64"
+      },
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.UserSS",
+      "event": "call",
+      "id": 28,
+      "lineno": 53,
+      "method_id": "isAccountNonLocked",
+      "path": "src/main/java/com/peterson/helpdesk/security/UserSS.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.UserSS",
+        "object_id": 1542524004,
+        "value": "com.peterson.helpdesk.security.UserSS@5bf10c64"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 29,
+      "parent_id": 28,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1007575416,
+        "value": "true"
+      },
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.UserSS",
+      "event": "call",
+      "id": 30,
+      "lineno": 63,
+      "method_id": "isEnabled",
+      "path": "src/main/java/com/peterson/helpdesk/security/UserSS.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.UserSS",
+        "object_id": 1542524004,
+        "value": "com.peterson.helpdesk.security.UserSS@5bf10c64"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.00010007,
+      "event": "return",
+      "id": 31,
+      "parent_id": 30,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1007575416,
+        "value": "true"
+      },
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.UserSS",
+      "event": "call",
+      "id": 32,
+      "lineno": 48,
+      "method_id": "isAccountNonExpired",
+      "path": "src/main/java/com/peterson/helpdesk/security/UserSS.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.UserSS",
+        "object_id": 1542524004,
+        "value": "com.peterson.helpdesk.security.UserSS@5bf10c64"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 33,
+      "parent_id": 32,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1007575416,
+        "value": "true"
+      },
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.UserSS",
+      "event": "call",
+      "id": 34,
+      "lineno": 58,
+      "method_id": "isCredentialsNonExpired",
+      "path": "src/main/java/com/peterson/helpdesk/security/UserSS.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.UserSS",
+        "object_id": 1542524004,
+        "value": "com.peterson.helpdesk.security.UserSS@5bf10c64"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 35,
+      "parent_id": 34,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1007575416,
+        "value": "true"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.01279683,
+      "event": "return",
+      "id": 36,
+      "parent_id": 1,
+      "return_value": {
+        "class": "org.springframework.security.authentication.UsernamePasswordAuthenticationToken",
+        "object_id": 1688807424,
+        "value": "UsernamePasswordAuthenticationToken [Principal=com.peterson.helpdesk.security.UserSS@5bf10c64, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CLIENTE, ROLE_ADMIN]]"
+      },
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTAuthenticationFilter",
+      "event": "call",
+      "id": 37,
+      "lineno": 45,
+      "method_id": "successfulAuthentication",
+      "parameters": [
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest",
+          "kind": "req",
+          "name": "request",
+          "object_id": 2074452069,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@7ba5a065"
+        },
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse",
+          "kind": "req",
+          "name": "response",
+          "object_id": 2140810185,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@7f9a2bc9"
+        },
+        {
+          "class": "org.springframework.security.web.FilterChainProxy$VirtualFilterChain",
+          "kind": "req",
+          "name": "chain",
+          "object_id": 937986781,
+          "value": "org.springframework.security.web.FilterChainProxy$VirtualFilterChain@37e88add"
+        },
+        {
+          "class": "org.springframework.security.authentication.UsernamePasswordAuthenticationToken",
+          "kind": "req",
+          "name": "authResult",
+          "object_id": 1688807424,
+          "value": "UsernamePasswordAuthenticationToken [Principal=com.peterson.helpdesk.security.UserSS@5bf10c64, Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CLIENTE, ROLE_ADMIN]]"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTAuthenticationFilter",
+        "object_id": 1158520066,
+        "value": "com.peterson.helpdesk.security.JWTAuthenticationFilter@450d9d02"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTUtil",
+      "event": "call",
+      "id": 38,
+      "lineno": 35,
+      "method_id": "generateToken",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 2015504633,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTUtil",
+        "object_id": 1137270729,
+        "value": "com.peterson.helpdesk.security.JWTUtil@43c95fc9"
+      },
+      "static": false,
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.00356213,
+      "event": "return",
+      "id": 39,
+      "parent_id": 38,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 303114914,
+        "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAZ21haWwuY29tIiwiZXhwIjoxNzAyMzA3Njk4fQ._DxtcTh85wT_xaexRQ8wrMNbBIhx8SwCSxJmPTIhWrsQiFDG2gwcGh0DpNguOCiNpL7H83gUYf9d6PY2KEoPjA"
+      },
+      "thread_id": 43
+    },
+    {
+      "elapsed": 0.00366158,
+      "event": "return",
+      "id": 40,
+      "parent_id": 37,
+      "thread_id": 43
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "POST /login (UNKNOWN) - 10:14:58.543",
+    "app": "helpdesk",
+    "language": {
+      "name": "java",
+      "version": "17.0.7+7-LTS",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {},
+    "git": {
+      "repository": "https://github.com/DarkCodePE/ticket-anavatec.git",
+      "branch": "DEVELOP_3"
+    }
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "setEmail",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java:13"
+                            },
+                            {
+                              "name": "setSenha",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/CredenciaisDTO.java:21"
+                            }
+                          ],
+                          "name": "CredenciaisDTO",
+                          "type": "class"
+                        }
+                      ],
+                      "name": "dtos",
+                      "type": "package"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "toEnum",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:24"
+                            },
+                            {
+                              "name": "values",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:3"
+                            }
+                          ],
+                          "name": "Perfil",
+                          "type": "class"
+                        }
+                      ],
+                      "name": "enums",
+                      "type": "package"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "addPerfil",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java:99"
+                        }
+                      ],
+                      "name": "Pessoa",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "domain",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "generateToken",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:35"
+                        }
+                      ],
+                      "name": "JWTUtil",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "isCredentialsNonExpired",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/UserSS.java:58"
+                        },
+                        {
+                          "name": "isAccountNonExpired",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/UserSS.java:48"
+                        },
+                        {
+                          "name": "isAccountNonLocked",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/UserSS.java:53"
+                        },
+                        {
+                          "name": "isEnabled",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/UserSS.java:63"
+                        }
+                      ],
+                      "name": "UserSS",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "successfulAuthentication",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java:45"
+                        },
+                        {
+                          "name": "attemptAuthentication",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthenticationFilter.java:34"
+                        }
+                      ],
+                      "name": "JWTAuthenticationFilter",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "security",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "loadUserByUsername",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22"
+                        }
+                      ],
+                      "name": "UserDetailServiceImpl",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "services",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "findByEmail",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java:-1"
+                        }
+                      ],
+                      "name": "PessoaRepository",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "repositories",
+                  "type": "package"
+                }
+              ],
+              "name": "helpdesk",
+              "type": "package"
+            }
+          ],
+          "name": "peterson",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+        },
+        {
+          "type": "query",
+          "name": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+        }
+      ]
+    }
+  ]
+}

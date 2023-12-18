@@ -1,0 +1,2775 @@
+{
+  "events": [
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTAuthoorizationFilter",
+      "event": "call",
+      "id": 1,
+      "lineno": 29,
+      "method_id": "doFilterInternal",
+      "parameters": [
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest",
+          "kind": "req",
+          "name": "request",
+          "object_id": 269559735,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterRequest@101127b7"
+        },
+        {
+          "class": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse",
+          "kind": "req",
+          "name": "response",
+          "object_id": 338604397,
+          "value": "org.springframework.security.web.header.HeaderWriterFilter$HeaderWriterResponse@142eb16d"
+        },
+        {
+          "class": "org.springframework.security.web.FilterChainProxy$VirtualFilterChain",
+          "kind": "req",
+          "name": "chain",
+          "object_id": 1361849740,
+          "value": "org.springframework.security.web.FilterChainProxy$VirtualFilterChain@512c2d8c"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTAuthoorizationFilter",
+        "object_id": 814220467,
+        "value": "com.peterson.helpdesk.security.JWTAuthoorizationFilter@308804b3"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTUtil",
+      "event": "call",
+      "id": 2,
+      "lineno": 44,
+      "method_id": "tokenValido",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "token",
+          "object_id": 2038563718,
+          "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAZ21haWwuY29tIiwiZXhwIjoxNzAyMzA3Njk4fQ._DxtcTh85wT_xaexRQ8wrMNbBIhx8SwCSxJmPTIhWrsQiFDG2gwcGh0DpNguOCiNpL7H83gUYf9d6PY2KEoPjA"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTUtil",
+        "object_id": 1137270729,
+        "value": "com.peterson.helpdesk.security.JWTUtil@43c95fc9"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00199931,
+      "event": "return",
+      "id": 3,
+      "parent_id": 2,
+      "return_value": {
+        "class": "java.lang.Boolean",
+        "object_id": 1007575416,
+        "value": "true"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.security.JWTUtil",
+      "event": "call",
+      "id": 4,
+      "lineno": 66,
+      "method_id": "getUsername",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "token",
+          "object_id": 2038563718,
+          "value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAZ21haWwuY29tIiwiZXhwIjoxNzAyMzA3Njk4fQ._DxtcTh85wT_xaexRQ8wrMNbBIhx8SwCSxJmPTIhWrsQiFDG2gwcGh0DpNguOCiNpL7H83gUYf9d6PY2KEoPjA"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.security.JWTUtil",
+        "object_id": 1137270729,
+        "value": "com.peterson.helpdesk.security.JWTUtil@43c95fc9"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00010352,
+      "event": "return",
+      "id": 5,
+      "parent_id": 4,
+      "return_value": {
+        "class": "java.lang.String",
+        "object_id": 1917872364,
+        "value": "valdir@gmail.com"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+      "event": "call",
+      "id": 6,
+      "lineno": 22,
+      "method_id": "loadUserByUsername",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 1917872364,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.services.UserDetailServiceImpl",
+        "object_id": 1507419114,
+        "value": "com.peterson.helpdesk.services.UserDetailServiceImpl@59d963ea"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.PessoaRepository",
+      "event": "call",
+      "id": 7,
+      "lineno": -1,
+      "method_id": "findByEmail",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 1917872364,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy151",
+        "object_id": 1632567800,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@64f24e4b"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 8,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 9,
+      "parent_id": 8,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 10,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 1396489374,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 11,
+      "parent_id": 10,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 12,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 1721512139,
+          "value": "TECNICO"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 1396489374,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.0001009,
+      "event": "return",
+      "id": 13,
+      "parent_id": 12,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 14,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.0001001,
+      "event": "return",
+      "id": 15,
+      "parent_id": 14,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 16,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00012279,
+      "event": "return",
+      "id": 17,
+      "parent_id": 16,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00054689,
+      "event": "return",
+      "id": 18,
+      "parent_id": 7,
+      "return_value": {
+        "class": "java.util.Optional",
+        "object_id": 774707573,
+        "value": "Optional[com.peterson.helpdesk.domain.Tecnico@864dbcbb]"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 19,
+      "lineno": 24,
+      "method_id": "toEnum",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "cod",
+          "object_id": 1608532537,
+          "value": "0"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 20,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 21,
+      "parent_id": 20,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Perfil;",
+        "object_id": 1582031778,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Perfil;@5e4be3a2"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 22,
+      "parent_id": 19,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.enums.Perfil",
+        "object_id": 39807075,
+        "value": "ADMIN"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 23,
+      "lineno": 24,
+      "method_id": "toEnum",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "cod",
+          "object_id": 602447388,
+          "value": "1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Perfil",
+      "event": "call",
+      "id": 24,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 25,
+      "parent_id": 24,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Perfil;",
+        "object_id": 616670945,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Perfil;@24c1a6e1"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00010561,
+      "event": "return",
+      "id": 26,
+      "parent_id": 23,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.enums.Perfil",
+        "object_id": 907222711,
+        "value": "CLIENTE"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00075389,
+      "event": "return",
+      "id": 27,
+      "parent_id": 6,
+      "return_value": {
+        "class": "com.peterson.helpdesk.security.UserSS",
+        "object_id": 275690637,
+        "value": "com.peterson.helpdesk.security.UserSS@106eb48d"
+      },
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "http_server_request": {
+        "headers": {
+          "sec-fetch-mode": "cors",
+          "referer": "http://localhost:4200/",
+          "sec-fetch-site": "same-site",
+          "accept-language": "es-419,es;q=0.9",
+          "origin": "http://localhost:4200",
+          "accept": "application/json, text/plain, */*",
+          "authorization": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJ2YWxkaXJAZ21haWwuY29tIiwiZXhwIjoxNzAyMzA3Njk4fQ._DxtcTh85wT_xaexRQ8wrMNbBIhx8SwCSxJmPTIhWrsQiFDG2gwcGh0DpNguOCiNpL7H83gUYf9d6PY2KEoPjA",
+          "sec-ch-ua": "\"Google Chrome\";v=\"119\", \"Chromium\";v=\"119\", \"Not?A_Brand\";v=\"24\"",
+          "sec-ch-ua-mobile": "?0",
+          "sec-ch-ua-platform": "\"Windows\"",
+          "host": "localhost:8080",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip, deflate, br",
+          "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+          "sec-fetch-dest": "empty"
+        },
+        "normalized_path_info": "/chamados/top",
+        "path_info": "/chamados/top",
+        "protocol": "HTTP/1.1",
+        "request_method": "GET"
+      },
+      "id": 28,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.resources.ChamadoResource",
+      "event": "call",
+      "id": 29,
+      "lineno": 57,
+      "method_id": "findTop",
+      "path": "src/main/java/com/peterson/helpdesk/resources/ChamadoResource.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.resources.ChamadoResource",
+        "object_id": 536906120,
+        "value": "com.peterson.helpdesk.resources.ChamadoResource@20008988"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.services.ChamadoService",
+      "event": "call",
+      "id": 30,
+      "lineno": 124,
+      "method_id": "topTecnicoByChamados",
+      "path": "src/main/java/com/peterson/helpdesk/services/ChamadoService.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.services.ChamadoService",
+        "object_id": 1248530949,
+        "value": "com.peterson.helpdesk.services.ChamadoService@4a6b1205"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 31,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 32,
+      "parent_id": 31,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Prioridade",
+      "event": "call",
+      "id": 33,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Prioridade.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 34,
+      "parent_id": 33,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Prioridade;",
+        "object_id": 1522449760,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Prioridade;@5abebd60"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.enums.Status",
+      "event": "call",
+      "id": 35,
+      "lineno": 3,
+      "method_id": "values",
+      "path": "src/main/java/com/peterson/helpdesk/domain/enums/Status.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 36,
+      "parent_id": 35,
+      "return_value": {
+        "class": "[Lcom.peterson.helpdesk.domain.enums.Status;",
+        "object_id": 37523173,
+        "value": "[Lcom.peterson.helpdesk.domain.enums.Status;@23c8ee5"
+      },
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 37,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select cliente0_.id as id2_5_0_, cliente0_.cpf as cpf3_5_0_, cliente0_.data_criacao as data_cri4_5_0_, cliente0_.email as email5_5_0_, cliente0_.nome as nome6_5_0_, cliente0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_ from personas cliente0_ left outer join perfis perfis1_ on cliente0_.id=perfis1_.pessoa_id where cliente0_.id=? and cliente0_.dtype='Cliente'"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 38,
+      "parent_id": 37,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 39,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1453088787,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 40,
+      "parent_id": 39,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 41,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1453088787,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 42,
+      "parent_id": 41,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 43,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_0_, product0_.category_id as category7_7_0_, product0_.image_id as image_id8_7_0_, product0_.price as price2_7_0_, product0_.sku as sku3_7_0_, product0_.status as status4_7_0_, product0_.summary as summary5_7_0_, product0_.title as title6_7_0_, productcat1_.id as id1_6_1_, productcat1_.name as name2_6_1_, image2_.id as id1_3_2_, image2_.imagedata as imagedat2_3_2_, image2_.name as name3_3_2_, image2_.type as type4_3_2_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.product_id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00011526,
+      "event": "return",
+      "id": 44,
+      "parent_id": 43,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 45,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select tecnico0_.id as id2_5_0_, tecnico0_.cpf as cpf3_5_0_, tecnico0_.data_criacao as data_cri4_5_0_, tecnico0_.email as email5_5_0_, tecnico0_.nome as nome6_5_0_, tecnico0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_, profile2_.profile_id as profile_1_8_2_, profile2_.address as address2_8_2_, profile2_.avatar as avatar3_8_2_, profile2_.birth_date as birth_da4_8_2_, profile2_.created_at as created_5_8_2_, profile2_.phone as phone6_8_2_, profile2_.resume as resume7_8_2_, profile2_.tecnico_id as tecnico_8_8_2_ from personas tecnico0_ left outer join perfis perfis1_ on tecnico0_.id=perfis1_.pessoa_id left outer join profiles profile2_ on tecnico0_.id=profile2_.tecnico_id where tecnico0_.id=? and tecnico0_.dtype='Tecnico'"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00012246,
+      "event": "return",
+      "id": 46,
+      "parent_id": 45,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 47,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 180917230,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 48,
+      "parent_id": 47,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 49,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 1721512139,
+          "value": "TECNICO"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 180917230,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 50,
+      "parent_id": 49,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 51,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select cliente0_.id as id2_5_0_, cliente0_.cpf as cpf3_5_0_, cliente0_.data_criacao as data_cri4_5_0_, cliente0_.email as email5_5_0_, cliente0_.nome as nome6_5_0_, cliente0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_ from personas cliente0_ left outer join perfis perfis1_ on cliente0_.id=perfis1_.pessoa_id where cliente0_.id=? and cliente0_.dtype='Cliente'"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 52,
+      "parent_id": 51,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 53,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1965241533,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 54,
+      "parent_id": 53,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 55,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1965241533,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 56,
+      "parent_id": 55,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 57,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_0_, product0_.category_id as category7_7_0_, product0_.image_id as image_id8_7_0_, product0_.price as price2_7_0_, product0_.sku as sku3_7_0_, product0_.status as status4_7_0_, product0_.summary as summary5_7_0_, product0_.title as title6_7_0_, productcat1_.id as id1_6_1_, productcat1_.name as name2_6_1_, image2_.id as id1_3_2_, image2_.imagedata as imagedat2_3_2_, image2_.name as name3_3_2_, image2_.type as type4_3_2_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.product_id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 58,
+      "parent_id": 57,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 59,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select cliente0_.id as id2_5_0_, cliente0_.cpf as cpf3_5_0_, cliente0_.data_criacao as data_cri4_5_0_, cliente0_.email as email5_5_0_, cliente0_.nome as nome6_5_0_, cliente0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_ from personas cliente0_ left outer join perfis perfis1_ on cliente0_.id=perfis1_.pessoa_id where cliente0_.id=? and cliente0_.dtype='Cliente'"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 60,
+      "parent_id": 59,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 61,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1219759344,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 62,
+      "parent_id": 61,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 63,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1219759344,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 64,
+      "parent_id": 63,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 65,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select product0_.product_id as product_1_7_0_, product0_.category_id as category7_7_0_, product0_.image_id as image_id8_7_0_, product0_.price as price2_7_0_, product0_.sku as sku3_7_0_, product0_.status as status4_7_0_, product0_.summary as summary5_7_0_, product0_.title as title6_7_0_, productcat1_.id as id1_6_1_, productcat1_.name as name2_6_1_, image2_.id as id1_3_2_, image2_.imagedata as imagedat2_3_2_, image2_.name as name3_3_2_, image2_.type as type4_3_2_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.product_id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 66,
+      "parent_id": 65,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 67,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select tecnico0_.id as id2_5_0_, tecnico0_.cpf as cpf3_5_0_, tecnico0_.data_criacao as data_cri4_5_0_, tecnico0_.email as email5_5_0_, tecnico0_.nome as nome6_5_0_, tecnico0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_, profile2_.profile_id as profile_1_8_2_, profile2_.address as address2_8_2_, profile2_.avatar as avatar3_8_2_, profile2_.birth_date as birth_da4_8_2_, profile2_.created_at as created_5_8_2_, profile2_.phone as phone6_8_2_, profile2_.resume as resume7_8_2_, profile2_.tecnico_id as tecnico_8_8_2_ from personas tecnico0_ left outer join perfis perfis1_ on tecnico0_.id=perfis1_.pessoa_id left outer join profiles profile2_ on tecnico0_.id=profile2_.tecnico_id where tecnico0_.id=? and tecnico0_.dtype='Tecnico'"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 68,
+      "parent_id": 67,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 69,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 1294077959,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 70,
+      "parent_id": 69,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 71,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 1721512139,
+          "value": "TECNICO"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 1294077959,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00010963,
+      "event": "return",
+      "id": 72,
+      "parent_id": 71,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 73,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select tecnico0_.id as id2_5_0_, tecnico0_.cpf as cpf3_5_0_, tecnico0_.data_criacao as data_cri4_5_0_, tecnico0_.email as email5_5_0_, tecnico0_.nome as nome6_5_0_, tecnico0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_, profile2_.profile_id as profile_1_8_2_, profile2_.address as address2_8_2_, profile2_.avatar as avatar3_8_2_, profile2_.birth_date as birth_da4_8_2_, profile2_.created_at as created_5_8_2_, profile2_.phone as phone6_8_2_, profile2_.resume as resume7_8_2_, profile2_.tecnico_id as tecnico_8_8_2_ from personas tecnico0_ left outer join perfis perfis1_ on tecnico0_.id=perfis1_.pessoa_id left outer join profiles profile2_ on tecnico0_.id=profile2_.tecnico_id where tecnico0_.id=? and tecnico0_.dtype='Tecnico'"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 74,
+      "parent_id": 73,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 75,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 1324726293,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 76,
+      "parent_id": 75,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 77,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 1721512139,
+          "value": "TECNICO"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Tecnico",
+        "object_id": 1324726293,
+        "value": "com.peterson.helpdesk.domain.Tecnico@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 78,
+      "parent_id": 77,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 79,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select cliente0_.id as id2_5_0_, cliente0_.cpf as cpf3_5_0_, cliente0_.data_criacao as data_cri4_5_0_, cliente0_.email as email5_5_0_, cliente0_.nome as nome6_5_0_, cliente0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_ from personas cliente0_ left outer join perfis perfis1_ on cliente0_.id=perfis1_.pessoa_id where cliente0_.id=? and cliente0_.dtype='Cliente'"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 80,
+      "parent_id": 79,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 81,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1364456494,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 82,
+      "parent_id": 81,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.Pessoa",
+      "event": "call",
+      "id": 83,
+      "lineno": 99,
+      "method_id": "addPerfil",
+      "parameters": [
+        {
+          "class": "com.peterson.helpdesk.domain.enums.Perfil",
+          "kind": "req",
+          "name": "perfil",
+          "object_id": 907222711,
+          "value": "CLIENTE"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.Cliente",
+        "object_id": 1364456494,
+        "value": "com.peterson.helpdesk.domain.Cliente@3c1"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 84,
+      "parent_id": 83,
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+      "event": "call",
+      "id": 85,
+      "lineno": 6,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00808179,
+      "event": "return",
+      "id": 86,
+      "parent_id": 85,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.ChamadoRepository",
+      "event": "call",
+      "id": 87,
+      "lineno": -1,
+      "method_id": "findByTecnico_Id",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 1263182628,
+          "value": "2"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/ChamadoRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy148",
+        "object_id": 1154360771,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@f2519a7"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 88,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_ left outer join personas tecnico1_ on chamado0_.tecnico_id=tecnico1_.id where tecnico1_.id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 89,
+      "parent_id": 88,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00082484,
+      "event": "return",
+      "id": 90,
+      "parent_id": 87,
+      "return_value": {
+        "class": "java.util.ArrayList",
+        "object_id": 162246775,
+        "value": "[com.peterson.helpdesk.domain.Chamado@22, com.peterson.helpdesk.domain.Chamado@24, com.peterson.helpdesk.domain.Chamado@26, com.peterson.helpdesk.domain.Chamado@27]"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 91,
+      "lineno": 6,
+      "method_id": "quantidade",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "quantidade",
+          "object_id": 1592647439,
+          "value": "3"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 92,
+      "parent_id": 91,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 93,
+      "lineno": 6,
+      "method_id": "nome",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "nome",
+          "object_id": 2050338180,
+          "value": "Richard Stallman"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=null, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 94,
+      "parent_id": 93,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=null, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 95,
+      "lineno": 6,
+      "method_id": "email",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 776569533,
+          "value": "stallman@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 96,
+      "parent_id": 95,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 97,
+      "lineno": 6,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 662942571,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 98,
+      "parent_id": 97,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+        "object_id": 1752700409,
+        "value": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@687815f9"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+      "event": "call",
+      "id": 99,
+      "lineno": 6,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 100,
+      "parent_id": 99,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.ChamadoRepository",
+      "event": "call",
+      "id": 101,
+      "lineno": -1,
+      "method_id": "findByTecnico_Id",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 1592647439,
+          "value": "3"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/ChamadoRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy148",
+        "object_id": 1154360771,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@f2519a7"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 102,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_ left outer join personas tecnico1_ on chamado0_.tecnico_id=tecnico1_.id where tecnico1_.id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 103,
+      "parent_id": 102,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00023714,
+      "event": "return",
+      "id": 104,
+      "parent_id": 101,
+      "return_value": {
+        "class": "java.util.ArrayList",
+        "object_id": 1890097246,
+        "value": "[com.peterson.helpdesk.domain.Chamado@23]"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 105,
+      "lineno": 6,
+      "method_id": "quantidade",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "quantidade",
+          "object_id": 602447388,
+          "value": "1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 106,
+      "parent_id": 105,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=1)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 107,
+      "lineno": 6,
+      "method_id": "nome",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "nome",
+          "object_id": 1682307586,
+          "value": "Claude Elwood Shannon"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Claude Elwood Shannon, email=null, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 108,
+      "parent_id": 107,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Claude Elwood Shannon, email=null, quantidade=1)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 109,
+      "lineno": 6,
+      "method_id": "email",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 1673318945,
+          "value": "shannon@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Claude Elwood Shannon, email=shannon@gmail.com, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 110,
+      "parent_id": 109,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Claude Elwood Shannon, email=shannon@gmail.com, quantidade=1)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 111,
+      "lineno": 6,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1490922078,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Claude Elwood Shannon, email=shannon@gmail.com, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 112,
+      "parent_id": 111,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+        "object_id": 878114363,
+        "value": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@3456f63b"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+      "event": "call",
+      "id": 113,
+      "lineno": 6,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 114,
+      "parent_id": 113,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.ChamadoRepository",
+      "event": "call",
+      "id": 115,
+      "lineno": -1,
+      "method_id": "findByTecnico_Id",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 602447388,
+          "value": "1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/ChamadoRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy148",
+        "object_id": 1154360771,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@f2519a7"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 116,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_ left outer join personas tecnico1_ on chamado0_.tecnico_id=tecnico1_.id where tecnico1_.id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00010923,
+      "event": "return",
+      "id": 117,
+      "parent_id": 116,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00021782,
+      "event": "return",
+      "id": 118,
+      "parent_id": 115,
+      "return_value": {
+        "class": "java.util.ArrayList",
+        "object_id": 172063963,
+        "value": "[com.peterson.helpdesk.domain.Chamado@20, com.peterson.helpdesk.domain.Chamado@21, com.peterson.helpdesk.domain.Chamado@25]"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 119,
+      "lineno": 6,
+      "method_id": "quantidade",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "quantidade",
+          "object_id": 602447388,
+          "value": "1"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 120,
+      "parent_id": 119,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=1)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 121,
+      "lineno": 6,
+      "method_id": "nome",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "nome",
+          "object_id": 1971563904,
+          "value": "Valdir Cezar"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Valdir Cezar, email=null, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 122,
+      "parent_id": 121,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Valdir Cezar, email=null, quantidade=1)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 123,
+      "lineno": 6,
+      "method_id": "email",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 1214237140,
+          "value": "valdir@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Valdir Cezar, email=valdir@gmail.com, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 124,
+      "parent_id": 123,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Valdir Cezar, email=valdir@gmail.com, quantidade=1)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 125,
+      "lineno": 6,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 8974983,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Valdir Cezar, email=valdir@gmail.com, quantidade=1)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 126,
+      "parent_id": 125,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+        "object_id": 1346652257,
+        "value": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@50444861"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+      "event": "call",
+      "id": 127,
+      "lineno": 6,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 128,
+      "parent_id": 127,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.ChamadoRepository",
+      "event": "call",
+      "id": 129,
+      "lineno": -1,
+      "method_id": "findByTecnico_Id",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 1263182628,
+          "value": "2"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/ChamadoRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy148",
+        "object_id": 1154360771,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@f2519a7"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 130,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_ left outer join personas tecnico1_ on chamado0_.tecnico_id=tecnico1_.id where tecnico1_.id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 131,
+      "parent_id": 130,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00024711,
+      "event": "return",
+      "id": 132,
+      "parent_id": 129,
+      "return_value": {
+        "class": "java.util.ArrayList",
+        "object_id": 1042199582,
+        "value": "[com.peterson.helpdesk.domain.Chamado@22, com.peterson.helpdesk.domain.Chamado@24, com.peterson.helpdesk.domain.Chamado@26, com.peterson.helpdesk.domain.Chamado@27]"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 133,
+      "lineno": 6,
+      "method_id": "quantidade",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "quantidade",
+          "object_id": 1592647439,
+          "value": "3"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 134,
+      "parent_id": 133,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 135,
+      "lineno": 6,
+      "method_id": "nome",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "nome",
+          "object_id": 2050338180,
+          "value": "Richard Stallman"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=null, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 136,
+      "parent_id": 135,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=null, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 137,
+      "lineno": 6,
+      "method_id": "email",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 776569533,
+          "value": "stallman@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 138,
+      "parent_id": 137,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 139,
+      "lineno": 6,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 1373786390,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 140,
+      "parent_id": 139,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+        "object_id": 799195115,
+        "value": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@2fa2bfeb"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+      "event": "call",
+      "id": 141,
+      "lineno": 6,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 142,
+      "parent_id": 141,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.repositories.ChamadoRepository",
+      "event": "call",
+      "id": 143,
+      "lineno": -1,
+      "method_id": "findByTecnico_Id",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "p0",
+          "object_id": 1263182628,
+          "value": "2"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/repositories/ChamadoRepository.java",
+      "receiver": {
+        "class": "jdk.proxy3.$Proxy148",
+        "object_id": 1154360771,
+        "value": "org.springframework.data.jpa.repository.support.SimpleJpaRepository@f2519a7"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "event": "call",
+      "id": 144,
+      "sql_query": {
+        "database_type": "MySQL",
+        "sql": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_ left outer join personas tecnico1_ on chamado0_.tecnico_id=tecnico1_.id where tecnico1_.id=?"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00024197,
+      "event": "return",
+      "id": 145,
+      "parent_id": 144,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00050187,
+      "event": "return",
+      "id": 146,
+      "parent_id": 143,
+      "return_value": {
+        "class": "java.util.ArrayList",
+        "object_id": 301341649,
+        "value": "[com.peterson.helpdesk.domain.Chamado@22, com.peterson.helpdesk.domain.Chamado@24, com.peterson.helpdesk.domain.Chamado@26, com.peterson.helpdesk.domain.Chamado@27]"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 147,
+      "lineno": 6,
+      "method_id": "quantidade",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "quantidade",
+          "object_id": 1592647439,
+          "value": "3"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 148,
+      "parent_id": 147,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=null, email=null, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 149,
+      "lineno": 6,
+      "method_id": "nome",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "nome",
+          "object_id": 2050338180,
+          "value": "Richard Stallman"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=null, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 150,
+      "parent_id": 149,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=null, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 151,
+      "lineno": 6,
+      "method_id": "email",
+      "parameters": [
+        {
+          "class": "java.lang.String",
+          "kind": "req",
+          "name": "email",
+          "object_id": 776569533,
+          "value": "stallman@gmail.com"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 152,
+      "parent_id": 151,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+      "event": "call",
+      "id": 153,
+      "lineno": 6,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO$TopTecnicoDTOBuilder",
+        "object_id": 860363359,
+        "value": "TopTecnicoDTO.TopTecnicoDTOBuilder(nome=Richard Stallman, email=stallman@gmail.com, quantidade=3)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 154,
+      "parent_id": 153,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO",
+        "object_id": 1245841046,
+        "value": "com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@4a420696"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopDTO",
+      "event": "call",
+      "id": 155,
+      "lineno": 8,
+      "method_id": "builder",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java",
+      "static": true,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00400156,
+      "event": "return",
+      "id": 156,
+      "parent_id": 155,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=null, totalSolved=null, totalTechnician=null, topTechnician=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+      "event": "call",
+      "id": 157,
+      "lineno": 8,
+      "method_id": "total",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "total",
+          "object_id": 527496971,
+          "value": "8"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=null, totalTechnician=null, topTechnician=null)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.00020121,
+      "event": "return",
+      "id": 158,
+      "parent_id": 157,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=null, totalTechnician=null, topTechnician=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+      "event": "call",
+      "id": 159,
+      "lineno": 8,
+      "method_id": "totalSolved",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "totalSolved",
+          "object_id": 958111867,
+          "value": "5"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=5, totalTechnician=null, topTechnician=null)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.0001001,
+      "event": "return",
+      "id": 160,
+      "parent_id": 159,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=5, totalTechnician=null, topTechnician=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+      "event": "call",
+      "id": 161,
+      "lineno": 8,
+      "method_id": "totalTechnician",
+      "parameters": [
+        {
+          "class": "java.lang.Integer",
+          "kind": "req",
+          "name": "totalTechnician",
+          "object_id": 527496971,
+          "value": "8"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=5, totalTechnician=8, topTechnician=null)"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 162,
+      "parent_id": 161,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=5, totalTechnician=8, topTechnician=null)"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+      "event": "call",
+      "id": 163,
+      "lineno": 8,
+      "method_id": "topTechnician",
+      "parameters": [
+        {
+          "class": "java.util.ImmutableCollections$ListN",
+          "kind": "req",
+          "name": "topTechnician",
+          "object_id": 190528227,
+          "value": "[com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@687815f9, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@3456f63b, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@50444861, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@2fa2bfeb, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@4a420696]"
+        }
+      ],
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=5, totalTechnician=8, topTechnician=[com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@687815f9, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@3456f63b, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@50444861, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@2fa2bfeb, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@4a420696])"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 164,
+      "parent_id": 163,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=5, totalTechnician=8, topTechnician=[com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@687815f9, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@3456f63b, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@50444861, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@2fa2bfeb, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@4a420696])"
+      },
+      "thread_id": 47
+    },
+    {
+      "defined_class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+      "event": "call",
+      "id": 165,
+      "lineno": 8,
+      "method_id": "build",
+      "path": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java",
+      "receiver": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO$TopDTOBuilder",
+        "object_id": 826930087,
+        "value": "TopDTO.TopDTOBuilder(total=8, totalSolved=5, totalTechnician=8, topTechnician=[com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@687815f9, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@3456f63b, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@50444861, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@2fa2bfeb, com.peterson.helpdesk.domain.dtos.TopTecnicoDTO@4a420696])"
+      },
+      "static": false,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0,
+      "event": "return",
+      "id": 166,
+      "parent_id": 165,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO",
+        "object_id": 423483501,
+        "value": "com.peterson.helpdesk.domain.dtos.TopDTO@193dd86d"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.02407919,
+      "event": "return",
+      "id": 167,
+      "parent_id": 30,
+      "return_value": {
+        "class": "com.peterson.helpdesk.domain.dtos.TopDTO",
+        "object_id": 423483501,
+        "value": "com.peterson.helpdesk.domain.dtos.TopDTO@193dd86d"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.02438816,
+      "event": "return",
+      "id": 168,
+      "parent_id": 29,
+      "return_value": {
+        "class": "org.springframework.http.ResponseEntity",
+        "object_id": 358137846,
+        "value": "<200 OK OK,com.peterson.helpdesk.domain.dtos.TopDTO@193dd86d,[]>"
+      },
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.02657325,
+      "event": "return",
+      "http_server_response": {
+        "headers": {
+          "Transfer-Encoding": "chunked",
+          "Keep-Alive": "timeout=60",
+          "Access-Control-Allow-Origin": "*",
+          "X-Content-Type-Options": "nosniff",
+          "Connection": "keep-alive",
+          "Pragma": "no-cache",
+          "Date": "Mon, 04 Dec 2023 15:14:58 GMT",
+          "X-Frame-Options": "DENY",
+          "Cache-Control": "no-cache, no-store, max-age=0, must-revalidate",
+          "Vary": "Origin",
+          "Expires": "0",
+          "X-XSS-Protection": "1; mode=block",
+          "Content-Type": "application/json"
+        },
+        "status": 200
+      },
+      "id": 169,
+      "parent_id": 28,
+      "thread_id": 47
+    },
+    {
+      "elapsed": 0.02953085,
+      "event": "return",
+      "id": 170,
+      "parent_id": 1,
+      "thread_id": 47
+    }
+  ],
+  "version": "1.2",
+  "metadata": {
+    "name": "GET /chamados/top (200) - 10:14:58.852",
+    "app": "helpdesk",
+    "language": {
+      "name": "java",
+      "version": "17.0.7+7-LTS",
+      "engine": "OpenJDK 64-Bit Server VM"
+    },
+    "client": {
+      "name": "appmap-java",
+      "url": "https://github.com/appland/appmap-java"
+    },
+    "recorder": {
+      "name": "request_recording",
+      "type": "requests"
+    },
+    "recording": {},
+    "git": {
+      "repository": "https://github.com/DarkCodePE/ticket-anavatec.git",
+      "branch": "DEVELOP_3"
+    }
+  },
+  "classMap": [
+    {
+      "children": [
+        {
+          "children": [
+            {
+              "children": [
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "build",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                            },
+                            {
+                              "name": "total",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                            },
+                            {
+                              "name": "totalSolved",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                            },
+                            {
+                              "name": "totalTechnician",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                            },
+                            {
+                              "name": "topTechnician",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                            }
+                          ],
+                          "name": "TopDTO$TopDTOBuilder",
+                          "type": "class"
+                        },
+                        {
+                          "children": [
+                            {
+                              "name": "quantidade",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                            },
+                            {
+                              "name": "email",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                            },
+                            {
+                              "name": "nome",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                            },
+                            {
+                              "name": "build",
+                              "type": "function",
+                              "static": false,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                            }
+                          ],
+                          "name": "TopTecnicoDTO$TopTecnicoDTOBuilder",
+                          "type": "class"
+                        },
+                        {
+                          "children": [
+                            {
+                              "name": "builder",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopTecnicoDTO.java:6"
+                            }
+                          ],
+                          "name": "TopTecnicoDTO",
+                          "type": "class"
+                        },
+                        {
+                          "children": [
+                            {
+                              "name": "builder",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/dtos/TopDTO.java:8"
+                            }
+                          ],
+                          "name": "TopDTO",
+                          "type": "class"
+                        }
+                      ],
+                      "name": "dtos",
+                      "type": "package"
+                    },
+                    {
+                      "children": [
+                        {
+                          "children": [
+                            {
+                              "name": "values",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Status.java:3"
+                            }
+                          ],
+                          "name": "Status",
+                          "type": "class"
+                        },
+                        {
+                          "children": [
+                            {
+                              "name": "values",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Prioridade.java:3"
+                            }
+                          ],
+                          "name": "Prioridade",
+                          "type": "class"
+                        },
+                        {
+                          "children": [
+                            {
+                              "name": "toEnum",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:24"
+                            },
+                            {
+                              "name": "values",
+                              "type": "function",
+                              "static": true,
+                              "location": "src/main/java/com/peterson/helpdesk/domain/enums/Perfil.java:3"
+                            }
+                          ],
+                          "name": "Perfil",
+                          "type": "class"
+                        }
+                      ],
+                      "name": "enums",
+                      "type": "package"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "addPerfil",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/domain/Pessoa.java:99"
+                        }
+                      ],
+                      "name": "Pessoa",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "domain",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "getUsername",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:66"
+                        },
+                        {
+                          "name": "tokenValido",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTUtil.java:44"
+                        }
+                      ],
+                      "name": "JWTUtil",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "doFilterInternal",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/security/JWTAuthoorizationFilter.java:29"
+                        }
+                      ],
+                      "name": "JWTAuthoorizationFilter",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "security",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "findByTecnico_Id",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/repositories/ChamadoRepository.java:-1"
+                        }
+                      ],
+                      "name": "ChamadoRepository",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "findByEmail",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/repositories/PessoaRepository.java:-1"
+                        }
+                      ],
+                      "name": "PessoaRepository",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "repositories",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "loadUserByUsername",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/services/UserDetailServiceImpl.java:22"
+                        }
+                      ],
+                      "name": "UserDetailServiceImpl",
+                      "type": "class"
+                    },
+                    {
+                      "children": [
+                        {
+                          "name": "topTecnicoByChamados",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/services/ChamadoService.java:124"
+                        }
+                      ],
+                      "name": "ChamadoService",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "services",
+                  "type": "package"
+                },
+                {
+                  "children": [
+                    {
+                      "children": [
+                        {
+                          "name": "findTop",
+                          "type": "function",
+                          "static": false,
+                          "location": "src/main/java/com/peterson/helpdesk/resources/ChamadoResource.java:57"
+                        }
+                      ],
+                      "name": "ChamadoResource",
+                      "type": "class"
+                    }
+                  ],
+                  "name": "resources",
+                  "type": "package"
+                }
+              ],
+              "name": "helpdesk",
+              "type": "package"
+            }
+          ],
+          "name": "peterson",
+          "type": "package"
+        }
+      ],
+      "name": "com",
+      "type": "package"
+    },
+    {
+      "type": "database",
+      "name": "Database",
+      "children": [
+        {
+          "type": "query",
+          "name": "select pessoa0_.id as id2_5_, pessoa0_.cpf as cpf3_5_, pessoa0_.data_criacao as data_cri4_5_, pessoa0_.email as email5_5_, pessoa0_.nome as nome6_5_, pessoa0_.senha as senha7_5_, pessoa0_.dtype as dtype1_5_ from personas pessoa0_ where pessoa0_.email=?"
+        },
+        {
+          "type": "query",
+          "name": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_"
+        },
+        {
+          "type": "query",
+          "name": "select cliente0_.id as id2_5_0_, cliente0_.cpf as cpf3_5_0_, cliente0_.data_criacao as data_cri4_5_0_, cliente0_.email as email5_5_0_, cliente0_.nome as nome6_5_0_, cliente0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_ from personas cliente0_ left outer join perfis perfis1_ on cliente0_.id=perfis1_.pessoa_id where cliente0_.id=? and cliente0_.dtype='Cliente'"
+        },
+        {
+          "type": "query",
+          "name": "select product0_.product_id as product_1_7_0_, product0_.category_id as category7_7_0_, product0_.image_id as image_id8_7_0_, product0_.price as price2_7_0_, product0_.sku as sku3_7_0_, product0_.status as status4_7_0_, product0_.summary as summary5_7_0_, product0_.title as title6_7_0_, productcat1_.id as id1_6_1_, productcat1_.name as name2_6_1_, image2_.id as id1_3_2_, image2_.imagedata as imagedat2_3_2_, image2_.name as name3_3_2_, image2_.type as type4_3_2_ from products product0_ left outer join product_categories productcat1_ on product0_.category_id=productcat1_.id left outer join images image2_ on product0_.image_id=image2_.id where product0_.product_id=?"
+        },
+        {
+          "type": "query",
+          "name": "select tecnico0_.id as id2_5_0_, tecnico0_.cpf as cpf3_5_0_, tecnico0_.data_criacao as data_cri4_5_0_, tecnico0_.email as email5_5_0_, tecnico0_.nome as nome6_5_0_, tecnico0_.senha as senha7_5_0_, perfis1_.pessoa_id as pessoa_i1_4_1_, perfis1_.perfis as perfis2_4_1_, profile2_.profile_id as profile_1_8_2_, profile2_.address as address2_8_2_, profile2_.avatar as avatar3_8_2_, profile2_.birth_date as birth_da4_8_2_, profile2_.created_at as created_5_8_2_, profile2_.phone as phone6_8_2_, profile2_.resume as resume7_8_2_, profile2_.tecnico_id as tecnico_8_8_2_ from personas tecnico0_ left outer join perfis perfis1_ on tecnico0_.id=perfis1_.pessoa_id left outer join profiles profile2_ on tecnico0_.id=profile2_.tecnico_id where tecnico0_.id=? and tecnico0_.dtype='Tecnico'"
+        },
+        {
+          "type": "query",
+          "name": "select chamado0_.id as id1_0_, chamado0_.cliente_id as cliente_9_0_, chamado0_.data_abertura as data_abe2_0_, chamado0_.data_fechamento as data_fec3_0_, chamado0_.is_solution as is_solut4_0_, chamado0_.observacoes as observac5_0_, chamado0_.prioridade as priorida6_0_, chamado0_.product_id as product10_0_, chamado0_.status as status7_0_, chamado0_.tecnico_id as tecnico11_0_, chamado0_.titulo as titulo8_0_ from chamado chamado0_ left outer join personas tecnico1_ on chamado0_.tecnico_id=tecnico1_.id where tecnico1_.id=?"
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "HTTP server requests",
+      "children": [
+        {
+          "type": "route",
+          "name": "GET /chamados/top"
+        }
+      ]
+    }
+  ]
+}
