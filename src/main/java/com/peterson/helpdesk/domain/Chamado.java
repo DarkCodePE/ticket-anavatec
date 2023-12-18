@@ -15,11 +15,9 @@ import java.util.Objects;
 @Entity
 @Slf4j(topic = "Chamado")
 public class Chamado {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-
     @JsonFormat(pattern = "dd/MM/yyyy")
     private LocalDate dataAbertura = LocalDate.now();
     @JsonFormat(pattern = "dd/MM/yyyy")
@@ -32,7 +30,6 @@ public class Chamado {
     @ManyToOne
     @JoinColumn(name = "tecnico_id")
     private Tecnico tecnico;
-
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;
@@ -55,6 +52,16 @@ public class Chamado {
         this.observacoes = observacoes;
         this.tecnico = tecnico;
         this.cliente = cliente;
+    }
+    public Chamado(Integer id, Prioridade prioridade, Status status, String titulo, String observacoes, Tecnico tecnico, Cliente cliente, LocalDate dataFechamento) {
+        this.id = id;
+        this.prioridade = prioridade;
+        this.status = status;
+        this.titulo = titulo;
+        this.observacoes = observacoes;
+        this.tecnico = tecnico;
+        this.cliente = cliente;
+        this.dataFechamento = dataFechamento;
     }
 
     public Integer getId() {

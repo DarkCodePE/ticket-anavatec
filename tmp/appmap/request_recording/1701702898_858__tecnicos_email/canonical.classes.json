@@ -1,0 +1,8 @@
+[
+  "com/peterson/helpdesk/domain/Pessoa",
+  "com/peterson/helpdesk/domain/dtos/TecnicoDTO",
+  "com/peterson/helpdesk/domain/enums/Perfil",
+  "com/peterson/helpdesk/repositories/TecnicoRepository",
+  "com/peterson/helpdesk/resources/TecnicoResource",
+  "com/peterson/helpdesk/services/TecnicoService"
+]

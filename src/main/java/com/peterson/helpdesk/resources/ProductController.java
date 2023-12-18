@@ -2,6 +2,7 @@ package com.peterson.helpdesk.resources;
 
 import com.peterson.helpdesk.domain.Image;
 import com.peterson.helpdesk.domain.Product;
+import com.peterson.helpdesk.domain.ProductCategory;
 import com.peterson.helpdesk.domain.dtos.ProductListDTO;
 import com.peterson.helpdesk.domain.dtos.ProductRequestDTO;
 import com.peterson.helpdesk.services.ProductService;
@@ -30,6 +31,18 @@ public class ProductController {
         return ResponseEntity.status(HttpStatus.OK)
                 .body(productService.products());
     }
+    @GetMapping("/categories")
+    public ResponseEntity<List<ProductCategory>>  getAllCategories(){
+        log.info("getAllCategories");
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(productService.getAllCategories());
+    }
+    @GetMapping("/categories/list")
+    public ResponseEntity<List<ProductCategory>>  getAllCategories2(){
+        log.info("getAllCategories");
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(productService.getAllCategories());
+    }
     @PostMapping("/create")
     public ResponseEntity<List<ProductListDTO>> saveProduct(@RequestPart ProductRequestDTO productRequestDTO, @RequestPart MultipartFile file) throws IOException {
         log.info("image", file);
@@ -44,5 +57,17 @@ public class ProductController {
         Image image = productService.getInfoByImageByName(name);
         return ResponseEntity.status(HttpStatus.OK)
                 .body(image);
+    }
+    @PostMapping("/category/create")
+    public ResponseEntity<List<ProductCategory>> saveCategory(@Valid @RequestBody ProductCategory productCategory){
+        List<ProductCategory> categories = productService.createOrUpdateCategory(productCategory);
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(categories);
+    }
+    @GetMapping("/delete/category")
+    public ResponseEntity<List<ProductCategory>> deleteCategory(@RequestParam("id") Integer id){
+        List<ProductCategory> categories = productService.deleteCategory(id);
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(categories);
     }
 }

@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /tecnicos",
+    "parameters": "()",
+    "status": 200
+  }
+]

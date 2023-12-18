@@ -1,0 +1,22 @@
+[
+  {
+    "caller": "GET /tecnicos/email",
+    "callee": "com/peterson"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "GET /tecnicos/email"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select perfis0_.pessoa_id as pessoa_i1_4_0_, perfis0_.perfis as perfis2_4_0_ from perfis perfis0_ where perfis0_.pessoa_id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select profile0_.profile_id as profile_1_8_1_, profile0_.address as address2_8_1_, profile0_.avatar as avatar3_8_1_, profile0_.birth_date as birth_da4_8_1_, profile0_.created_at as created_5_8_1_, profile0_.phone as phone6_8_1_, profile0_.resume as resume7_8_1_, profile0_.tecnico_id as tecnico_8_8_1_, tecnico1_.id as id2_5_0_, tecnico1_.cpf as cpf3_5_0_, tecnico1_.data_criacao as data_cri4_5_0_, tecnico1_.email as email5_5_0_, tecnico1_.nome as nome6_5_0_, tecnico1_.senha as senha7_5_0_, perfis2_.pessoa_id as pessoa_i1_4_3_, perfis2_.perfis as perfis2_4_3_ from profiles profile0_ left outer join personas tecnico1_ on profile0_.tecnico_id=tecnico1_.id left outer join perfis perfis2_ on tecnico1_.id=perfis2_.pessoa_id where profile0_.tecnico_id=?"
+  },
+  {
+    "caller": "com/peterson",
+    "callee": "select tecnico0_.id as id2_5_, tecnico0_.cpf as cpf3_5_, tecnico0_.data_criacao as data_cri4_5_, tecnico0_.email as email5_5_, tecnico0_.nome as nome6_5_, tecnico0_.senha as senha7_5_ from personas tecnico0_ where tecnico0_.dtype='Tecnico' and tecnico0_.email=?"
+  }
+]

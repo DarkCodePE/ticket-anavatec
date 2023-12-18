@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /chamados",
+    "parameters": "()",
+    "status": 200
+  }
+]

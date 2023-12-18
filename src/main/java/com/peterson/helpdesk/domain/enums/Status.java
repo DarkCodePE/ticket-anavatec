@@ -2,7 +2,7 @@ package com.peterson.helpdesk.domain.enums;
 
 public enum Status {
 
-    ABERTO(0, "ABERTO"), ANDAMENTO(1, "ANDAMENTO"), ENCERRADO(2, "ENCERRADO");
+    ABERTO(0, "ABIERTO"), ANDAMENTO(1, "EN PROCESO"), ENCERRADO(2, "CERRADO");
 
     private Integer codigo;
     private String descricao;

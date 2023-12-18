@@ -1,0 +1,5 @@
+name: "helpdesk"
+appmap_dir: "tmp/appmap"
+packages:
+- path: "com.peterson.helpdesk"
+- path: "templates"

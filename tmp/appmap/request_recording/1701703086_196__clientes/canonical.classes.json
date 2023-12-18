@@ -1,0 +1,7 @@
+[
+  "com/peterson/helpdesk/domain/Pessoa",
+  "com/peterson/helpdesk/domain/dtos/ClienteDTO",
+  "com/peterson/helpdesk/domain/enums/Perfil",
+  "com/peterson/helpdesk/resources/ClienteResource",
+  "com/peterson/helpdesk/services/ClienteService"
+]

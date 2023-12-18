@@ -1,0 +1,7 @@
+[
+  {
+    "route": "GET /chamados/expired",
+    "parameters": "()",
+    "status": 200
+  }
+]

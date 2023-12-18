@@ -1,0 +1,5 @@
+[
+  "com/peterson/helpdesk/domain",
+  "com/peterson/helpdesk/resources",
+  "com/peterson/helpdesk/services"
+]

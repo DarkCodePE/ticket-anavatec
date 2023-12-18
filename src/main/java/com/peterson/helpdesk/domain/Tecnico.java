@@ -4,8 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.peterson.helpdesk.domain.dtos.TecnicoDTO;
 import com.peterson.helpdesk.domain.enums.Perfil;
 
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import java.io.Serial;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,9 +21,12 @@ public class Tecnico extends Pessoa{
     @OneToMany(mappedBy = "tecnico")
     private List<Chamado> chamados = new ArrayList<>();
 
+    @OneToOne(mappedBy="tecnico", cascade = CascadeType.ALL)
+    private Profile profile;
+
     public Tecnico() {
         super();
-        addPerfil(Perfil.CLIENTE);
+        addPerfil(Perfil.TECNICO);
     }
 
     public Tecnico(TecnicoDTO obj) {
@@ -40,7 +42,7 @@ public class Tecnico extends Pessoa{
 
     public Tecnico(Integer id, String nome, String cpf, String email, String senha) {
         super(id, nome, cpf, email, senha);
-        addPerfil(Perfil.CLIENTE);
+        addPerfil(Perfil.TECNICO);
     }
 
     public List<Chamado> getChamados() {
@@ -49,5 +51,13 @@ public class Tecnico extends Pessoa{
 
     public void setChamados(List<Chamado> chamados) {
         this.chamados = chamados;
+    }
+
+    public Profile getProfile() {
+        return profile;
+    }
+
+    public void setProfile(Profile profile) {
+        this.profile = profile;
     }
 }
